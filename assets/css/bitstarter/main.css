@@ -1,0 +1,37 @@
+/* Base styles for bitstarter page */
+
+body {
+    margin-top: 60px;
+}
+
+.navbar {
+    background-color: rgba(0, 0, 0, 0.7);
+}
+
+.navbar-brand,
+.navbar-nav > li > a {
+    font: normal 20px/20px 'Pathway Gothic One', sans-serif;
+    text-transform: uppercase;
+}
+
+.navbar-brand {
+    margin-right: 50px;
+    -webkit-transition: all 1s linear;
+    -moz-transition: all 1s linear;
+    transition: all 1s linear;
+}
+
+.navbar-brand {
+    color: rgba(255, 255, 255, 1);
+}
+
+.navbar-nav > li > a {
+    -webkit-transition: border-color 1s linear;
+    -moz-transition: border-color 1s linear;
+    transition: border-color 1s linear;
+}
+
+.navbar-nav > li > a:hover {
+    height: 50px;
+    border-bottom: 4px solid rgba(255, 0, 0, 0.8);
+}
