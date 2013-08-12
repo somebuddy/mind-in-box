@@ -5,9 +5,7 @@ from django.contrib import admin
 admin.autodiscover()
 
 urlpatterns = patterns('',
-    # Examples:
-    # url(r'^$', 'mindinbox.views.home', name='home'),
-    # url(r'^mindinbox/', include('mindinbox.foo.urls')),
+    url(r'^$', include('bitstarter.urls', namespace='bistarter')),
 
     # Uncomment the admin/doc line below to enable admin documentation:
     # url(r'^admin/doc/', include('django.contrib.admindocs.urls')),
@@ -15,8 +13,9 @@ urlpatterns = patterns('',
     url(r'^admin/', include(admin.site.urls)),
 )
 
+
 urlpatterns += patterns (
-        '',
-        (r'^static/(.*)$', 'django.views.static.serve', {
-            'document_root': settings.STATIC_ROOT}),
+    '',
+    (r'^static/(.*)$', 'django.views.static.serve', {
+        'document_root': settings.STATIC_ROOT}),
 ) + static(settings.MEDIA_URL, document_root=settings.MEDIA_URL)

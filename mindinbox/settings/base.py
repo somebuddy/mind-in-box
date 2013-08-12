@@ -117,7 +117,9 @@ THIRDPART_APPS = (
         'south',
 )
 
-LOCAL_APPS = ()
+LOCAL_APPS = (
+        'bitstarter',
+)
 
 INSTALLED_APPS = DJANGO_APPS + THIRDPART_APPS + LOCAL_APPS
 
