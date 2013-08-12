@@ -8,7 +8,11 @@ echo 'Pushing staging'
 git checkout staging
 git push origin staging
 git push bitbucket staging
-git push heroku staging:master
+
+echo 'Pushing heroku test server'
+git checkout heroku_staging
+git merge staging
+git push heroku heroku_staging:master
 
 echo 'Pushing master'
 git checkout master
