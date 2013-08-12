@@ -11,7 +11,7 @@ MANAGERS = ADMINS
 
 # Hosts/domain names that are valid for this site; required if DEBUG is False
 # See https://docs.djangoproject.com/en/1.5/ref/settings/#allowed-hosts
-ALLOWED_HOSTS = [*]
+ALLOWED_HOSTS = ['*']
 
 # Local time zone for this installation. Choices can be found here:
 # http://en.wikipedia.org/wiki/List_of_tz_zones_by_name
@@ -116,9 +116,7 @@ THIRDPART_APPS = (
         'south',
         )
 
-LOCAL_APPS = (
-        '',
-        )
+LOCAL_APPS = ()
 
 INSTALLED_APPS = DJANGO_APPS + THIRDPART_APPS + LOCAL_APPS
 
