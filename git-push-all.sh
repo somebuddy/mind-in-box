@@ -14,3 +14,6 @@ echo 'Pushing master'
 git checkout master
 git push origin master
 git push bitbucket master
+
+echo 'Return to dev branch'
+git checkout dev
