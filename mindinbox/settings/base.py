@@ -113,7 +113,9 @@ DJANGO_APPS = (
     # 'django.contrib.admindocs',
 )
 
-THIRDPART_APPS = ()
+THIRDPART_APPS = (
+        'south',
+)
 
 LOCAL_APPS = ()
 
