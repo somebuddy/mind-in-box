@@ -2,8 +2,10 @@
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>{% block page_title %}{% endblock %} | Mind In Box</title>
-{% include 'addons/default_links.html' %}
-{% block page_header %}{% endblock %}
+{% include 'addons/default_css.html' %}
+{% block page_styles %}{% endblock %}
+{% include 'addons/default_scripts.html' %}
+{% block page_scripts %}{% endblock %}
 {% include 'addons/google_analytics.html' %}
 
 {% block page_content %}{% endblock %}
