@@ -15,7 +15,7 @@ urlpatterns = patterns(
     url(r'^cb/balance', 'coinbase.views.balance'),
     url(r'^cb/orders', 'coinbase.views.orders'),
     url(r'^cb/sell', 'coinbase.views.sell'),
-
+    url(r'^contact_messages/', include('contact_messages.urls', namespace="contact_messages")),
 )
 
 urlpatterns += patterns(
