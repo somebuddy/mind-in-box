@@ -12,6 +12,7 @@ urlpatterns = patterns(
     # url(r'^admin/doc/', include('django.contrib.admindocs.urls')),
 
     url(r'^admin/', include(admin.site.urls)),
+    url(r'^contact_messages/', include('contact_messages.urls', namespace="contact_messages")),
 )
 
 urlpatterns += patterns(

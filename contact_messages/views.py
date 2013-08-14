@@ -1,4 +1,4 @@
-from django.views.generic import ListView, DetaitView
+from django.views.generic import ListView, DetailView
 from django.views.generic.edit import CreateView
 from .models import Message
 
