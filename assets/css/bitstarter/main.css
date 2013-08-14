@@ -4,10 +4,6 @@ body {
     height: 100%;
 }
 
-body {
-    padding-top: 60px;
-}
-
 /* Page background */
 
 html {
@@ -56,4 +52,31 @@ body {
     border-bottom: 4px solid rgba(255, 0, 0, 0.8);
 }
 
+/* Sections */
 
+section {
+    height: 100%;
+    width: 100%;
+    padding-top: 50px;
+}
+
+#dashboard {
+    background-color: rgba(0, 0, 0, 0);
+}
+
+.section-odd {
+    background-color: rgba(250, 250, 250, 0.8);
+}
+
+.section-even {
+    background-color: rgba(230, 230, 230, 0.8);
+}
+
+#contacts {
+    background-color: rgba(0, 0, 0, 0.8);
+    height: 50%;
+}
+
+.row-spacer {
+    height: 100px;
+}
