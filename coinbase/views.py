@@ -4,7 +4,7 @@ from .models import CoinbaseWallet
 
 
 def balance(request):
-    return HttpResponse("Balance %s." % CoinbaseWallet.balance())
+    return HttpResponse("Balance $%s." % CoinbaseWallet.get_total_USD())
 
 
 def orders(request):
@@ -12,4 +12,4 @@ def orders(request):
 
 
 def sell(request):
-    return HttpResponse("Sell %s." % CoinbaseWallet.sell())
+    return HttpResponse("Sell %s." % CoinbaseWallet.sell(100))
