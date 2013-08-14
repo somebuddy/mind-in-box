@@ -12,6 +12,10 @@ urlpatterns = patterns(
     # url(r'^admin/doc/', include('django.contrib.admindocs.urls')),
 
     url(r'^admin/', include(admin.site.urls)),
+    url(r'^cb/balance', 'coinbase.views.balance'),
+    url(r'^cb/orders', 'coinbase.views.orders'),
+    url(r'^cb/sell', 'coinbase.views.sell'),
+
 )
 
 urlpatterns += patterns(
