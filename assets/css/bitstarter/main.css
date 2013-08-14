@@ -1,10 +1,26 @@
 /* Base styles for bitstarter page */
-
+html,
 body {
-    margin-top: 60px;
+    height: 100%;
 }
 
-/* Page background %/
+body {
+    padding-top: 60px;
+}
+
+/* Page background */
+
+html {
+    background: url(/static/img/bitstarter_bkg.jpg) no-repeat center center fixed;
+    -moz-background-size: cover;
+    -o-background-size: cover;
+    -webkit-background-size: cover;
+    background-size: cover;
+}
+
+body {
+    background-color: rgba(0, 0, 0, 0.2);
+}
 
 /* Menu */
 
