@@ -22,10 +22,30 @@
 <section class="section-even">
     <div></div>
 </section>
-<section id="contacts">
-    <div></div>
+<section id="contact">
+<div class="container">
+    <div class="row">
+        <span class="line"></span>
+        <h3 class="header">Say Hello</h3>
+        <span class="line"></span>
+    </div>
+    <div class="row">
+        <div class="col-lg-5" id="send-message">
+            <h3>contact</h3>
+            <form id="contact-form" action="post">
+                <input type="text" class="form-control" id="username" name="username" placeholder="Your name">
+                <input type="text" class="form-control" id="email" name="email" placeholder="Your email">
+                <textarea class="form-control" rows="5" placeholder="Your message"></textarea>
+                <button type="button" class="btn btn-default pull-right btn-lg">Send</button>
+            </form>
+        </div>
+        <div class="col-lg-2" id="social-links">
+        </div>
+        <div class="col-lg-5" id="read-us">
+        </div>
+    </div>
+</div>
 </section>
 <section class="row-spacer">
-    <div></div>
 </section>
 {% endblock %}

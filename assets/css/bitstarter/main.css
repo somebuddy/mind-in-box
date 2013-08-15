@@ -72,11 +72,77 @@ section {
     background-color: rgba(230, 230, 230, 0.8);
 }
 
-#contacts {
+#contact {
     background-color: rgba(0, 0, 0, 0.8);
-    height: 50%;
 }
 
 .row-spacer {
     height: 100px;
+}
+
+/* Contact Section */
+
+#contact .header {
+    text-align: center;
+    font: 24px/36px 'Pathway Gothic One', sans-serif;
+    text-transform: uppercase;
+    color: #DDD;
+    width: 16%;
+    min-width: 150px;
+    float: left;
+}
+
+#contact .line {
+    width: 42%;
+    border-bottom: 1px solid #FFF;
+    height: 40px;
+    float: left;
+}
+
+
+#contact input,
+#contact textarea {
+    margin: 10px auto;
+    line-height: 24px;
+    border: 2px solid rgba(100, 100, 100, 0.8);
+    background-color: rgba(50, 50, 50, 1);
+    border-radius: 2px;
+    color: rgba(230, 230, 230, 1);
+    -webkit-transition: all 0.5s linear;
+    -moz-transition: all 0.5s linear;
+    transition: all 0.5s linear;
+}
+
+#contact input:focus,
+#contact textarea:focus {
+    border: 2px solid #19A2DE;
+    -webkit-box-shadow: 0 0 9px rgba(25, 162, 222, 0.8);
+            box-shadow: 0 0 9px rgba(25, 162, 222, 0.8);
+}
+
+#contact input:hover,
+#contact textarea:hover {
+    border: 2px solid #FE7C22;
+    -webkit-box-shadow: 0 0 9px rgba(254, 124, 34, 0.8);
+            box-shadow: 0 0 9px rgba(254, 124, 34, 0.8);
+}
+
+#contact button {
+    border: none;
+    background-color: #19A2DE;
+    border-radius: 2px;
+    color: white;
+    font-weight: normal;
+}
+
+#contact button:hover {
+    background-color: rgba(30, 172, 242, 1);
+}
+
+#contact input {
+    height: 50px;
+}
+
+#contact textarea {
+    height: 200px;
 }
