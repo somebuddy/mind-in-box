@@ -240,48 +240,74 @@ a:hover > i {
     text-decoration: none;
 }
 
-/* Sandbox section */
+/* Mission */
 
-#sandbox > label {
-    background-color: rgba(247, 215, 8, 0.8);
-    border: 1px solid rgba(247, 215, 8, 1);
+#mission > label {
+    background-color: rgba(147, 42, 182, 0.8);
+    border: 1px solid rgba(147, 42, 182, 1);
     color: white;
     box-shadow: 2px 2px 9px rgba(50, 50, 50, 0.7);
 }
 
-#sandbox h2 {
-    color: rgba(247, 215, 8, 1);
+#mission h2 {
+    color: rgba(147, 42, 182, 0.8);
+}
+
+/* At a glance */
+
+#at-glance > label {
+    background-color: rgba(140, 190, 41, 0.8);
+    border: 1px solid rgba(140, 190, 41, 1);
+    color: white;
+    box-shadow: 2px 2px 9px rgba(50, 50, 50, 0.7);
+}
+
+#at-glance h2 {
+    color: rgba(140, 190, 41, 0.8);
+}
+
+/* Features */
+
+#features > label {
+    background-color: rgba(224, 0, 0, 0.8);
+    border: 1px solid rgba(224, 0, 0, 1);
+    color: white;
+    box-shadow: 2px 2px 9px rgba(50, 50, 50, 0.7);
+}
+
+#features h2 {
+    color: rgba(224, 0, 0, 0.8);
 }
 
 /* Source code section */
 
 #source-code > label {
+    background-color: rgba(25, 162, 222, 0.8);
+    border: 1px solid rgba(25, 162, 222, 1);
+    color: white;
+    box-shadow: 2px 2px 9px rgba(50, 50, 50, 0.7);
+}
+
+#source-code h2 {
+    color: rgba(25, 162, 222, 0.8);
+}
+
+/* Mobile section */
+
+#mobile > label {
     background-color: rgba(44, 103, 0, 0.8);
     border: 1px solid rgba(44, 103, 0, 1);
     color: white;
     box-shadow: 2px 2px 9px rgba(50, 50, 50, 0.7);
 }
 
-#source-code h2 {
-    color: rgba(44, 103, 0, 0.8);
-}
-
-/* Mobile section */
-
-#mobile > label {
-    background-color: rgba(183, 26, 26, 0.8);
-    border: 1px solid rgba(183, 26, 26, 1);
-    color: white;
-    box-shadow: 2px 2px 9px rgba(50, 50, 50, 0.7);
-}
-
 #mobile h2 {
-    color: rgba(183, 26, 26, 0.8);
+    color: rgba(44, 103, 0, 0.8);
 }
 
 #mobile .platforms {
     position: absolute;
-    bottom: 50px;
+    bottom: 150px;
     width: 100%;
     color: rgba(200, 200, 200, 1);
 }
@@ -296,6 +322,19 @@ a:hover > i {
 
 .platforms .icon-apple:hover {
     color: rgba(10, 10, 10, 1);
+}
+
+/* Sandbox section */
+
+#sandbox > label {
+    background-color: rgba(254, 124, 34, 0.8);
+    border: 1px solid rgba(254, 124, 34, 1);
+    color: white;
+    box-shadow: 2px 2px 9px rgba(50, 50, 50, 0.7);
+}
+
+#sandbox h2 {
+    color: rgba(254, 124, 34, 1);
 }
 
 /* Roadmap */
