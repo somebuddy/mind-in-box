@@ -76,7 +76,7 @@ section {
 
 section > label {
     position: absolute; 
-    top: 70px;
+    top: 20px;
     left: -1px;
     width: 25%;
     height: 50px;
@@ -100,6 +100,46 @@ section > label {
     background-color: rgba(230, 230, 230, 0.8);
 }
 
+.row-spacer {
+    height: 100px;
+}
+
+section ul.feature-details {
+    margin-top: 50px;
+    font-size: 20px;
+    color: #333;
+    font-weight: 300;
+}
+
+ul.feature-details > li {
+    margin-top: 20px;
+}
+
+section .feature-picture {
+    margin: 70px auto;
+}
+
+section .feature-picture i {
+    margin: 25px;
+    color: rgba(200, 200, 200, 1);
+}
+
+section h2:first-child {
+    margin-top: 40px;
+}
+
+section h2:last-child {
+    margin-bottom: 80px;
+}
+
+section h2 {
+    font-size: 36px;
+    font-weight: 300;
+    text-align: center;
+}
+
+/* Contact Section */
+
 #contact {
     background-color: rgba(0, 0, 0, 0.8);
 }
@@ -110,12 +150,6 @@ section > label {
     color: white;
     box-shadow: 2px 2px 9px rgba(50, 50, 50, 0.7);
 }
-
-.row-spacer {
-    height: 100px;
-}
-
-/* Contact Section */
 
 #contact .subheader {
     font-size: 24px;
@@ -197,10 +231,71 @@ section > label {
     font-size: 96px;
 }
 
-a {
+a > i {
     color: white;
 }
 
-a:hover {
+a:hover > i {
     color: rgba(254, 124, 34, 1);
+    text-decoration: none;
 }
+
+/* Sandbox section */
+
+#sandbox > label {
+    background-color: rgba(247, 215, 8, 0.8);
+    border: 1px solid rgba(247, 215, 8, 1);
+    color: white;
+    box-shadow: 2px 2px 9px rgba(50, 50, 50, 0.7);
+}
+
+#sandbox h2 {
+    color: rgba(247, 215, 8, 1);
+}
+
+/* Source code section */
+
+#source-code > label {
+    background-color: rgba(44, 103, 0, 0.8);
+    border: 1px solid rgba(44, 103, 0, 1);
+    color: white;
+    box-shadow: 2px 2px 9px rgba(50, 50, 50, 0.7);
+}
+
+#source-code h2 {
+    color: rgba(44, 103, 0, 0.8);
+}
+
+/* Mobile section */
+
+#mobile > label {
+    background-color: rgba(183, 26, 26, 0.8);
+    border: 1px solid rgba(183, 26, 26, 1);
+    color: white;
+    box-shadow: 2px 2px 9px rgba(50, 50, 50, 0.7);
+}
+
+#mobile h2 {
+    color: rgba(183, 26, 26, 0.8);
+}
+
+#mobile .platforms {
+    position: absolute;
+    bottom: 50px;
+    width: 100%;
+    color: rgba(200, 200, 200, 1);
+}
+
+.platforms .icon-html5:hover {
+    color: rgba(183, 26, 26, 1);
+}
+
+.platforms .icon-android:hover {
+    color: rgba(140, 190, 41, 1);
+}
+
+.platforms .icon-apple:hover {
+    color: rgba(10, 10, 10, 1);
+}
+
+/* Roadmap */
