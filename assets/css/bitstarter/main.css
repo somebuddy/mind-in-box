@@ -16,6 +16,19 @@ html {
 
 body {
     background-color: rgba(0, 0, 0, 0.2);
+    font-family: 'Roboto', 'Open Sans';
+}
+
+/* Default font */
+body,
+p,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+    font-family: 'Roboto', 'Open Sans';
 }
 
 /* Menu */
@@ -55,10 +68,25 @@ body {
 /* Sections */
 
 section {
+    position: relative;
     height: 100%;
     width: 100%;
     padding-top: 50px;
 }
+
+section > label {
+    position: absolute; 
+    top: 70px;
+    left: -1px;
+    width: 25%;
+    height: 50px;
+    padding-right: 30px;
+    padding-top: 5px;
+    text-align: right;
+    font: 24px/36px 'Pathway Gothic One', sans-serif;
+    text-transform: uppercase;
+}
+
 
 #dashboard {
     background-color: rgba(0, 0, 0, 0);
@@ -76,20 +104,26 @@ section {
     background-color: rgba(0, 0, 0, 0.8);
 }
 
+#contact > label {
+    background-color: rgba(0, 0, 0, 0.7);
+    border: 1px solid rgba(30, 30, 30, 1);
+    color: white;
+    box-shadow: 2px 2px 9px rgba(50, 50, 50, 0.7);
+}
+
 .row-spacer {
     height: 100px;
 }
 
 /* Contact Section */
 
-#contact .header {
-    text-align: center;
-    font: 24px/36px 'Pathway Gothic One', sans-serif;
-    text-transform: uppercase;
-    color: #DDD;
-    width: 16%;
-    min-width: 150px;
-    float: left;
+#contact .subheader {
+    font-size: 24px;
+    font-weight: 100;
+    color: white;
+    text-align: right;
+    margin-bottom: 40px;
+    margin-top: 30px;
 }
 
 #contact .line {
@@ -99,18 +133,26 @@ section {
     float: left;
 }
 
-
 #contact input,
 #contact textarea {
     margin: 10px auto;
     line-height: 24px;
     border: 2px solid rgba(100, 100, 100, 0.8);
-    background-color: rgba(50, 50, 50, 1);
     border-radius: 2px;
+    background-color: rgba(50, 50, 50, 1);
+    font: 18px/24px 'Roboto';
     color: rgba(230, 230, 230, 1);
     -webkit-transition: all 0.5s linear;
     -moz-transition: all 0.5s linear;
     transition: all 0.5s linear;
+}
+
+#contact input {
+    height: 50px;
+}
+
+#contact textarea {
+    height: 200px;
 }
 
 #contact input:focus,
@@ -139,10 +181,26 @@ section {
     background-color: rgba(30, 172, 242, 1);
 }
 
-#contact input {
-    height: 50px;
+#social-links .subheader {
+    text-align: center;
 }
 
-#contact textarea {
-    height: 200px;
+#social-link {
+    text-align: center;
+}
+
+#social-links i {
+    text-align: center;
+    display: block;
+    margin-top: 20px;
+    margin-bottom: 20px;
+    font-size: 96px;
+}
+
+a {
+    color: white;
+}
+
+a:hover {
+    color: rgba(254, 124, 34, 1);
 }
