@@ -138,6 +138,130 @@ section h2 {
     text-align: center;
 }
 
+/* Mission */
+
+#mission > label {
+    background-color: rgba(147, 42, 182, 0.8);
+    border: 1px solid rgba(147, 42, 182, 1);
+    color: white;
+    box-shadow: 2px 2px 9px rgba(50, 50, 50, 0.7);
+}
+
+#mission h2 {
+    color: rgba(147, 42, 182, 0.8);
+}
+
+#mission .subheader {
+    font-size: 24px;
+    font-weight: 300;
+    color: #333;
+    text-align: center;
+    margin-bottom: 40px;
+    margin-top: 30px;
+}
+
+#mission .footer-icons {
+    margin-top: 40px;
+    color: rgba(147, 42, 182, 1);
+    text-align: center;
+}
+
+/* At a glance */
+
+#at-glance > label {
+    background-color: rgba(140, 190, 41, 0.8);
+    border: 1px solid rgba(140, 190, 41, 1);
+    color: white;
+    box-shadow: 2px 2px 9px rgba(50, 50, 50, 0.7);
+}
+
+#at-glance h2 {
+    color: rgba(140, 190, 41, 0.8);
+}
+
+/* Features */
+
+#features > label {
+    background-color: rgba(224, 0, 0, 0.8);
+    border: 1px solid rgba(224, 0, 0, 1);
+    color: white;
+    box-shadow: 2px 2px 9px rgba(50, 50, 50, 0.7);
+}
+
+#features h2 {
+    color: rgba(224, 0, 0, 0.8);
+}
+
+/* Source code section */
+
+#source-code > label {
+    background-color: rgba(25, 162, 222, 0.8);
+    border: 1px solid rgba(25, 162, 222, 1);
+    color: white;
+    box-shadow: 2px 2px 9px rgba(50, 50, 50, 0.7);
+}
+
+#source-code h2 {
+    color: rgba(25, 162, 222, 0.8);
+}
+
+/* Mobile section */
+
+#mobile > label {
+    background-color: rgba(44, 103, 0, 0.8);
+    border: 1px solid rgba(44, 103, 0, 1);
+    color: white;
+    box-shadow: 2px 2px 9px rgba(50, 50, 50, 0.7);
+}
+
+#mobile h2 {
+    color: rgba(44, 103, 0, 0.8);
+}
+
+#mobile .platforms {
+    margin-top: 80px;
+    width: 100%;
+    color: rgba(200, 200, 200, 1);
+}
+
+.platforms .icon-html5:hover {
+    color: rgba(183, 26, 26, 1);
+}
+
+.platforms .icon-android:hover {
+    color: rgba(140, 190, 41, 1);
+}
+
+.platforms .icon-apple:hover {
+    color: rgba(10, 10, 10, 1);
+}
+
+/* Sandbox section */
+
+#sandbox > label {
+    background-color: rgba(254, 124, 34, 0.8);
+    border: 1px solid rgba(254, 124, 34, 1);
+    color: white;
+    box-shadow: 2px 2px 9px rgba(50, 50, 50, 0.7);
+}
+
+#sandbox h2 {
+    color: rgba(254, 124, 34, 1);
+}
+
+/* Roadmap */
+
+#roadmap > label {
+    background-color: rgba(51, 51, 51, 0.8);
+    border: 1px solid rgba(51, 51, 51, 1);
+    color: white;
+    box-shadow: 2px 2px 9px rgba(50, 50, 50, 0.7);
+}
+
+#roadmap h2 {
+    color: rgba(51, 51, 51, 0.8);
+}
+
 /* Contact Section */
 
 #contact {
@@ -238,115 +362,5 @@ a > i {
 a:hover > i {
     color: rgba(254, 124, 34, 1);
     text-decoration: none;
-}
-
-/* Mission */
-
-#mission > label {
-    background-color: rgba(147, 42, 182, 0.8);
-    border: 1px solid rgba(147, 42, 182, 1);
-    color: white;
-    box-shadow: 2px 2px 9px rgba(50, 50, 50, 0.7);
-}
-
-#mission h2 {
-    color: rgba(147, 42, 182, 0.8);
-}
-
-/* At a glance */
-
-#at-glance > label {
-    background-color: rgba(140, 190, 41, 0.8);
-    border: 1px solid rgba(140, 190, 41, 1);
-    color: white;
-    box-shadow: 2px 2px 9px rgba(50, 50, 50, 0.7);
-}
-
-#at-glance h2 {
-    color: rgba(140, 190, 41, 0.8);
-}
-
-/* Features */
-
-#features > label {
-    background-color: rgba(224, 0, 0, 0.8);
-    border: 1px solid rgba(224, 0, 0, 1);
-    color: white;
-    box-shadow: 2px 2px 9px rgba(50, 50, 50, 0.7);
-}
-
-#features h2 {
-    color: rgba(224, 0, 0, 0.8);
-}
-
-/* Source code section */
-
-#source-code > label {
-    background-color: rgba(25, 162, 222, 0.8);
-    border: 1px solid rgba(25, 162, 222, 1);
-    color: white;
-    box-shadow: 2px 2px 9px rgba(50, 50, 50, 0.7);
-}
-
-#source-code h2 {
-    color: rgba(25, 162, 222, 0.8);
-}
-
-/* Mobile section */
-
-#mobile > label {
-    background-color: rgba(44, 103, 0, 0.8);
-    border: 1px solid rgba(44, 103, 0, 1);
-    color: white;
-    box-shadow: 2px 2px 9px rgba(50, 50, 50, 0.7);
-}
-
-#mobile h2 {
-    color: rgba(44, 103, 0, 0.8);
-}
-
-#mobile .platforms {
-    position: absolute;
-    bottom: 150px;
-    width: 100%;
-    color: rgba(200, 200, 200, 1);
-}
-
-.platforms .icon-html5:hover {
-    color: rgba(183, 26, 26, 1);
-}
-
-.platforms .icon-android:hover {
-    color: rgba(140, 190, 41, 1);
-}
-
-.platforms .icon-apple:hover {
-    color: rgba(10, 10, 10, 1);
-}
-
-/* Sandbox section */
-
-#sandbox > label {
-    background-color: rgba(254, 124, 34, 0.8);
-    border: 1px solid rgba(254, 124, 34, 1);
-    color: white;
-    box-shadow: 2px 2px 9px rgba(50, 50, 50, 0.7);
-}
-
-#sandbox h2 {
-    color: rgba(254, 124, 34, 1);
-}
-
-/* Roadmap */
-
-#roadmap > label {
-    background-color: rgba(51, 51, 51, 0.8);
-    border: 1px solid rgba(51, 51, 51, 1);
-    color: white;
-    box-shadow: 2px 2px 9px rgba(50, 50, 50, 0.7);
-}
-
-#roadmap h2 {
-    color: rgba(51, 51, 51, 0.8);
 }
 
