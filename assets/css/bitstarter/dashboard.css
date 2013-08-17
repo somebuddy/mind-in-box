@@ -1,0 +1,210 @@
+/* Dashboard and boxes */
+#dashboard {
+    display: table;
+    vertical-align: middle;
+}
+
+#dashboard > div {
+    display: table-cell;
+    vertical-align: middle;
+}
+
+.dashboard {
+    position: relative;
+    width: 985px;
+    height: 425px;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.dashboard > .box-s {
+    width: 130px;
+    height: 40px;
+    overflow: hidden;
+    background-color: rgba(0,0,0,0);
+    -webkit-transition: all 1s ease;
+    -o-transition: all 1s ease;
+    -moz-transition: all 1s ease;
+    transition: all 1s ease;
+}
+
+.dashboard:hover .box-s {
+    width: 130px;
+    height: 130px;
+    -webkit-border-radius: 3px;
+    -moz-border-radius: 3px;
+    border-radius: 3px;
+    -webkit-box-shadow: 0 0 3px #779;
+    -moz-box-shadow: 0 0 3px #779;
+    box-shadow: 0 0 3px #779;
+}
+
+/* Dashboard Grid */
+
+.dashboard > [class*="dash-col-"],
+.dashboard > [class*="dash-row-"] {
+    position: absolute;
+}
+
+/* init positions for boxes */
+.dashboard > .dash-row-1.dash-col-1 {
+    top: 379px;
+    left: 833px;
+}
+
+.dashboard > .dash-row-1.dash-col-2 {
+    top: 148px;
+    left: 756px;
+}
+
+.dashboard > .dash-row-1.dash-col-3 {
+    top: 202px;
+    left: 90px;
+}
+
+.dashboard > .dash-row-1.dash-col-4 {
+    top: 60px;
+    left: 290px;
+}
+
+.dashboard > .dash-row-1.dash-col-5 {
+    top: 188px;
+    left: 642px;
+}
+
+.dashboard > .dash-row-1.dash-col-6 {
+    top: 158px;
+    left: 363px;
+}
+
+.dashboard > .dash-row-1.dash-col-7 {
+    top: 0px;
+    left: 620px;
+}
+
+.dashboard > .dash-row-2.dash-col-1 {
+    top: 247px;
+    left: 335px;
+}
+
+.dashboard > .dash-row-2.dash-col-2 {
+    top: 224px;
+    left: 791px;
+}
+
+.dashboard > .dash-row-2.dash-col-3 {
+    top: 302px;
+    left: 659px;
+}
+
+.dashboard > .dash-row-2.dash-col-4 {
+    top: 237px;
+    left: 231px;
+}
+
+.dashboard > .dash-row-2.dash-col-5 {
+    top: 103px;
+    left: 778px;
+}
+
+.dashboard > .dash-row-2.dash-col-6 {
+    top: 90px;
+    left: 60px;
+}
+
+.dashboard > .dash-row-2.dash-col-7 {
+    top: 5px;
+    left: 125px;
+}
+
+.dashboard > .dash-row-3.dash-col-1 {
+    top: 35px;
+    left: 529px;
+}
+
+.dashboard > .dash-row-3.dash-col-2 {
+    top: 315px;
+    left: 465px;
+}
+
+.dashboard > .dash-row-3.dash-col-3 {
+    top: 387px;
+    left: 90px;
+}
+
+.dashboard > .dash-row-3.dash-col-4 {
+    top: 76px;
+    left: 717px;
+}
+
+.dashboard > .dash-row-3.dash-col-5 {
+    top: 294px;
+    left: 294px;
+}
+
+.dashboard > .dash-row-3.dash-col-6 {
+    top: 7px;
+    left: 225px;
+}
+
+.dashboard > .dash-row-3.dash-col-7 {
+    top: 72px;
+    left: 487px;
+}
+
+/* grid state */
+
+.dashboard:hover > .dash-col-1 {
+    left: 10px;
+}
+
+.dashboard:hover > .dash-col-2 {
+    left: 150px;
+}
+
+.dashboard:hover > .dash-col-3 {
+    left: 290px;
+}
+
+.dashboard:hover > .dash-col-4 {
+    left: 430px;
+}
+
+.dashboard:hover > .dash-col-5 {
+    left: 570px;
+}
+
+.dashboard:hover > .dash-col-6 {
+    left: 710px;
+}
+
+.dashboard:hover > .dash-col-7 {
+    left: 850px;
+}
+
+.dashboard:hover > .dash-row-1 {
+    top: 10px;
+}
+
+.dashboard:hover > .dash-row-2 {
+    top: 150px;
+}
+
+.dashboard:hover > .dash-row-3 {
+    top: 290px;
+}
+
+/*****************
+ *  Boxes Styles *
+ *  ************** */
+
+.box-s {
+    font-family: 'Pathway Gothic One';
+    font-size: 24px;
+    color: #EEA;
+}
+
+
+
+
+
