@@ -588,3 +588,33 @@
     width: 160px;
     margin: 5px auto;
 }
+
+.crowdfunding-footer-arrow {
+    opacity: 0;
+    -webkit-transition: all 1s step-start;
+    -o-transition: all 1s step-start;
+    -moz-transition: all 1s step-start;
+    transition: all 1s step-start;
+    position: absolute;
+    margin-left: 10px;
+    margin-top: 60px;
+    height: 50px;
+    width: 400px;
+    z-index: 1000;
+}
+
+.dashboard:hover .crowdfunding-footer-arrow {
+    opacity: 1;
+    -webkit-transition: all 0.6s step-end;
+    -o-transition: all 0.6s step-end;
+    -moz-transition: all 0.6s step-end;
+    transition: all 0.6s step-end;
+}
+
+.crowdfunding-footer-arrow:hover + .box {
+    background-color: #555;
+    -webkit-box-shadow: 0 0 9px red;
+    -moz-box-shadow: 0 0 9px red;
+    box-shadow: 0 0 9px red;
+}
+
