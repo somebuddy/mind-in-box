@@ -363,8 +363,8 @@
     background-color: rgba(140, 190, 41, 1);
 }
 
-.dashboard:hover .box-purple > .header,
-.dashboard:hover .box-purple > .cover {
+.dashboard:hover .box-light-green > .header,
+.dashboard:hover .box-light-green > .cover {
     color: white;
 }
 
@@ -374,8 +374,8 @@
     background-color: rgba(224, 0, 0, 1);
 }
 
-.dashboard:hover .box-purple > .header,
-.dashboard:hover .box-purple > .cover {
+.dashboard:hover .box-red > .header,
+.dashboard:hover .box-red > .cover {
     color: white;
 }
 
@@ -385,8 +385,8 @@
     background-color: rgba(25, 162, 222, 1);
 }
 
-.dashboard:hover .box-purple > .header,
-.dashboard:hover .box-purple > .cover {
+.dashboard:hover .box-light-blue > .header,
+.dashboard:hover .box-light-blue > .cover {
     color: white;
 }
 
