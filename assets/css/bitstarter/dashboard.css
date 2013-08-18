@@ -106,11 +106,17 @@
 }
 
 .cover > .link {
+    position: absolute;
+    bottom: 3px;
     display: block;
     color: white;
     width: 100%;
     text-align: center;
     margin-top: 20px;
+}
+
+.link:hover i {
+    color: black !important;
 }
 
 /* Dashboard Grid */
