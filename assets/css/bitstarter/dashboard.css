@@ -445,3 +445,14 @@
     color: white;
 }
 
+/* Yellow */
+
+.dashboard:hover .box-yellow {
+    background-color: rgba(247, 215, 8, 1);
+}
+
+.dashboard:hover .box-yellow > .header,
+.dashboard:hover .box-yellow > .cover {
+    color: white;
+}
+
