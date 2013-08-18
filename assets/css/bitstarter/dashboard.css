@@ -401,3 +401,15 @@
     color: white;
 }
 
+/* Orange */
+
+.dashboard:hover .box-orange {
+    background-color: rgba(254, 124, 34, 1);
+}
+
+.dashboard:hover .box-orange > .header,
+.dashboard:hover .box-orange > .cover {
+    color: white;
+}
+
+
