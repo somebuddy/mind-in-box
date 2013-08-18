@@ -10,6 +10,7 @@
 }
 
 .dashboard {
+    margin-top: -70px;
     position: relative;
     width: 985px;
     height: 425px;
@@ -37,6 +38,71 @@
     -webkit-box-shadow: 0 0 3px #779;
     -moz-box-shadow: 0 0 3px #779;
     box-shadow: 0 0 3px #779;
+}
+
+.dashboard:hover .box-s:hover {
+    -webkit-box-shadow:0 0 9px #000;
+    -moz-box-shadow:0 0 9px #000;
+    box-shadow:0 0 9px #000;
+}
+
+/* Box content */
+.box-s > .header {
+    text-align: center;
+    -webkit-transition: all 1s ease;
+    -o-transition: all 1s ease;
+    -moz-transition: all 1s ease;
+    transition: all 1s ease;
+}
+
+.dashboard:hover > .box-s > .header {
+    padding: 4px 5px;
+    text-align: left;
+}
+
+.box-s > .cover,
+.box-s > .back,
+.box-s > .footer {
+    padding: 5px;
+}
+
+.box-s > .cover,
+.box-s > .back,
+.box-s > .footer {
+    opacity: 0;
+}
+
+.dashboard:hover .box-s > .cover,
+.dashboard:hover .box-s > .footer {
+    opacity: 1;
+}
+
+.box-s > .back {
+    top: 0px;
+    height: 0px;
+    position: absolute;
+    width: 100%;
+    padding: 5px;
+    background-color: rgba(255, 255, 255, 0.9);
+    -webkit-transition: all 0.5s ease;
+    -o-transition: all 0.5s ease;
+    -moz-transition: all 0.5s ease;
+    transition: all 0.5s ease;
+    opacity: 0;
+}
+
+.box-s:hover > .back {
+    height: 130px;
+    opacity: 1;
+}
+    
+.box-s > .back > p {
+    margin-top: 5px;
+    margin-bottom: 0px;
+}
+
+.box-s > .back > p:first-child {
+    margin-top: 0px;
 }
 
 /* Dashboard Grid */
@@ -83,8 +149,8 @@
 }
 
 .dashboard > .dash-row-2.dash-col-1 {
-    top: 247px;
-    left: 335px;
+    top: 145px;
+    left: 360px;
 }
 
 .dashboard > .dash-row-2.dash-col-2 {
@@ -194,17 +260,101 @@
     top: 290px;
 }
 
+/* LOGO */
+.box-s.logo,
+.dashboard:hover > .box-s.logo {
+    padding-top: 20px;
+    width: 270px;
+    height: 130px;
+    -webkit-transition: all 2s ease;
+    -o-transition: all 2s ease;
+    -moz-transition: all 2s ease;
+    transition: all 2s ease;
+}
+
+.box-s.logo,
+.dashboard:hover > .box-s.logo,
+.box-s.logo:hover {
+    border: none;
+    -moz-box-shadow: none;
+    -o-box-shadow: none;
+    -webkit-box-shadow: none;
+    box-shadow: none;
+}
+
 /*****************
  *  Boxes Styles *
  *  ************** */
 
-.box-s {
-    font-family: 'Pathway Gothic One';
-    font-size: 24px;
-    color: #EEA;
+/* Box typography */
+.box-s.logo {
+    font: bold 64px/72px 'Pathway Gothic One', sans-serif;
+    text-align: center;
+    text-shadow: 1px 1px 2px black;
 }
 
+.box-s > .header {
+    font: 26px/30px 'Pathway Gothic One';
+}
 
+.box-s > .cover {
+    font: 14px/16px 'Roboto', sans-serif;
+}
 
+.box-s > .back,
+.box-s > .footer {
+    font: 12px/14px 'Roboto', sans-serif;
+}
+
+.box-s > .back > .attention {
+    font: bold 14px/14px 'Roboto', sans-serif;
+}
+
+/* Box colors */
+.dashboard .box-s {
+    background-color: rgba(0,0,0,0);
+}
+
+.dashboard:hover .box-s {
+    background-color: white;
+    color: black;
+}
+
+.box-s.logo {
+    background-color: rgba(0,0,0,0);
+    color: white;
+}
+
+.dashboard:hover > .box-s.logo {
+    color: rgba(254, 124, 34, 1);
+    background-color: rgba(0,0,0,0);
+}
+
+.box-s > .header {
+    color: rgba(238, 238, 170, 1);
+}
+
+.dashboard:hover .box-s > .header {
+    color: rgba(109, 110, 113, 1);
+}
+
+.box-s > .back {
+    color: black;
+}
+
+.box-s > .back > .attention {
+    color: rgba(221, 85, 85, 1);
+}
+
+/* Purple */
+
+.dashboard:hover .box-purple {
+    background-color: rgba(147, 42, 182, 1);
+}
+
+.dashboard:hover .box-purple > .header,
+.dashboard:hover .box-purple > .cover {
+    color: white;
+}
 
 
