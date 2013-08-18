@@ -478,3 +478,14 @@
     color: white;
 }
 
+/* Brown */
+
+.dashboard:hover .box-brown {
+    background-color: rgba(198, 69, 33, 1);
+}
+
+.dashboard:hover .box-brown > .header,
+.dashboard:hover .box-brown > .cover {
+    color: white;
+}
+
