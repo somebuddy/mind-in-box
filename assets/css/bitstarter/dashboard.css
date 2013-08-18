@@ -456,3 +456,14 @@
     color: white;
 }
 
+/* Dark-blue */
+
+.dashboard:hover .box-dark-blue {
+    background-color: rgba(31, 0, 104, 1);
+}
+
+.dashboard:hover .box-dark-blue > .header,
+.dashboard:hover .box-dark-blue > .cover {
+    color: white;
+}
+
