@@ -379,4 +379,14 @@
     color: white;
 }
 
+/* Light-blue */
+
+.dashboard:hover .box-light-blue {
+    background-color: rgba(25, 162, 222, 1);
+}
+
+.dashboard:hover .box-purple > .header,
+.dashboard:hover .box-purple > .cover {
+    color: white;
+}
 
