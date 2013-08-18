@@ -423,4 +423,14 @@
     color: white;
 }
 
+/* Dark-red */
+
+.dashboard:hover .box-dark-red {
+    background-color: rgba(183, 26, 26, 1);
+}
+
+.dashboard:hover .box-dark-red > .header,
+.dashboard:hover .box-dark-red > .cover {
+    color: white;
+}
 
