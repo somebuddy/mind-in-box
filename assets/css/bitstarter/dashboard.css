@@ -357,4 +357,15 @@
     color: white;
 }
 
+/* Light-green */
+
+.dashboard:hover .box-light-green {
+    background-color: rgba(140, 190, 41, 1);
+}
+
+.dashboard:hover .box-purple > .header,
+.dashboard:hover .box-purple > .cover {
+    color: white;
+}
+
 
