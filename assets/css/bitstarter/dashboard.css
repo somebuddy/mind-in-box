@@ -572,4 +572,19 @@
     background-color: #F7D708;
 }
 
+@media (min-width: 980px){
+    .linediv-l {
+        border-right: 1px black solid;
+    }
+}
 
+@media (max-width: 480px) {
+    .linediv-l {
+        border-top: 1px black solid;
+    }
+}
+
+.donate-button {
+    width: 160px;
+    margin: 5px auto;
+}
