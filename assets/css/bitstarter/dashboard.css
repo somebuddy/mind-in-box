@@ -390,3 +390,14 @@
     color: white;
 }
 
+/* Green */
+
+.dashboard:hover .box-green {
+    background-color: rgba(44, 103, 0, 1);
+}
+
+.dashboard:hover .box-green > .header,
+.dashboard:hover .box-green > .cover {
+    color: white;
+}
+
