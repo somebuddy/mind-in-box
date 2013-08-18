@@ -434,3 +434,14 @@
     color: white;
 }
 
+/* Light-gray */
+
+.dashboard:hover .box-light-gray {
+    background-color: rgba(177, 177, 177, 1);
+}
+
+.dashboard:hover .box-light-gray > .header,
+.dashboard:hover .box-light-gray > .cover {
+    color: white;
+}
+
