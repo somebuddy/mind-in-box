@@ -35,6 +35,11 @@ h6 {
     text-align: center;
 }
 
+.anchor-marker {
+    position: absolute;
+    top: -50px;
+}
+
 /* Menu */
 
 .navbar {
