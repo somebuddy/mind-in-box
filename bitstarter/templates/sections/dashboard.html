@@ -45,13 +45,37 @@
                     <p> We work hard to finish it as soon as possible</p>
                 </div>
             </div>
-            <div class="box box-x3 dash-col-4 dash-row-1 box-white box-crowdfunding">
-                <div class="header">Crowdfunding</div>
-                <div class="cover">Cover of Text Box</div>
-                <div class="back">
-                    <p class="attention">Beware of falling boxes!</p>
-                    <p> Sorry, this site part isn't ready yet</p>
-                    <p> We work hard to finish it as soon as possible</p>
+            <div class="box box-x3 dash-col-4 dash-row-1 box-whit" id="crowdfunding-box">
+                <div class="header">
+                    <p>Crowdfunding</p>
+                    <p class="header-comment">Everyone can help</p>
+                </div>
+                <div class="cover">
+                    <div class="row center">
+                        <div class="col-lg-10 col-lg-offset-1"> 
+                            <div class="row statistics">
+                                <div class="col-6 linediv-l">
+                                    <h3>0</h3><p>backers</p>
+                                </div>
+                                <div class="col-6">
+                                    <div class="linediv-c">
+                                        <h3>${{ current_account }}</h3><p>of $300,000</p>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="row">
+                               <div class="thermometer progress active">
+                                 <div class="progress-bar progress-bar-success" style="width: 10%;"></div>
+                                 <div class="progress-bar progress-bar-warning" style="width: 90%;"></div>
+                               </div>
+                            </div>
+                            <div class="row statistics">
+                               <div class="col-12">
+                                 <h4>{{ start_date|timeuntil }} left</h4>
+                               </div>
+                            </div>
+                        </div>
+                    </div>
                 </div>
             </div>
             <div class="box box-s dash-col-3 dash-row-2 box-light-blue">

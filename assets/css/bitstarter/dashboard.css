@@ -20,7 +20,7 @@
 
 .dashboard > .box {
     width: 130px;
-    height: 40px;
+    height: 35px;
     overflow: hidden;
     background-color: rgba(0,0,0,0);
     -webkit-transition: all 1s ease;
@@ -320,7 +320,8 @@
     text-shadow: 1px 1px 2px black;
 }
 
-.box > .header {
+.box > .header,
+.box > .header > *:first-child {
     font: 26px/30px 'Pathway Gothic One';
 }
 
@@ -525,6 +526,50 @@
 .dashboard:hover .box-white > .header,
 .dashboard:hover .box-white > .cover {
     color: #333;
+}
+
+/* ----------------------------------------
+ *  Special Boxes
+ *  -------------------------------------- */
+
+/* #cowdfunding-box */
+
+.dashboard:hover #crowdfunding-box > .header {
+    height: 60px;
+    color: white;
+    background-color: black;
+}
+
+.header-comment {
+    font: bold small-caps 14px/10px 'Roboto', sans-serif;
+    color: #AAA;
+}
+
+.statistics p {
+    font: normal 16px/18px 'Roboto', sans-serif;
+    margin-bottom: 2px;
+}
+
+.statistics h3,
+.statistics h4,
+.statistics h5 {
+    margin-top: 5px;
+    margin-bottom: 5px;
+    color: #555;
+    font-weight: bold;
+}
+
+.progress {
+    margin-top: 10px;
+    margin-bottom: 5px;
+}
+
+.progress-bar-success {
+    background-color: #8CBE29;
+}
+
+.progress-bar-warning {
+    background-color: #F7D708;
 }
 
 

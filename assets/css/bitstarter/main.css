@@ -31,6 +31,10 @@ h6 {
     font-family: 'Roboto', 'Open Sans';
 }
 
+.center {
+    text-align: center;
+}
+
 /* Menu */
 
 .navbar {
