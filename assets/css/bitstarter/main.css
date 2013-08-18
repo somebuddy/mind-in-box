@@ -113,13 +113,15 @@ section > label {
     height: 100px;
 }
 
-section ul.feature-details {
+section ul.feature-details,
+section ol.feature-details {
     margin-top: 50px;
     font-size: 20px;
     color: #333;
     font-weight: 300;
 }
 
+ol.feature-details > li,
 ul.feature-details > li {
     margin-top: 20px;
 }
