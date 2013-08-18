@@ -105,6 +105,14 @@
     margin-top: 0px;
 }
 
+.cover > .link {
+    display: block;
+    color: white;
+    width: 100%;
+    text-align: center;
+    margin-top: 20px;
+}
+
 /* Dashboard Grid */
 
 .dashboard > [class*="dash-col-"],
