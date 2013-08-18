@@ -18,7 +18,7 @@
     margin-right: auto;
 }
 
-.dashboard > .box-s {
+.dashboard > .box {
     width: 130px;
     height: 40px;
     overflow: hidden;
@@ -29,9 +29,7 @@
     transition: all 1s ease;
 }
 
-.dashboard:hover .box-s {
-    width: 130px;
-    height: 130px;
+.dashboard:hover .box {
     -webkit-border-radius: 3px;
     -moz-border-radius: 3px;
     border-radius: 3px;
@@ -40,14 +38,24 @@
     box-shadow: 0 0 3px #779;
 }
 
-.dashboard:hover .box-s:hover {
+.dashboard:hover .box:hover {
     -webkit-box-shadow:0 0 9px #000;
     -moz-box-shadow:0 0 9px #000;
     box-shadow:0 0 9px #000;
 }
 
+.dashboard:hover .box-s {
+    width: 130px;
+    height: 130px;
+}
+
+.dashboard:hover .box-x3 {
+    width: 410px;
+    height: 410px;
+}
+
 /* Box content */
-.box-s > .header {
+.box > .header {
     text-align: center;
     -webkit-transition: all 1s ease;
     -o-transition: all 1s ease;
@@ -55,29 +63,29 @@
     transition: all 1s ease;
 }
 
-.dashboard:hover > .box-s > .header {
+.dashboard:hover > .box > .header {
     padding: 4px 5px;
     text-align: left;
 }
 
-.box-s > .cover,
-.box-s > .back,
-.box-s > .footer {
+.box > .cover,
+.box > .back,
+.box > .footer {
     padding: 5px;
 }
 
-.box-s > .cover,
-.box-s > .back,
-.box-s > .footer {
+.box > .cover,
+.box > .back,
+.box > .footer {
     opacity: 0;
 }
 
-.dashboard:hover .box-s > .cover,
-.dashboard:hover .box-s > .footer {
+.dashboard:hover .box > .cover,
+.dashboard:hover .box > .footer {
     opacity: 1;
 }
 
-.box-s > .back {
+.box > .back {
     top: 0px;
     height: 0px;
     position: absolute;
@@ -96,12 +104,17 @@
     opacity: 1;
 }
     
-.box-s > .back > p {
+.box-x3:hover > .back {
+    height: 410px;
+    opacity: 1;
+}
+    
+.box > .back > p {
     margin-top: 5px;
     margin-bottom: 0px;
 }
 
-.box-s > .back > p:first-child {
+.box > .back > p:first-child {
     margin-top: 0px;
 }
 
@@ -275,8 +288,8 @@
 }
 
 /* LOGO */
-.box-s.logo,
-.dashboard:hover > .box-s.logo {
+.box.logo,
+.dashboard:hover > .box.logo {
     padding-top: 20px;
     width: 270px;
     height: 130px;
@@ -286,9 +299,9 @@
     transition: all 2s ease;
 }
 
-.box-s.logo,
-.dashboard:hover > .box-s.logo,
-.box-s.logo:hover {
+.box.logo,
+.dashboard:hover > .box.logo,
+.box.logo:hover {
     border: none;
     -moz-box-shadow: none;
     -o-box-shadow: none;
@@ -301,62 +314,62 @@
  *  ************** */
 
 /* Box typography */
-.box-s.logo {
+.box.logo {
     font: bold 64px/72px 'Pathway Gothic One', sans-serif;
     text-align: center;
     text-shadow: 1px 1px 2px black;
 }
 
-.box-s > .header {
+.box > .header {
     font: 26px/30px 'Pathway Gothic One';
 }
 
-.box-s > .cover {
+.box > .cover {
     font: 14px/16px 'Roboto', sans-serif;
 }
 
-.box-s > .back,
-.box-s > .footer {
+.box > .back,
+.box > .footer {
     font: 12px/14px 'Roboto', sans-serif;
 }
 
-.box-s > .back > .attention {
+.box > .back > .attention {
     font: bold 14px/14px 'Roboto', sans-serif;
 }
 
 /* Box colors */
-.dashboard .box-s {
+.dashboard .box {
     background-color: rgba(0,0,0,0);
 }
 
-.dashboard:hover .box-s {
+.dashboard:hover .box {
     background-color: white;
     color: black;
 }
 
-.box-s.logo {
+.box.logo {
     background-color: rgba(0,0,0,0);
     color: white;
 }
 
-.dashboard:hover > .box-s.logo {
+.dashboard:hover > .box.logo {
     color: rgba(254, 124, 34, 1);
     background-color: rgba(0,0,0,0);
 }
 
-.box-s > .header {
+.box > .header {
     color: rgba(238, 238, 170, 1);
 }
 
-.dashboard:hover .box-s > .header {
+.dashboard:hover .box > .header {
     color: rgba(109, 110, 113, 1);
 }
 
-.box-s > .back {
+.box > .back {
     color: black;
 }
 
-.box-s > .back > .attention {
+.box > .back > .attention {
     color: rgba(221, 85, 85, 1);
 }
 
