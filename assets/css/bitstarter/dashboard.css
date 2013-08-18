@@ -412,4 +412,15 @@
     color: white;
 }
 
+/* Dark-gray */
+
+.dashboard:hover .box-dark-gray {
+    background-color: rgba(51, 51, 51, 1);
+}
+
+.dashboard:hover .box-dark-gray > .header,
+.dashboard:hover .box-dark-gray > .cover {
+    color: white;
+}
+
 
