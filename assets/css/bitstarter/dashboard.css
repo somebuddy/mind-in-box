@@ -368,4 +368,15 @@
     color: white;
 }
 
+/* Red */
+
+.dashboard:hover .box-red {
+    background-color: rgba(224, 0, 0, 1);
+}
+
+.dashboard:hover .box-purple > .header,
+.dashboard:hover .box-purple > .cover {
+    color: white;
+}
+
 
