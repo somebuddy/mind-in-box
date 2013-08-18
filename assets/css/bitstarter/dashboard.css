@@ -516,3 +516,15 @@
     color: white;
 }
 
+/* White */
+
+.dashboard:hover .box-white {
+    background-color: rgba(255, 255, 255, 1);
+}
+
+.dashboard:hover .box-white > .header,
+.dashboard:hover .box-white > .cover {
+    color: #333;
+}
+
+
