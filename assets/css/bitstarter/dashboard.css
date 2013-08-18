@@ -467,3 +467,14 @@
     color: white;
 }
 
+/* Magenta */
+
+.dashboard:hover .box-magenta {
+    background-color: rgba(173, 0, 102, 1);
+}
+
+.dashboard:hover .box-magenta > .header,
+.dashboard:hover .box-magenta > .cover {
+    color: white;
+}
+
