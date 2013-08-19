@@ -37,7 +37,16 @@ class CoinbaseWallet(object):
 
     @staticmethod
     def orders():
-        return CoinbaseWallet.get_json_data('orders')
+        orders = CoinbaseWallet.get_json_data('orders')['orders']
+        orders_list = []
+        for x in orders:
+            if x['status'] == 'completed':
+                orders_list.append([x['id'], int(x['total_btc']['cents'])/100000000.0, x['created_at']])
+        return orders_list
+
+    @staticmethod
+    def get_orders_count():
+        return len(CoinbaseWallet.orders()) 
 
     @staticmethod
     def sell(count):
@@ -46,11 +55,11 @@ class CoinbaseWallet(object):
     @staticmethod
     def get_total_USD():
         balance = CoinbaseWallet.balance()
-        raise Exception(balance)
+        for k, x in balance.items():
+            print(k)
         total = 0.0
-        for x in balance:
-            if x['currency'] == 'BTC':
-                x = CoinbaseWallet.sell(x['amount'])['total']
-            if x['currency'] == 'USD':
-                total += float(x['amount'])
-        return total
+        if balance['currency'] == 'BTC':
+            balance = CoinbaseWallet.sell(balance['amount'])['total']
+        if balance['currency'] == 'USD':
+            total += float(balance['amount'])
+        return max(0, total)
