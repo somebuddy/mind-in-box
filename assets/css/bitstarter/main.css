@@ -164,6 +164,13 @@ section h2 {
     color: #555;
 }
 
+/* Undercontruction */
+.under-construction {
+    padding: 50px;
+    font: lighter 18px/36px 'Roboto', sans-serif;
+    color: rgba(183, 26, 26, 1);
+}
+
 /* Mission */
 
 #mission > label {
