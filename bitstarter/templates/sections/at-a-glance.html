@@ -22,6 +22,17 @@
 
     .carousel-button {
         font: 18px/18px 'Shadows Into Light Two', cursive;
+        position: absolute;
+        bottom: 25px;
+        z-index: 30;
+    }
+
+    .carousel-button.left {
+        left: 30%;
+    }
+        
+    .carousel-button.right {
+        right: 30%;
     }
 </style>
 <section class="section-odd" id="at-glance">
@@ -94,8 +105,8 @@
           </div>
           
           <!-- Controls -->
-          <a class="carousel-button" href="#carousel-what" data-slide="prev"><img src="{{ STATIC_URL }}img/prev-arrow.png" alt="">Less</a>
-          <a class="carousel-button" href="#carousel-what" data-slide="next">More<img src="{{ STATIC_URL }}img/next-arrow.png" alt=""></a>
+          <a class="carousel-button left" href="#carousel-what" data-slide="prev"><img src="{{ STATIC_URL }}img/prev-arrow.png" alt="">Less</a>
+          <a class="carousel-button right" href="#carousel-what" data-slide="next">More<img src="{{ STATIC_URL }}img/next-arrow.png" alt=""></a>
       </div>
         
         <div class="col-lg-6" style="display: none;">
