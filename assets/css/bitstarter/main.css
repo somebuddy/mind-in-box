@@ -118,7 +118,8 @@ section > label {
 }
 
 .row-spacer {
-    height: 100px;
+    padding-top: 10px;
+    min-height: 100px;
 }
 
 section ul.feature-details,
@@ -155,6 +156,12 @@ section h2 {
     font-size: 36px;
     font-weight: 300;
     text-align: center;
+}
+
+/* Copyright */
+.copyright {
+    font-size: 14px;
+    color: #555;
 }
 
 /* Mission */
