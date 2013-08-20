@@ -1,3 +1,4 @@
+<link href='http://fonts.googleapis.com/css?family=Shadows+Into+Light+Two' rel='stylesheet' type='text/css'>
 <style>
     .next-control {
         position: absolute;
@@ -17,6 +18,10 @@
 
     .carousel-indicators .active {
         background-color: rgba(140, 190, 41, 0.3);
+    }
+
+    .carousel-button {
+        font: 18px/18px 'Shadows Into Light Two', cursive;
     }
 </style>
 <section class="section-odd" id="at-glance">
@@ -44,8 +49,8 @@
           <!-- Wrapper for slides -->
           <div class="carousel-inner">
              <div class="item active" style="height: 500px">
-                 <div style="position: absolute; top: 30px; left: 10%; width: 40%">
-                     <h2>Keep all your minds in one place</h2>
+                 <div style="position: absolute; top: 30px; left: 10%; width: 40%; font-family: 'Shadows Into Light Two', cursive;">
+                     <h2 style="font-family: 'Shadows Into Light Two', cursive;">Keep all your minds in one place</h2>
                      <p>Box is good tool to keep ideas, tools, tasks in one place: you can't forget anythings and nothing distract you</p>
                 </div>
                 <div style="position: absolute; bottom: 30px; left: 10%; width: 40%">
@@ -89,8 +94,8 @@
           </div>
           
           <!-- Controls -->
-          <a href="#carousel-what" data-slide="prev"><img src="{{ STATIC_URL }}img/prev-arrow.png" alt="">Less</a>
-          <a href="#carousel-what" data-slide="next">More<img src="{{ STATIC_URL }}img/next-arrow.png" alt=""></a>
+          <a class="carousel-button" href="#carousel-what" data-slide="prev"><img src="{{ STATIC_URL }}img/prev-arrow.png" alt="">Less</a>
+          <a class="carousel-button" href="#carousel-what" data-slide="next">More<img src="{{ STATIC_URL }}img/next-arrow.png" alt=""></a>
       </div>
         
         <div class="col-lg-6" style="display: none;">
