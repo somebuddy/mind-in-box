@@ -1,25 +1,99 @@
+<style>
+    .next-control {
+        position: absolute;
+        bottom: 30px;
+        right: 20px;
+    }
+    .prev-control {
+        position: absolute;
+        bottom: 30px;
+        left: 20px;
+    }
+
+    .carousel-indicators li {
+        border-radius: 0px;
+        border: 2px solid rgba(140, 190, 41, 0.5); 
+    }
+
+    .carousel-indicators .active {
+        background-color: rgba(140, 190, 41, 0.3);
+    }
+</style>
 <section class="section-odd" id="at-glance">
     <div class="anchor-marker" id="at-glance-anchor"></div>
     <label>Mind in Box at a glance</label>
     <div class="container">
+        <h2 class="slogan">What is the box?</h2>
         <div style="margin-top: 50px">
             <p>This section is underconstruction now.</p>
             <p>The full list of features that we plan to provide with our service will be here soon.</p>
         </div>
-        <div class="col-lg-6">
-            <h2 class="slogan">What is the box?</h2>
-            <ul class="icons-ul feature-details">
-                <li><i class="icon-li icon-ok-circle"></i>All minds in one place</li>
-                <li><i class="icon-li icon-ok-circle"></i>Easy way from idea to to-do list</li>
-                <li><i class="icon-li icon-ok-circle"></i>Long way with small steps</li>
-                <li><i class="icon-li icon-ok-circle"></i>Current task focus</li>
-                <li><i class="icon-li icon-ok-circle"></i>Only tools that you need</li>
-                <li><i class="icon-li icon-ok-circle"></i>Global view at big projects</li>
-                <li><i class="icon-li icon-ok-circle"></i>Best tool for small tasks and great ideas</li>
-                <li><i class="icon-li icon-ok-circle"></i>One click transformation:<br> idea-&gt;goal-&gt;project-&gt;product</li>
-            </ul>
-        </div>
-        <div class="col-lg-6">
+        <div id="carousel-what" class="carousel slide">
+          <!-- Indicators -->
+          <ol class="carousel-indicators">
+              <li data-target="#carousel-what" data-slide-to="0" class="active"></li>
+              <li data-target="#carousel-what" data-slide-to="1"></li>
+              <li data-target="#carousel-what" data-slide-to="2"></li>
+              <li data-target="#carousel-what" data-slide-to="3"></li>
+              <li data-target="#carousel-what" data-slide-to="4"></li>
+              <li data-target="#carousel-what" data-slide-to="5"></li>
+              <li data-target="#carousel-what" data-slide-to="6"></li>
+              <li data-target="#carousel-what" data-slide-to="7"></li>
+          </ol>
+          
+          <!-- Wrapper for slides -->
+          <div class="carousel-inner">
+             <div class="item active" style="height: 500px">
+                 <div style="position: absolute; top: 30px; left: 10%; width: 40%">
+                     <h2>Keep all your minds in one place</h2>
+                     <p>Box is good tool to keep ideas, tools, tasks in one place: you can't forget anythings and nothing distract you</p>
+                </div>
+                <div style="position: absolute; bottom: 30px; left: 10%; width: 40%">
+                </div>
+              </div>
+             <div class="item" style="height: 500px">
+                  <div class="carousel-caption">
+                Easy way from idea to to-do list
+                  </div>
+             </div>
+             <div class="item" style="height: 500px">
+                  <div class="carousel-caption">
+                Long way with small steps
+                  </div>
+             </div>
+             <div class="item" style="height: 500px">
+                  <div class="carousel-caption">
+                Current task focus
+                  </div>
+             </div>
+             <div class="item" style="height: 500px">
+                  <div class="carousel-caption">
+                Only tools that you need
+                  </div>
+             </div>
+             <div class="item" style="height: 500px">
+                  <div class="carousel-caption">
+                Global view at big projects
+                  </div>
+             </div>
+             <div class="item" style="height: 500px">
+                  <div class="carousel-caption">
+                Best tool for small tasks and great ideas
+                  </div>
+             </div>
+             <div class="item" style="height: 500px">
+                  <div class="carousel-caption">
+                One click transformation:<br> idea-&gt;goal-&gt;project-&gt;product</li>
+                  </div>
+             </div>
+          </div>
+          
+          <!-- Controls -->
+          <a href="#carousel-what" data-slide="prev"><img src="{{ STATIC_URL }}img/prev-arrow.png" alt="">Less</a>
+          <a href="#carousel-what" data-slide="next">More<img src="{{ STATIC_URL }}img/next-arrow.png" alt=""></a>
+      </div>
+        
+        <div class="col-lg-6" style="display: none;">
             <h2 class="slogan">How it works?</h2>
             <ol class="feature-details">
                 <li>Set the goal</li>
@@ -34,46 +108,3 @@
         </div>
     </div>
 </section>
-<section class="section-odd" style="display: none;">
-    <div class="container">
-        <div id="carousel-example-generic" class="carousel slide">
-          <!-- Indicators -->
-          <ol class="carousel-indicators">
-              <li data-target="#carousel-example-generic" data-slide-to="0" class="active"></li>
-              <li data-target="#carousel-example-generic" data-slide-to="1"></li>
-              <li data-target="#carousel-example-generic" data-slide-to="2"></li>
-          </ol>
-          
-          <!-- Wrapper for slides -->
-          <div class="carousel-inner">
-             <div class="item active" style="height: 500px">
-                 <div style="position: absolute; top: 30px; left: 10%; width: 40%">
-                     <h2>Keep all your minds in one place</h2>
-                </div>
-                <div style="position: absolute; bottom: 30px; left: 10%; width: 40%">
-                    <p>Box is good tool to keep ideas, tools, tasks in one place: you can't forget anythings and nothing distract you</p>
-                </div>
-              </div>
-             <div class="item" style="height: 500px">
-                  <div class="carousel-caption">
-                      Test 2
-                  </div>
-              </div>
-             <div class="item" style="height: 500px">
-                  <div class="carousel-caption">
-                      Test 3
-                  </div>
-              </div>
-          </div>
-          
-          <!-- Controls -->
-          <a class="left carousel-control" href="#carousel-example-generic" data-slide="prev">
-              <span class="icon-prev"></span>
-          </a>
-          <a class="right carousel-control" href="#carousel-example-generic" data-slide="next">
-              <span class="icon-next"></span>
-          </a>
-      </div>
-  </div>
-</section>
-
