@@ -38,6 +38,31 @@
     .carousel-button.right {
         right: 30%;
     }
+
+    .carousel-inner > .item > .header {
+        color: rgba(25, 162, 222, 1);
+        position: absolute;
+        font: 36px/42px 'Shadows Into Light Two', cursive;
+        width: 40%;
+        top: 30px;
+        left: 0;
+        right: 0;
+        margin-left: auto;
+        margin-right: auto;
+        text-align: center;
+    }
+
+    .carousel-inner > .item > .header.left {
+        left: 10%;
+        margin-left: 0;
+    }
+
+    .carousel-inner > .item > .header.right {
+        right: 10%;
+        margin-right: 0;
+    }
+
+
 </style>
 <section class="section-odd" id="at-glance">
     <div class="anchor-marker" id="at-glance-anchor"></div>
@@ -64,45 +89,41 @@
           <!-- Wrapper for slides -->
           <div class="carousel-inner">
              <div class="item active" style="height: 500px">
-                 <div style="position: absolute; top: 30px; left: 10%; width: 40%; font-family: 'Shadows Into Light Two', cursive;">
-                     <h2 style="font-family: 'Shadows Into Light Two', cursive;">Keep all your minds in one place</h2>
-                     <p>Box is good tool to keep ideas, tools, tasks in one place: you can't forget anythings and nothing distract you</p>
-                </div>
-                <div style="position: absolute; bottom: 30px; left: 10%; width: 40%">
-                </div>
-              </div>
+                 <div class="header left">Keep all your minds in one place</div>
+                 <p>Box is good tool to keep ideas, tools, tasks in one place: you can't forget anythings and nothing distract you</p>
+             </div>
              <div class="item" style="height: 500px">
-                  <div class="carousel-caption">
+                  <div class="header right">
                 Easy way from idea to to-do list
                   </div>
              </div>
              <div class="item" style="height: 500px">
-                  <div class="carousel-caption">
+                  <div class="header left">
                 Long way with small steps
                   </div>
              </div>
              <div class="item" style="height: 500px">
-                  <div class="carousel-caption">
+                  <div class="header right">
                 Current task focus
                   </div>
              </div>
              <div class="item" style="height: 500px">
-                  <div class="carousel-caption">
+                  <div class="header left">
                 Only tools that you need
                   </div>
              </div>
              <div class="item" style="height: 500px">
-                  <div class="carousel-caption">
+                  <div class="header right">
                 Global view at big projects
                   </div>
              </div>
              <div class="item" style="height: 500px">
-                  <div class="carousel-caption">
+                  <div class="header left">
                 Best tool for small tasks and great ideas
                   </div>
              </div>
              <div class="item" style="height: 500px">
-                  <div class="carousel-caption">
+                  <div class="header right">
                 One click transformation:<br> idea-&gt;goal-&gt;project-&gt;product</li>
                   </div>
              </div>
