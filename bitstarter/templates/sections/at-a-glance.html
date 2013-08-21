@@ -126,45 +126,45 @@
           <!-- Wrapper for slides -->
           <div class="carousel-inner">
              <div class="item active">
-                 <div class="header left">Keep all your minds in one place</div>
+                 <div class="header left">Keep all your thoughts in one place</div>
                  <div class="comment right">
                      Box is good tool to keep ideas, tools, tasks in one place: you can't forget anythings and nothing distract you
                  </div>
                  <img class="image left" src="http://placehold.it/400x240/ffffff">
              </div>
              <div class="item">
+                  <div class="header left">
+                      Only the tools that you need
+                  </div>
+             </div>
+             <div class="item">
                   <div class="header right">
-                Easy way from idea to to-do list
+                      Simple way from idea to action
                   </div>
              </div>
              <div class="item">
                   <div class="header left">
-                Long way with small steps
+                      Makes complex things simple
                   </div>
              </div>
              <div class="item">
                   <div class="header right">
-                Current task focus
+                      Helps focus on the current task
+                  </div>
+             </div>
+             <div class="item">
+                  <div class="header right">
+                      Your own workspace
+                  </div>
+             </div>
+             <div class="item">
+                  <div class="header right">
+                      Global view of the big goals
                   </div>
              </div>
              <div class="item">
                   <div class="header left">
-                Only tools that you need
-                  </div>
-             </div>
-             <div class="item">
-                  <div class="header right">
-                Global view at big projects
-                  </div>
-             </div>
-             <div class="item">
-                  <div class="header left">
-                Best tool for small tasks and great ideas
-                  </div>
-             </div>
-             <div class="item">
-                  <div class="header right">
-                One click transformation:<br> idea-&gt;goal-&gt;project-&gt;product</li>
+                      The best tool for small tasks and great goals
                   </div>
              </div>
           </div>
@@ -173,19 +173,49 @@
           <a class="carousel-button left" href="#carousel-what" data-slide="prev"><img src="{{ STATIC_URL }}img/prev-arrow.png" alt="">Less</a>
           <a class="carousel-button right" href="#carousel-what" data-slide="next">More<img src="{{ STATIC_URL }}img/next-arrow.png" alt=""></a>
       </div>
-        
-        <div class="col-lg-6" style="display: none;">
+      <style>
+        #how-works-board {
+            color: rgba(25, 162, 222, 1);
+            font: 30px/42px 'Shadows Into Light Two', cursive;
+            margin-top: 50px;
+            margin-bottom: 50px;
+            height: 500px;
+            background-color: rgba(255, 255, 255, 1);
+        }
+
+        #how-works-board .item {
+            margin-top: 50px;
+        }
+
+        #how-works-board.item.left {
+            margin-top: 0;
+            margin-bottom: 50px;
+        }
+
+        #how-works-board .item.right {
+            margin-top: 50px;
+            margin-bottom: 0;
+        }
+      </style>
+        <div class="center" style="display: none;">
             <h2 class="slogan">How it works?</h2>
-            <ol class="feature-details">
-                <li>Set the goal</li>
-                <li>Define the tasks</li>
-                <li>Collect all ideas about expected result</li>
-                <li>Share your ideas and let people improve them</li>
-                <li>Collect resources and tools in one box</li>
-                <li>Plan your work</li>
-                <li>Do the tasks</li>
-                <li>Look at statistics to improve your skills</li>
-            </ol>
+            <div id="how-works-board" class="font-cursive">
+                <div class="row">
+                    <div class="item col-lg-5 item">Set the goal</div>
+                    <div class="col-lg-5 col-lg-offset-2 item right">Collect all the ideas about the expected result</div>
+                </div>
+                <div class="row">
+                    <div class="col-lg-5 item left">Share your ideas the other people and let them improve it</div>
+                    <div class="col-lg-5 col-lg-offset-2 item right">Define the tasks</div>
+                </div>
+                <div class="row">
+                    <div class="col-lg-5 item left">Do the task yourself or find an assistant</div>
+                    <div class="col-lg-5 col-lg-offset-2 item right">Enjoy obtained results</div>
+                </div>
+                <div class="row">
+                    <div class="center">Go to the next goal</div>
+                </div>
+            </div>
         </div>
     </div>
 </section>
