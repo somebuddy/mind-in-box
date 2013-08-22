@@ -1,16 +1,80 @@
+<style>
+    .mockup-device {
+        position: absolute;
+        left: 0;
+        right: 0;
+        top: 30px;
+        margin-left: auto;
+        margin-right: auto;
+        border-color: rgba(255, 255, 255, 0.3);
+        border-style: solid;
+        overflow: hidden;
+        border-radius: 20px;
+        -webkit-animation-name: 'switch-device';
+        -webkit-animation-duration: 5s;
+        -webkit-animation-iteration-count: infinite;
+        -webkit-animation-direction: alternate;
+        -webkit-timing-function: ease-in-out;
+        -webkit-transform-style: preserve-3d;
+        -moz-animation-name: 'switch-device';
+        -moz-animation-duration: 5s;
+        -moz-animation-iteration-count: infinite;
+        -moz-animation-direction: alternate;
+        -moz-timing-function: ease-in-out;
+        -moz-transform-style: preserve-3d;
+        -ms-animation-name: 'switch-device';
+        -ms-animation-duration: 5s;
+        -ms-animation-iteration-count: infinite;
+        -ms-animation-direction: alternate;
+        -ms-timing-function: ease-in-out;
+        -ms-transform-style: preserve-3d;
+        animation-name: 'switch-device';
+        animation-duration: 5s;
+        animation-iteration-count: infinite;
+        animation-direction: alternate;
+        timing-function: ease-in-out;
+        transform-style: preserve-3d;
+    }
+    
+    @-webkit-keyframes 'switch-device' {
+        from {
+            width: 155px;
+            height: 310px;
+            border-width: 40px 10px;
+            -webkit-transform: rotateY(0deg);
+        }
+        50% {
+            -webkit-transform: /*perspective(600px)*/ rotateY(90deg);
+        }
+        to {
+            width: 417px;
+            height: 321px;
+            border-width: 36px 31px;
+            -webkit-transform: rotateY(0deg);
+        }
+    }
+
+</style>
 <section class="section-even" id="mobile">
     <div class="anchor-marker" id="mobile-anchor"></div>
     <label>Mobile</label>
     <div class="container">
         <h2 class="slogan">Your minds with you always and everywhere</h2>
-        <ul class="icons-ul feature-details">
-            <li><i class="icon-li icon-ok-circle"></i>Autosync for all connected devices</li>
-            <li><i class="icon-li icon-ok-circle"></i>Offline access</li>
-            <li><i class="icon-li icon-ok-circle"></i>Quick add notes</li>
-            <li><i class="icon-li icon-ok-circle"></i>Task reminder</li>
-            <li><i class="icon-li icon-ok-circle"></i>Geo reminder</li>
-            <li><i class="icon-li icon-ok-circle"></i>All web tools in your device</li>
-        </ul>
+        <div class="row">
+            <div class="col-lg-6">
+                <ul class="icons-ul feature-details">
+                    <li><i class="icon-li icon-ok-circle"></i>Autosync for all connected devices</li>
+                    <li><i class="icon-li icon-ok-circle"></i>Offline access</li>
+                    <li><i class="icon-li icon-ok-circle"></i>Quick add notes</li>
+                    <li><i class="icon-li icon-ok-circle"></i>Task reminder</li>
+                    <li><i class="icon-li icon-ok-circle"></i>Geo reminder</li>
+                    <li><i class="icon-li icon-ok-circle"></i>All web tools in your device</li>
+                </ul>
+            </div>
+            <div class="col-lg-6">
+                <div class="mockup-device"></div>
+            </div>
+        </div>
         <div class="row platforms">
             <div class="col-lg-2 col-lg-offset-2"><i class="icon-android icon-5x"></i></div>
             <div class="col-lg-2 col-lg-offset-1"><i class="icon-apple icon-5x"></i></div>
