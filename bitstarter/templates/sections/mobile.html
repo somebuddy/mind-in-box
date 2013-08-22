@@ -6,33 +6,32 @@
         top: 30px;
         margin-left: auto;
         margin-right: auto;
-        border-color: rgba(255, 255, 255, 0.3);
+        border-color: rgba(255, 255, 255, 1);
         border-style: solid;
         overflow: hidden;
         border-radius: 20px;
         -webkit-animation-name: 'switch-device';
         -webkit-animation-duration: 5s;
         -webkit-animation-iteration-count: infinite;
-        -webkit-animation-direction: alternate;
-        -webkit-timing-function: ease-in-out;
+        -webkit-animation-timing-function: ease-in-out;
         -webkit-transform-style: preserve-3d;
         -moz-animation-name: 'switch-device';
         -moz-animation-duration: 5s;
         -moz-animation-iteration-count: infinite;
         -moz-animation-direction: alternate;
-        -moz-timing-function: ease-in-out;
+        -moz-animation-timing-function: ease-in-out;
         -moz-transform-style: preserve-3d;
         -ms-animation-name: 'switch-device';
         -ms-animation-duration: 5s;
         -ms-animation-iteration-count: infinite;
         -ms-animation-direction: alternate;
-        -ms-timing-function: ease-in-out;
+        -ms-animation-timing-function: ease-in-out;
         -ms-transform-style: preserve-3d;
         animation-name: 'switch-device';
         animation-duration: 5s;
         animation-iteration-count: infinite;
         animation-direction: alternate;
-        timing-function: ease-in-out;
+        animation-timing-function: ease-in-out;
         transform-style: preserve-3d;
     }
     
@@ -41,16 +40,28 @@
             width: 155px;
             height: 310px;
             border-width: 40px 10px;
+            background: url({{ STATIC_URL }}img/mobile-phone-bkg.png) no-repeat;
             -webkit-transform: rotateY(0deg);
         }
-        50% {
-            -webkit-transform: /*perspective(600px)*/ rotateY(90deg);
+        25% {
+            -webkit-transform: perspective(600px) rotateY(105deg);
         }
-        to {
+        50% {
             width: 417px;
             height: 321px;
             border-width: 36px 31px;
-            -webkit-transform: rotateY(0deg);
+            background: url({{ STATIC_URL }}img/mobile-tablet-bkg.png) no-repeat;
+            -webkit-transform: rotateY(180deg);
+        }
+        75% {
+            -webkit-transform: perspective(600px) rotateY(280deg);
+        }
+        to {
+            width: 155px;
+            height: 310px;
+            border-width: 40px 10px;
+            background: url({{ STATIC_URL }}img/mobile-phone-bkg.png) no-repeat;
+            -webkit-transform: rotateY(360deg);
         }
     }
 
@@ -72,7 +83,8 @@
                 </ul>
             </div>
             <div class="col-lg-6">
-                <div class="mockup-device"></div>
+                <div class="mockup-device">
+                </div>
             </div>
         </div>
         <div class="row platforms">
