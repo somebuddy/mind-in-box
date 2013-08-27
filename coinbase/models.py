@@ -40,6 +40,7 @@ class CoinbaseWallet(object):
         orders = CoinbaseWallet.get_json_data('orders')['orders']
         orders_list = []
         for x in orders:
+            x = x['order']
             if x['status'] == 'completed':
                 orders_list.append([x['id'], int(x['total_btc']['cents'])/100000000.0, x['created_at']])
         return orders_list
