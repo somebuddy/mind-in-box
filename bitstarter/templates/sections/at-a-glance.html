@@ -48,7 +48,7 @@
         color: rgba(25, 162, 222, 1);
         position: absolute;
         font: 36px/42px 'Shadows Into Light Two', cursive;
-        width: 40%;
+        width: 50%;
         top: 30px;
         left: 0;
         right: 0;
@@ -61,8 +61,10 @@
     .carousel-inner > .item > .comment {
         color: rgba(100, 100, 100, 1);
         position: absolute;
-        font: 300 20px/24px 'Roboto', sans-serif;
-        width: 30%;
+        font: 300 18px/30px 'Roboto', sans-serif;
+        width: 40%;
+        vertical-align: middle;
+        top: 120px;
         bottom: 120px;
         left: 0;
         right: 0;
@@ -70,6 +72,11 @@
         margin-right: auto;
         text-align: center;
         z-index: 2;
+    }
+
+    .comment > p {
+        margin-top: 15px;
+        margin-bottom: 15px;
     }
 
     .carousel-inner > .item > .image {
@@ -106,11 +113,7 @@
     <label>Mind in Box at a glance</label>
     <div class="container">
         <h2 class="slogan">What is the box?</h2>
-        <div class="under-construction center">
-            <p>This section is under construction now.</p>
-            <p>The full list of features that we plan to provide with our service will be here soon.</p>
-        </div>
-        <div id="carousel-what" class="carousel slide">
+        <div id="carousel-what" class="carousel slide" data-interval="5000">
           <!-- Indicators -->
           <ol class="carousel-indicators">
               <li data-target="#carousel-what" data-slide-to="0" class="active"></li>
@@ -120,21 +123,47 @@
               <li data-target="#carousel-what" data-slide-to="4"></li>
               <li data-target="#carousel-what" data-slide-to="5"></li>
               <li data-target="#carousel-what" data-slide-to="6"></li>
+              <li data-target="#carousel-what" data-slide-to="7"></li>
           </ol>
           
           <!-- Wrapper for slides -->
           <div class="carousel-inner">
              <div class="item active">
+                 <div class="header">
+                     Box is idea, note, tasks, tool...
+                 </div>
+                 <div class="comment">
+                     It can be all that you need to control your life.
+                 </div>
+                 <img class="image" src="{{ STATIC_URL }}img/at-a-glance-what-is.png" width=450px>
+             </div>
+             <div class="item">
                  <div class="header left">Keep all your thoughts in one place</div>
-                  <div class="header right">
-                      Only the tools that you need
-                  </div>
                  <div class="comment right">
-                     Box is good tool to keep ideas, tools, tasks in one place: you can't forget anythings and nothing distract you
+                     <p>
+                     Box is a tool for storing ideas, notes, tasks, tools, and other boxes in one place.
+                     </p>
+                     <p>
+                     It helps you not to miss anything.
+                     </p>
+                     <p>
+                     Create a <a href="#mobile-anchor">mobile box</a> and all your thoughts will be always with you anywhere.
+                     </p>
                  </div>
                  <img class="image left" src="{{ STATIC_URL }}img/at-a-glance-all-together.png" width=350px>
              </div>
              <div class="item">
+                 <div class="comment left">
+                     <p>
+                     It's difficult to achieve big goals at once.
+                     </p>
+                     <p>
+                     Large problems can be confusing and frustrating.
+                     </p>
+                     <p>
+                     Divide your tasks into small pieces and it will help make the job easier, increase motivation and reduce frustration.
+                     </p>
+                 </div>
                   <div class="header right">
                       Makes complex things simple
                   </div>
@@ -145,29 +174,75 @@
                       Simple way from idea to action
                   </div>
                  <img class="image left" src="{{ STATIC_URL }}img/at-a-glance-migration.png" width=400px>
+                 <div class="comment right">
+                     <p>
+                     On the way to the goal can be difficult to make the first step.
+                     </p>
+                     <p>
+                     We want to make the path from idea to action as short as possible to reduce the cost of secondary tasks.
+                     </p>
+                 </div>
              </div>
              <div class="item">
                   <div class="header right">
                       Helps focus on the current task
                   </div>
                  <img class="image right" src="{{ STATIC_URL }}img/at-a-glance-focus.png" width=400px>
+                 <div class="comment left">
+                     <p>
+                     While working it is important to focus.
+                     </p>
+                     <p>
+                     Unnecessary information can prevent you from doing your job quickly and efficiently.
+                     </p>
+                     <p>
+                     Throw away all unnecessary and distracting, take only what you really need.
+                     </p>
+                 </div>
              </div>
              <div class="item">
                   <div class="header left">
                       Global view of the big goals
                   </div>
+                 <img class="image left" src="{{ STATIC_URL }}img/at-a-glance-global-view.png" width=400px>
+                 <div class="comment right">
+                     <p>
+                     General look at your goal helps set direction and milestones of your work.
+                     </p>
+                     <p>
+                     Look at your goal as a whole.
+                     </p>
+                     <p>
+                     Manage life, not actions.
+                     </p>
+                 </div>
              </div>
              <div class="item">
                   <div class="header right">
                       Your own workspace
                   </div>
                  <img class="image right" src="{{ STATIC_URL }}img/at-a-glance-personal.png" width=400px>
+                 <div class="comment left">
+                     <p>
+                     The box can be customized for each user.
+                     </p>
+                     <p>
+                     Create your own personal workspace in which you will be able act freely, and you will be comfortably.
+                     </p>
+                 </div>
              </div>
              <div class="item">
                   <div class="header left">
                       The best tool for small tasks and great goals
                   </div>
                  <img class="image left" src="{{ STATIC_URL }}img/at-a-glance-best-tool.png" width=400px>
+                 <div class="comment right">
+                     <p>
+                     We are creating a service by which you will be able to effectively manage the goals and tasks regardless of their size and duration.
+                     </p>
+                     <p>
+                     </p>
+                 </div>
              </div>
           </div>
           
@@ -220,4 +295,7 @@
             </div>
         </div>
     </div>
+    <script>
+        $('.carousel').carousel()
+    </script>
 </section>
