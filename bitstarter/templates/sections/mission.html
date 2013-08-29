@@ -1,61 +1,150 @@
 <style>
-    .descr-col {
-	width: 55%;
-	position: absolute;
-	right: 40px;
-        padding: 20px;
+    #carousel-mission {
+    	margin-top: 20px;
     }
 
-    .descr-col h3 {
+    #carousel-mission .item {
+	    height: 400px;
+    }
+
+    #carousel-mission .carousel-indicators li {
+        width: 12px;
+        height: 12px;
+    }	
+    
+    #carousel-mission .carousel-indicators .active {
+    	width: 16px;
+	    height: 16px;
+    }
+
+    #carousel-mission .row {
+        height: 100%;
+    }
+
+    #carousel-mission .image-col {
+        height: 60%;
+        top: 20%;
+        text-align: center;
+    }
+
+    #carousel-mission .image-col .caption {
+        width: 100%;
+        text-align: center;
+        color: #333;
+	    font: 20px/30px 'Shadows Into Light Two', cursive;
+    }
+
+    #carousel-mission .image-col .image {
+        max-width: 60%;
+        max-height: 70%;
+    }
+    
+    #carousel-mission .descr-col {
+        height: 90%;
+        top: 5%;
+        text-align: left;
+    }
+
+    #carousel-mission .descr-col .header {
+        width: 100%;
         font-family: 'Roboto', sans-serif;
-        font-weight: 300;
+        margin-bottom: 30px;
     }
 
-    .descr-col p {
+    #carousel-mission .descr-col p {
         font: 300 18px/24px 'Roboto', sans-serif;
     }
 
-    .descr-col > .details {
+    #carousel-mission .descr-col > .details {
         font: 300 16px/20px 'Roboto', sans-serif;
         margin-left: 0px;
         margin-top: 20px;
         margin-left: -20px;
     }
 
-    .details > li {
+    #carousel-mission .details > li {
         margin-top: 15px;
         margin-bottom: 10px;
     }
 
-    #carousel-mission {
-	margin-top: 60px;
-    }
-
-    #carousel-mission .item {
-	height: 500px;
-    }
-
-    #carousel-mission .carousel-indicators li {
-	width: 16px;
-	height: 16px;
-    }	
-
-    #carousel-mission .carousel-indicators .active {
-	width: 19px;
-	height: 19px;
-    }	
-
-    #carousel-mission .header {
-        top: 120px;
-	    font: 20px/30px 'Shadows Into Light Two', cursive;
-    }
-
-    #carousel-mission .image {
-        left: 110px;
-        top: 150px;
-        width: 200px;
-        height: 200px;
+    #carousel-mission .carousel-indicators {
+        top: 85%;
+        width: 30%;
+        left: 0;
         margin-left: 0;
+    }
+
+    .carousel-indicators > li.green {
+        border-color: rgba(140, 190, 41, 0.5);
+    }
+
+    .carousel-indicators > li.green.active {
+        background-color: rgba(140, 190, 41, 0.3);
+    }
+
+    .carousel-indicators > li.orange {
+        border-color: rgba(255, 147, 30, 0.5);
+    }
+
+    .carousel-indicators > li.orange.active {
+        background-color: rgba(255, 147, 30, 0.3);
+    }
+
+    .carousel-indicators > li.purple {
+        border-color: rgba(102, 45, 145, 0.5);
+    }
+
+    .carousel-indicators > li.purple.active {
+        background-color: rgba(102, 45, 145, 0.3);
+    }
+
+    .carousel-indicators > li.red {
+        border-color: rgba(255, 29, 37, 0.5);
+    }
+
+    .carousel-indicators > li.red.active {
+        background-color: rgba(255, 29, 37, 0.3);
+    }
+
+    .carousel-indicators > li.blue {
+        border-color: rgba(63, 169, 245, 0.5);
+    }
+
+    .carousel-indicators > li.blue.active {
+        background-color: rgba(63, 169, 245, 0.3);
+    }
+
+    .carousel-indicators > li.dark-gray {
+        border-color: rgba(77, 77, 77, 0.5);
+    }
+
+    .carousel-indicators > li.dark-gray.active {
+        background-color: rgba(77, 77, 77, 0.3);
+    }
+
+
+    .header.green {
+        color: rgba(140, 190, 41, 1);
+    }
+
+    .header.orange {
+        color: rgba(255, 147, 30, 1);
+    }
+
+    .header.purple {
+        color: rgba(102, 45, 145, 1);
+    }
+
+    .header.red {
+        color: rgba(255, 29, 37, 1);
+    }
+
+    .header.blue {
+        color: rgba(63, 169, 245, 1);
+    }
+
+    .header.dark-gray {
+        border-color: rgba(77, 77, 77, 1);
     }
 
 </style>
@@ -82,124 +171,142 @@
         <div id="carousel-mission" class="carousel slide" data-interval="5000">
           <!-- Indicators -->
           <ol class="carousel-indicators">
-              <li data-target="#carousel-mission" data-slide-to="0" class="active"></li>
-              <li data-target="#carousel-mission" data-slide-to="1"></li>
-              <li data-target="#carousel-mission" data-slide-to="2"></li>
-              <li data-target="#carousel-mission" data-slide-to="3"></li>
-              <li data-target="#carousel-mission" data-slide-to="4"></li>
-              <li data-target="#carousel-mission" data-slide-to="5"></li>
+              <li data-target="#carousel-mission" data-slide-to="0" class="green active"></li>
+              <li data-target="#carousel-mission" data-slide-to="1" class="orange"></li>
+              <li data-target="#carousel-mission" data-slide-to="2" class="purple"></li>
+              <li data-target="#carousel-mission" data-slide-to="3" class="red"></li>
+              <li data-target="#carousel-mission" data-slide-to="4" class="blue"></li>
+              <li data-target="#carousel-mission" data-slide-to="5" class="dark-gray"></li>
           </ol>
           
           <!-- Wrapper for slides -->
           <div class="carousel-inner">
              <div class="item active">
-		        <h4 class="header left">different sides of our mission</h4>
-                <img class="image left" src="{{ STATIC_URL }}img/mission-thinking.png">
-                <div class="descr-col">
-                    <h3>Improve human thinking</h3>
-                    <p>We believe that everything begins with a thought.</p>
-                    <p>The better thought out your ideas, the better the expected result.</p> 
-                    </p>
-                    <ul class="icons-ul details">
-                        <li><i class="icon-li icon-ok-circle"></i>Store the ideas, create new ones</li>
-                        <li><i class="icon-li icon-ok-circle"></i>Work on your ideas and improve them</li>
-                        <li><i class="icon-li icon-ok-circle"></i>Share your ideas with others</li>
-                        <li><i class="icon-li icon-ok-circle"></i>Help others and get help to achieve better results</li>
-                    </ul>
-                    <p>and way to the dream will be easier and more pleasant</p>
-                </div>
-    	     </div>
+                 <div class="row">
+                     <div class="col-lg-4 image-col">
+                         <h4 class="caption">look at the different sides of our mission</h4>
+                         <img class="image" src="{{ STATIC_URL }}img/mission-thinking.png">
+                     </div>
+                     <div class="col-lg-8 descr-col">
+                         <h3 class="header green">Improve human thinking</h3>
+                         <p>We believe that everything begins with a thought.</p>
+                         <p>The better thought out your ideas, the better the expected result.</p> 
+                         <ul class="icons-ul details">
+                             <li><i class="icon-li icon-ok-circle"></i>Store the ideas, create new ones</li>
+                             <li><i class="icon-li icon-ok-circle"></i>Work on your ideas and improve them</li>
+                             <li><i class="icon-li icon-ok-circle"></i>Share your ideas with others</li>
+                             <li><i class="icon-li icon-ok-circle"></i>Help others and get help to achieve better results</li>
+                         </ul>
+                         <p>and way to the dream will be easier and more pleasant</p>
+                     </div>
+                 </div>
+             </div>
              <div class="item">
-		        <h4 class="header left">different sides of our mission</h4>
-                <img class="image" src="{{ STATIC_URL }}img/mission-life.png">
-                <div class="col-lg-6 descr-col">
-                    <h3>Control of life</h3>
-                    <p>
-                       We want to help take control of lifetime, determine the values of life, do what really matters, don't waste your time on trifles and finally... enjoy the life.
-                    </p>
-                    <p>
-                       We can not fulfill all your desires, but we can help you:
-                    </p>
-                    <ul class="icons-ul details">
-                        <li><i class="icon-li icon-ok-circle"></i>Follow dreams</li>
-                        <li><i class="icon-li icon-ok-circle"></i>Track goals</li>
-                        <li><i class="icon-li icon-ok-circle"></i>Plan work</li>
-                        <li><i class="icon-li icon-ok-circle"></i>Control your actions</li>
-                        <li><i class="icon-li icon-ok-circle"></i>Find and communicate with people on the way to common goals</li>
-                    </ul>
+                 <div class="row">
+                     <div class="col-lg-4 image-col">
+                         <h4 class="caption">look at the different sides of our mission</h4>
+                         <img class="image" src="{{ STATIC_URL }}img/mission-life.png">
+                     </div>
+                     <div class="col-lg-8 descr-col">
+                        <h3 class="header orange">Control of life</h3>
+                        <p>We want to help take control of lifetime, determine the values of life, do what really matters, don't waste your time on trifles and finally... enjoy the life.</p>
+                        <p>We can not fulfill all your desires, but we can help you:</p>
+                        <ul class="icons-ul details">
+                            <li><i class="icon-li icon-ok-circle"></i>Follow dreams</li>
+                            <li><i class="icon-li icon-ok-circle"></i>Track goals</li>
+                            <li><i class="icon-li icon-ok-circle"></i>Plan work</li>
+                            <li><i class="icon-li icon-ok-circle"></i>Control your actions</li>
+                            <li><i class="icon-li icon-ok-circle"></i>Find and communicate with people on the way to common goals</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+            <div class="item">
+                 <div class="row">
+                     <div class="col-lg-4 image-col">
+                         <h4 class="caption">look at the different sides of our mission</h4>
+                         <img class="image" src="{{ STATIC_URL }}img/mission-reduce.png">
+                     </div>
+                     <div class="col-lg-8 descr-col">
+                         <h3 class="header purple">Reduce the time required for supporting actions</h3>
+                         <p>We strive for make work more exciting and interesting, and goal achievement quick and easy.</p>
+                         <p>To do this, we will create tools that can reduce the effects of secondary tasks and help to focus on goals:</p>
+                         <ul class="icons-ul details">
+                             <li><i class="icon-li icon-ok-circle"></i>Brainstorming</li>
+                             <li><i class="icon-li icon-ok-circle"></i>Goal tracking</li>
+                             <li><i class="icon-li icon-ok-circle"></i>Planning</li>
+                         </ul>
+                         <p>and many others our <a href="#feature-anchor">features</a> and even your personal</p>
+                     </div>
+                 </div>
+             </div>
+             <div class="item">
+                 <div class="row">
+                     <div class="col-lg-4 image-col">
+                         <h4 class="caption">look at the different sides of our mission</h4>
+                         <img class="image" src="{{ STATIC_URL }}img/mission-cooperation.png">
+                     </div>
+                     <div class="col-lg-8 descr-col">
+                        <h3 class="header red">Working together</h3>
+                        <p>We want connect people on common goals independs of country, skill </p>
+                        <p>Working together to achieve common goals allows you to move faster, leading to a better result, reduces frustration and increases motivation.</p>
+                        <p>So we want to make it easier</p>
+
+                        Search for colleagues
+                        Coordination of work
+                        Find people with best skills for each task
+                        
+                        
+                        <ul class="icons-ul details">
+                            <li><i class="icon-li icon-ok-circle"></i>Connect people minds</li>
+                            <li><i class="icon-li icon-ok-circle"></i>Communicate</li>
+                            <li><i class="icon-li icon-ok-circle"></i>Find people with best skills for each task</li>
+                            <li><i class="icon-li icon-ok-circle"></i>Give everyone the opportunity to take part in achieving the common goals</li>
+                        </ul>
+                    </div>
                 </div>
 	         </div>
              <div class="item">
-		        <h4 class="header left">different sides of our mission</h4>
-                <img class="image" src="{{ STATIC_URL }}img/mission-reduce.png">
-                <div class="col-lg-6 descr-col">
-                    <h3>Reduce the time required for supporting actions</h3>
-                    <p>We strive for make work more exciting and interesting, and goal achievement quick and easy.</p>
-                    <p>To do this, we will create tools that can reduce the effects of secondary tasks and help to focus on goals:</p>
-                    <ul class="icons-ul details">
-                        <li><i class="icon-li icon-ok-circle"></i>Brainstorming</li>
-                        <li><i class="icon-li icon-ok-circle"></i>Goal tracking</li>
-                        <li><i class="icon-li icon-ok-circle"></i>Planning</li>
-                    </ul>
-                    <p>and many others our <a href="#feature-anchor">features</a> and even your personal</p>
+                 <div class="row">
+                     <div class="col-lg-4 image-col">
+                         <h4 class="caption">look at the different sides of our mission</h4>
+                         <img class="image" src="{{ STATIC_URL }}img/mission-personal.png">
+                     </div>
+                     <div class="col-lg-8 descr-col">
+                        <h3 class="header blue">Create personal workspace</h3>
+                        <p>For us it is important that our customers feel comfortable and free.</p>
+                        <p>That is why we are working so that our users can: </p>
+                        <ul class="icons-ul details">
+                            <li><i class="icon-li icon-ok-circle"></i>Create own box</li>
+                            <li><i class="icon-li icon-ok-circle"></i>Use own tools</li>
+                            <li><i class="icon-li icon-ok-circle"></i>Customize workspace</li>
+                        </ul>
+                        <p>and even use the <a href="#source-code-anchor">open source framework</a> to create their own server.</p>
+                        <p>And to make it easier, we develop the most popular as voted by users features at first</p>
+                    </div>
                 </div>
-             </div>
+            </div>
              <div class="item">
-		        <h4 class="header left">different sides of our mission</h4>
-                <img class="image" src="{{ STATIC_URL }}img/mission-cooperation.png">
-                <div class="col-lg-6 descr-col">
-                    <h3>Working together</h3>
-                    <p>We want connect people on common goals independs of country, skill </p>
-                    <p>Working together to achieve common goals allows you to move faster, leading to a better result, reduces frustration and increases motivation.</p>
-                    <p>So we want to make it easier</p>
-                    Search for colleagues
-                    Coordination of work
-                    Find people with best skills for each task
-                    
-                    
-                    <ul class="icons-ul details">
-                        <li><i class="icon-li icon-ok-circle"></i>Connect people minds</li>
-                        <li><i class="icon-li icon-ok-circle"></i>Communicate</li>
-                        <li><i class="icon-li icon-ok-circle"></i>Find people with best skills for each task</li>
-                        <li><i class="icon-li icon-ok-circle"></i>Give everyone the opportunity to take part in achieving the common goals</li>
-                    </ul>
+                 <div class="row">
+                     <div class="col-lg-4 image-col">
+                         <h4 class="caption">look at the different sides of our mission</h4>
+                         <img class="image" src="{{ STATIC_URL }}img/mission-feedback.png">
+                     </div>
+                     <div class="col-lg-8 descr-col">
+                        <h3 class="header dark-gray">Feedback</h3>
+                        <p></p>
+                        <ul class="icons-ul details">
+                            <li><i class="icon-li icon-ok-circle"></i></li>
+                            <li><i class="icon-li icon-ok-circle"></i></li>
+                            <li><i class="icon-li icon-ok-circle"></i></li>
+                        </ul>
+                        <p></p>
+                        <p></p>
+                    </div>
                 </div>
-	         </div>
-             <div class="item">
-		        <h4 class="header left">different sides of our mission</h4>
-                <img class="image" src="{{ STATIC_URL }}img/mission-personal.png">
-                <div class="col-lg-6 descr-col">
-                    <h3>Create personal workspace</h3>
-                    <p>We work hard to ensure that our users feel comfortable and free. So our users can:</p>
-                    <ul class="icons-ul details">
-                        <li><i class="icon-li icon-ok-circle"></i>Create your own box</li>
-                        <li><i class="icon-li icon-ok-circle"></i>Use your own tools</li>
-                        <li><i class="icon-li icon-ok-circle"></i>Customize workspace</li>
-                    </ul>
-                    <p>and even use the <a href="#source-code-anchor">open source framework</a> to create their own server.</p>
-                    <p>And to make it easier, we develop the most popular as voted by users features at first</p>
-                </div>
-             </div>
-             <div class="item">
-		        <h4 class="header left">different sides of our mission</h4>
-                <img class="image" src="{{ STATIC_URL }}img/mission-feedback.png">
-                <div class="col-lg-6 descr-col">
-                    <h3></h3>
-                    <p></p>
-                    <ul class="icons-ul details">
-                        <li><i class="icon-li icon-ok-circle"></i></li>
-                        <li><i class="icon-li icon-ok-circle"></i></li>
-                        <li><i class="icon-li icon-ok-circle"></i></li>
-                    </ul>
-                    <p></p>
-                    <p></p>
-                </div>
-             </div>
+            </div>
     	  </div>
 	
-          <!-- Controls -->
-          <a class="carousel-button left" href="#carousel-mission" data-slide="prev"><img src="{{ STATIC_URL }}img/prev-arrow.png" alt="">Less</a>
-          <a class="carousel-button right" href="#carousel-mission" data-slide="next">More<img src="{{ STATIC_URL }}img/next-arrow.png" alt=""></a>
       </div>
     </div>
 </section>
