@@ -1,6 +1,7 @@
 /* Dashboard and boxes */
 #dashboard {
     display: table;
+    height: 100%;
     vertical-align: middle;
 }
 
