@@ -1,5 +1,8 @@
 <style>
     .descr-col {
+	width: 40%;
+	position: absolute;
+	right: 40px;
         padding: 20px;
     }
 
@@ -24,6 +27,28 @@
         margin-bottom: 10px;
     }
 
+    #carousel-mission {
+	margin-top: 60px;
+    }
+
+    #carousel-mission .item {
+	height: 600px;
+    }
+
+    #carousel-mission .carousel-indicators li {
+	width: 16px;
+	height: 16px;
+    }	
+
+    #carousel-mission .carousel-indicators .active {
+	width: 19px;
+	height: 19px;
+    }	
+
+    #carousel-mission .header {
+	font: 28px/30px 'Shadows Into Light Two', cursive;
+    }
+
 </style>
 
 <section class="section-even" id="mission">
@@ -45,64 +70,104 @@
     Just what you need
 	
 	{% endcomment %}
-        <div class="row" style="margin-top: 60px">
-            <div class="col-lg-4 descr-col">
-                <h3>Improve human thinking</h3>
-                {% comment %}
-                <p>
-                We will create service to help people create new ideas 
-                </p>
-                {% endcomment %}
-                <ul class="icons-ul details">
-                    <li><i class="icon-li icon-ok-circle"></i>Store the ideas and create new ones</li>
-                    <li><i class="icon-li icon-ok-circle"></i>Work on your ideas and improve them</li>
-                    <li><i class="icon-li icon-ok-circle"></i>Share your ideas with others</li>
-                    <li><i class="icon-li icon-ok-circle"></i>Help others and get help to achieve better results</li>
-                    <li><i class="icon-li icon-ok-circle"></i>Work together on common problems</li>
-                </ul>
-            </div>
-            <div class="col-lg-4 descr-col">
-                <h3>Control of life</h3>
-                {% comment %}
-                <p>
-                Help manage the activities, improve work efficiency, reduce the cost of performing routine tasks
-                </p>
-                {% endcomment %}
-                <ul class="icons-ul details">
-                    <li><i class="icon-li icon-ok-circle"></i>Follow your goals</li>
-                    <li><i class="icon-li icon-ok-circle"></i>Plan your work</li>
-                    <li><i class="icon-li icon-ok-circle"></i>Control your actions</li>
-                </ul>
-            </div>
-            <div class="col-lg-4 descr-col">
-                <h3>Cooperation to achieve common goals</h3>
-                <p></p>
-                <ul class="icons-ul details">
-                    <li><i class="icon-li icon-ok-circle"></i>Connect people minds</li>
-                    <li><i class="icon-li icon-ok-circle"></i>Working together on common objectives</li>
-                    <li><i class="icon-li icon-ok-circle"></i>Control your actions</li>
-                </ul>
-            </div>
-        </div>
-        <div class="row">
-            <div class="col-lg-4 col-lg-offset-2 descr-col">
-                <h3>Reduce the time required for supporting actions</h3>
-                <ul class="icons-ul details">
-                    <li><i class="icon-li icon-ok-circle"></i>Focus on goals and objectives</li>
-                    <li><i class="icon-li icon-ok-circle"></i>Concentrate on details</li>
-                    <li><i class="icon-li icon-ok-circle"></i>Increase motivation</li>
-                </ul>
-            </div>
-            <div class="col-lg-6 descr-col">
-                <i class="icon-globe footer-icons"></i>
-                <h3 class="subheader">For World</h3>
-                <ul class="icons-ul details">
-                    <li><i class="icon-li icon-ok-circle"></i>Connect people minds</li>
-                    <li><i class="icon-li icon-ok-circle"></i>Improve collaboration on common objectives</li>
-                    <li><i class="icon-li icon-ok-circle"></i>Find people with best skills for each task</li>
-                    <li><i class="icon-li icon-ok-circle"></i>Give everyone the opportunity to take part in achieving the common goals</li>
-                </ul>
-            </div>
-        </div>
+        <div id="carousel-mission" class="carousel slide" data-interval="5000">
+          <!-- Indicators -->
+          <ol class="carousel-indicators">
+              <li data-target="#carousel-mission" data-slide-to="0" class="active"></li>
+              <li data-target="#carousel-mission" data-slide-to="1"></li>
+              <li data-target="#carousel-mission" data-slide-to="2"></li>
+              <li data-target="#carousel-mission" data-slide-to="3"></li>
+              <li data-target="#carousel-mission" data-slide-to="4"></li>
+          </ol>
+          
+          <!-- Wrapper for slides -->
+          <div class="carousel-inner">
+             <div class="item active">
+		 <h4 class="header left">different sides of our mission</h4>
+                 <img class="image left" src="{{ STATIC_URL }}img/at-a-glance-what-is.png" style="top: -100px">
+		    <div class="descr-col">
+			<h3>Improve human thinking</h3>
+			<p>We believe that everything begins with a thought.</p>
+			<p>The better thought out your ideas, the better the expected result.</p> 
+			</p>
+			<ul class="icons-ul details">
+			    <li><i class="icon-li icon-ok-circle"></i>Store the ideas, create new ones</li>
+			    <li><i class="icon-li icon-ok-circle"></i>Work on your ideas and improve them</li>
+			    <li><i class="icon-li icon-ok-circle"></i>Share your ideas with others</li>
+			    <li><i class="icon-li icon-ok-circle"></i>Help others and get help to achieve better results</li>
+			</ul>
+			<p>and way to the dream will be easier and more pleasant</p>
+		    </div>
+	     </div>
+             <div class="item">
+                 <img class="image" src="{{ STATIC_URL }}img/at-a-glance-what-is.png" width=450px>
+		    <div class="col-lg-6 descr-col">
+			<h3>Control of life</h3>
+			<p>
+			   We want to help take control of lifetime, determine the values of life, do what really matters, don't waste your time on trifles and finally... enjoy the life.
+			</p>
+			<p>
+			   We can not fulfill all your desires, but we can help you:
+			</p>
+			<ul class="icons-ul details">
+			    <li><i class="icon-li icon-ok-circle"></i>Follow dreams</li>
+			    <li><i class="icon-li icon-ok-circle"></i>Track goals</li>
+			    <li><i class="icon-li icon-ok-circle"></i>Plan work</li>
+			    <li><i class="icon-li icon-ok-circle"></i>Control your actions</li>
+			    <li><i class="icon-li icon-ok-circle"></i>Find and communicate with people on the way to common goals</li>
+			</ul>
+		    </div>
+	     </div>
+             <div class="item">
+		    <div class="col-lg-6 descr-col">
+			<h3>Reduce the time required for supporting actions</h3>
+			<p>We strive for make work more exciting and interesting, and goal achievement quick and easy.</p>
+			<p>To do this, we will create tools that can reduce the effects of secondary tasks and help to focus on goals:</p>
+			<ul class="icons-ul details">
+			    <li><i class="icon-li icon-ok-circle"></i>Brainstorming</li>
+			    <li><i class="icon-li icon-ok-circle"></i>Goal tracking</li>
+			    <li><i class="icon-li icon-ok-circle"></i>Planning</li>
+			</ul>
+			<p>and many others our <a href="#feature-anchor">features</a> and even your personal</p>
+		    </div>
+	     </div>
+             <div class="item">
+		    <div class="col-lg-6 descr-col">
+			<h3>Working together</h3>
+			<p>We want connect people on common goals independs of country, skill </p>
+			<p>Working together to achieve common goals allows you to move faster, leading to a better result, reduces frustration and increases motivation.</p>
+			<p>So we want to make it easier</p>
+			Search for colleagues
+			Coordination of work
+			Find people with best skills for each task
+			
+			
+			<ul class="icons-ul details">
+			    <li><i class="icon-li icon-ok-circle"></i>Connect people minds</li>
+			    <li><i class="icon-li icon-ok-circle"></i>Communicate</li>
+			    <li><i class="icon-li icon-ok-circle"></i>Find people with best skills for each task</li>
+			    <li><i class="icon-li icon-ok-circle"></i>Give everyone the opportunity to take part in achieving the common goals</li>
+			</ul>
+		    </div>
+	     </div>
+             <div class="item">
+		    <div class="col-lg-6 descr-col">
+			<h3>Create personal workspace</h3>
+			<p>We work hard to ensure that our users feel comfortable and free. So our users can:</p>
+			<ul class="icons-ul details">
+			    <li><i class="icon-li icon-ok-circle"></i>Create your own box</li>
+			    <li><i class="icon-li icon-ok-circle"></i>Use your own tools</li>
+			    <li><i class="icon-li icon-ok-circle"></i>Customize workspace</li>
+			</ul>
+			<p>and even use the <a href="#source-code-anchor">open source framework</a> to create their own server.</p>
+			<p>And to make it easier, we develop the most popular as voted by users features at first</p>
+		    </div>
+	     </div>
+	  </div>
+	
+          <!-- Controls -->
+          <a class="carousel-button left" href="#carousel-mission" data-slide="prev"><img src="{{ STATIC_URL }}img/prev-arrow.png" alt="">Less</a>
+          <a class="carousel-button right" href="#carousel-mission" data-slide="next">More<img src="{{ STATIC_URL }}img/next-arrow.png" alt=""></a>
+      </div>
     </div>
 </section>
