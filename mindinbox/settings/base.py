@@ -119,6 +119,7 @@ THIRDPART_APPS = (
 
 LOCAL_APPS = (
         'bitstarter',
+        'coinbase',
         'contact_messages',
 )
 
