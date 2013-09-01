@@ -291,13 +291,20 @@
 /* LOGO */
 .box.logo,
 .dashboard:hover > .box.logo {
-    padding-top: 20px;
-    width: 270px;
+    padding-top: 35px;
     height: 130px;
     -webkit-transition: all 2s ease;
     -o-transition: all 2s ease;
     -moz-transition: all 2s ease;
     transition: all 2s ease;
+}
+
+.box.logo {
+    width: 330px;
+}
+
+.dashboard:hover > .box.logo {
+    width: 270px;
 }
 
 .box.logo,
@@ -319,6 +326,10 @@
     font: bold 64px/72px 'Pathway Gothic One', sans-serif;
     text-align: center;
     text-shadow: 1px 1px 2px black;
+}
+
+.dashboard:hover > .box.logo {
+    font: bold 52px/60px 'Pathway Gothic One', sans-serif;
 }
 
 .box > .header,
