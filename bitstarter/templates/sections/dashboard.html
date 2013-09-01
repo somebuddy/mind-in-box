@@ -1,5 +1,42 @@
 <link href='{{ STATIC_URL }}css/bitstarter/dashboard.css' rel='stylesheet' type='text/css'>
+<style>
+    #crowdfunding-box .header .caption {
+	display: block;
+	float: left;
+    }
 
+    .dashboard #crowdfunding-box .header .button {
+	opacity: 0;
+	-webkit-transition: opacity 0.9s step-start;
+	-o-transition: opacity 0.9s step-start;
+	-moz-transition: opacity 0.9s step-start;
+	-transition: opacity 0.9s step-start;
+    }
+
+    .dashboard:hover #crowdfunding-box .header .button {
+	color: black;
+	position: absolute;
+	top: 0px;
+	right: 0px;
+	height: 60px;
+	width: 80px;
+	background-color: #F55;
+	text-align: center;
+	padding: 10px;
+	font: small-caps 26px/20px 'Pathway Gothic One', sans-serif;
+	opacity: 1;
+	-webkit-transition: all 0.9s step-end;
+	-o-transition: all 0.9s step-end;
+	-moz-transition: all 0.9s step-end;
+	transition: opacity 0.9s step-end;
+    }
+
+    .button:hover {
+	cursor: pointer;
+	text-decoration: underline;
+    }
+
+</style>
 <section id="dashboard">
     <div>
         <div class="dashboard">
@@ -44,6 +81,7 @@
                 <div class="header">
                     <p>Crowdfunding</p>
                     <p class="header-comment">Everyone can help</p>
+		    <div data-toggle="modal" href="#orderModal" class="button">donation list</div>
                 </div>
                 <div class="cover">
                     <div class="row center" id='funding-stat'>
@@ -132,9 +170,35 @@
         </div>
     </div>
 </section>
+<div class="modal fade" id="orderModal">
+  <div class="modal-dialog">
+    <div class="modal-content">
+      <div class="modal-header">
+        <button type="button" class="close" data-dismiss="modal" aria-hidden="true">&times;</button>
+        <h4 class="modal-title">Donation list</h4>
+      </div>
+      <div class="modal-body">
+	<div style="text-align: center; min-height: 200px; padding-top: 80px;">
+          <i class="icon-spinner icon-spin icon-large"></i> updating...
+	</div>
+      </div>
+      <div class="modal-footer">
+	<div class="row pull-left" style="float: left">
+           <b>You also want to take part of the project?</b> 
+           <p>You can make a donation, or tell about us in social networks</p>
+        </div>
+        <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+      </div>
+    </div><!-- /.modal-content -->
+  </div><!-- /.modal-dialog -->
+</div><!-- /.modal -->
 <script>
     $(document).ready(function() {
         $('#funding-stat').load('{% url 'coinbase:box' %}');
+    });
+
+    $('#orderModal').on('show.bs.modal', function () {
+	$(this).find('.modal-body').load('{% url 'coinbase:orders' %}');
     });
 </script>
 

@@ -1,0 +1,27 @@
+<style>
+	.table thead > tr > th {
+		vertical-align: middle;
+		text-align: center;
+	}
+</style>
+<table class="table table-hover">
+	<thead>
+		<tr>
+			<th rowspan=2>Coinbase Order ID</th>
+			<th rowspan=2>BTC</th>
+			<th colspan=2>Transaction</th>
+		</tr>
+		<tr>
+			<th>Date</th>
+			<th>Time (UTC)</th>
+		</tr>
+	</thead>
+	{% for x in orders %}
+	<tr>
+		<td>{{ x.0 }}</td>
+		<td>{{ x.1 }}</td>
+		<td>{{ x.2 }}</td>
+		<td>{{ x.3 }}</td>
+	</tr>
+	{% endfor %}
+</table>

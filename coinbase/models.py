@@ -10,6 +10,8 @@
         https://coinbase.com/account/integrations
 """
 from os import environ
+from aniso8601 import parse_datetime
+from time import strftime
 from urllib.request import urlopen, build_opener, install_opener
 import json
 
@@ -41,8 +43,12 @@ class CoinbaseWallet(object):
         orders_list = []
         for x in orders:
             x = x['order']
+            coins = int(x['total_btc']['cents'])/100000000.0
+            dt = parse_datetime(x['created_at']).utctimetuple()
+            ds = strftime("%a, %d %b %Y", dt)
+            ts = strftime("%H:%M:%S", dt)
             if x['status'] == 'completed':
-                orders_list.append([x['id'], int(x['total_btc']['cents'])/100000000.0, x['created_at']])
+                orders_list.append([x['id'], coins, ds, ts])
         return orders_list
 
     @staticmethod
