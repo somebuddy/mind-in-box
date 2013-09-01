@@ -300,7 +300,7 @@
 }
 
 .box.logo {
-    width: 330px;
+    width: 400px;
 }
 
 .dashboard:hover > .box.logo {
@@ -329,7 +329,7 @@
 }
 
 .dashboard:hover > .box.logo {
-    font: bold 52px/60px 'Pathway Gothic One', sans-serif;
+    font: bold 48px/60px 'Pathway Gothic One', sans-serif;
 }
 
 .box > .header,
