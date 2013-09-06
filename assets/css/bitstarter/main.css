@@ -214,6 +214,19 @@ section h2 {
     color: rgba(140, 190, 41, 0.8);
 }
 
+/* How it works */
+
+#how-it-works > label {
+    background-color: rgba(140, 190, 41, 0.8);
+    border: 1px solid rgba(140, 190, 41, 1);
+    color: white;
+    box-shadow: 2px 2px 9px rgba(50, 50, 50, 0.7);
+}
+
+#how-it-works h2 {
+    color: rgba(140, 190, 41, 0.8);
+}
+
 /* Features */
 
 #features > label {

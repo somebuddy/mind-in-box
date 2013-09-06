@@ -299,3 +299,155 @@
         $('.carousel').carousel()
     </script>
 </section>
+<style>
+    #how-it-works {
+	height: 680px;
+	min-height: 0;
+    }
+
+    .board {
+	margin-top: 60px;
+	height: 480px;
+	width: 80%;
+	margin-left: auto;
+	margin-right: auto;
+	overflow-x: auto;
+	overflow-y: hidden;
+	position: relative;
+	text-align: center;
+    }
+
+    .board .slide {
+	position: relative;
+	height: 100%;
+	text-align: center;
+	display: none;
+	width: auto;
+	margin-left: auto;
+	margin-right: auto;
+	left:0;
+	right:0;
+    }
+
+    .board .slide > img {
+	height: 480px;
+	width: auto;
+	margin-left: auto;
+	margin-right: auto;
+	position: relative;
+    }
+
+    .slide.active {
+	display: inline-block;
+    }
+
+    .slide > .caption {
+	position: absolute;
+	font: 300 18px/20px 'Roboto', sans-serif;
+	color: black;
+    }
+
+    .slide > .link {
+	position: absolute;
+	font: 400 16px/18px 'Roboto', sans-serif;
+	color: rgba(69, 177, 221, 1);
+    }
+
+    .slide > h2.caption {
+	font: 400 22px/24px 'Roboto', sans-serif;
+    }
+
+    #howitwork-slide-2 .caption,
+    #howitwork-slide-2 .link {
+	width: 180px;
+    }
+
+    #howitwork-slide-3 .caption,
+    #howitwork-slide-3 .link {
+	width: 120px;
+    }
+
+    .coin {
+	position: absolute;
+	overflow: hidden;
+	width: 52px;
+	height: 52px;
+	border-radius: 25px;
+	background: url({{ STATIC_URL }}img/coin-green.png);
+    }
+
+    .coin > .head {
+	margin: 4px;
+	width: 44px;
+	height: 44px;
+	border-radius: 22px;
+    }
+
+    .coin > .tail {
+	margin: 4px;
+	margin-top: -44px;
+	width: 44px;
+	height: 44px;
+	border-radius: 22px;
+	transition: all 0.25s ease;
+    }
+	
+    .coin:hover > .head {
+    }
+
+    .coin:hover > .tail {
+	margin-top: 4px;
+    }
+
+</style>
+<section class="section-even" id="how-it-works">
+    <div class="anchor-marker" id="how-it-works-anchor"></div>
+    <label>How it Works</label>
+    <div class="board">
+	<div class="slide" id="howitwork-slide-1">
+		<img src="{{ STATIC_URL }}img/howitworks-slide-1.png">
+		<div class="caption" style="top: 25%; margin-left: auto; margin-right: auto; left:0; right: 0">
+			<p style="font-size: 36px; color: red; font-weight: bold; margin-bottom: 6%;">Beware of falling boxes!</p>
+			<p style="font-size: 24px; color: black; font-weight: 300;">This section is under construction now.</p>
+			<p style="font-size: 24px; color: black; font-weight: 300">But you're welcome to look at the overall ideas and comment on them</p>
+		</div>
+		<div class="link" style="top: 73%; right: 10%;">
+			I will be carefull<br>
+			I promise
+		</div>
+	</div>
+	<div class="slide" id="howitwork-slide-2">
+		<img src="{{ STATIC_URL }}img/howitworks-slide-2.png">
+		<div class="caption" style="top: 10px; left: 50px;">You want something to do?</div>
+		<div class="caption" style="top: 30px; left: 357px;">Add the task</div>
+		<div class="caption" style="top: 280px; left: 15px;">Plan it</div>
+		<div class="caption" style="top: 300px; left: 340px;">and we will remind you when you need</div>
+		<h2 class="caption" style="top: 100px; left: 620px;">Seems to easy?<br>But it works...</h2>
+		<h2 class="caption" style="top: 240px; left: 620px;">Want to look at a more complex case?</h2>
+		<div class="link" style="top: 380px; left: 620px;">Yes, I bravely look in the face of any challenges</div>
+	</div>
+	<div class="slide active" id="howitwork-slide-3" style="margin-left: 40%">
+			<img src="{{ STATIC_URL }}img/howitworks-slide-3.png">
+		<!-- node caption -->
+		<div class="caption" style="top: 260px; left: 80px;">Have an idea?</div>
+		<div class="caption" style="top: 150px; left: 445px;">Put it in a box</div>
+		<div class="caption" style="top: 330px; left: 500px;width: 200px;">Divide into small parts<br>Think about the details</div>
+		<div class="caption" style="top: 235px; left: 730px;width: 160px;">Look for inspiration</div>
+		<div class="caption" style="top: 350px; left: 920px;width: 180px;">Work on your idea</div>
+		<div class="caption" style="top: 108px; left: 1150px;width: 250px;">Share your ideas with others<br>Discuss them</div>
+		<div class="caption" style="top: 410px; left: 1280px;">Set the goal</div>
+		<div class="caption" style="top: 70px; left: 1440px;width: 280px;">Determine milestones and tasks</div>
+		<div class="caption" style="top: 100px; left: 1835px;">Plan your work</div>
+		<div class="caption" style="top: 400px; left: 1785px;">Share tasks</div>
+		<div class="caption" style="top: 360px; left: 1970px;width: 180px;">Search for coworkers</div>
+		<div class="caption" style="top: 345px; left: 2325px;">Work on tasks</div>
+		<div class="caption" style="top: 105px; left: 2130px;width: 160px;">Track your progress</div>
+		<div class="caption" style="top: 275px; left: 2740px;width: 200px;">Enjoy the result!</div>
+		<!-- coins -->
+		<div class="coin" style="top:20px; left:500px;">
+		    <div class="tail"><img src="{{ STATIC_URL }}img/coins/coin-01-tail.png"></div>
+		    <div class="head"><img src="{{ STATIC_URL }}img/coins/coin-01-head.png"></div>
+		</div>
+	</div>
+    </div>
+</section>
