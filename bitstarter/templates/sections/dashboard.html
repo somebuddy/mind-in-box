@@ -152,10 +152,24 @@
                     </a>
                 </div>
             </div>
+            <div class="box box-s box-transparent dash-col-7 dash-row-1" style="height: 270px; width: 270px;">
+		<div class="header">Startup MOOC</div>
+		<div class="cover">
+		    <p>Our project is the ranking member of <a href="http://startupmooc.org">StartupMOOC.org</a></p>
+		    <p>If you like our idea, please, tweet about us.</p>
+		    <a href="https://twitter.com/share" 
+			class="twitter-share-button" 
+			data-url="http://thinking-in-box.herokuapp.com" 
+			data-via="StartupMOOC" 
+			data-lang="en" data-related="anywhereTheJavascriptAPI" 
+			data-text="This student project looks interesting."
+			data-hashtags="StartupMOOC,ThinkingInBox"
+		    >Tweet</a>
+		</div>
+	    </div>
             {% comment %}                        
             <div class="box box-s dash-col-5 dash-row-1">Test Box 1, 5</div>
             <div class="box box-s dash-col-6 dash-row-1">Test Box 1, 6</div>
-            <div class="box box-s dash-col-7 dash-row-1">Test Box 1, 7</div>
             <div class="box box-s dash-col-4 dash-row-2">Test Box 2, 4</div>
             <div class="box box-s dash-col-5 dash-row-2">Test Box 2, 5</div>
             <div class="box box-s dash-col-6 dash-row-2">Test Box 2, 6</div>
@@ -200,5 +214,13 @@
     $('#orderModal').on('show.bs.modal', function () {
 	$(this).find('.modal-body').load('{% url 'coinbase:orders' %}');
     });
+
+   !function(d,s,id) {
+	var js,fjs=d.getElementsByTagName(s)[0];
+	if(!d.getElementById(id)){
+		js=d.createElement(s);js.id=id;
+		js.src="https://platform.twitter.com/widgets.js";
+		fjs.parentNode.insertBefore(js,fjs);
+	}}(document,"script","twitter-wjs");
 </script>
 

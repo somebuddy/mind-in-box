@@ -540,6 +540,23 @@
     color: #333;
 }
 
+/* Transparent */
+.box.box-transparent,
+.dashboard:hover > .box.box-transparent,
+.box.box-transparent:hover {
+    background-color: rgba(255, 255, 255, 0);
+    border: none;
+    -moz-box-shadow: none;
+    -o-box-shadow: none;
+    -webkit-box-shadow: none;
+    box-shadow: none;
+}
+
+.dashboard:hover .box-transparent > .header,
+.dashboard:hover .box-transparent > .cover {
+    color: #333;
+}
+
 /* ----------------------------------------
  *  Special Boxes
  *  -------------------------------------- */
