@@ -8,6 +8,10 @@
     <link href='http://fonts.googleapis.com/css?family=Roboto:400,100,300,100italic,300italic,400italic,500,500italic,700,700italic,900,900italic' rel='stylesheet' type='text/css'>
 {% endblock %}
 
+{% block page_scripts %}
+    <script src="{{ STATIC_URL }}js/jquery.tinyscrollbar.min.js"></script>
+{% endblock %}
+
 {% block page_content %}
 <body data-spy="scroll" data-target="#navbar" data-offset=0>
 {% include 'addons/menu.html' %}
@@ -21,7 +25,7 @@
 {% include 'sections/roadmap.html' %}
 {% include 'sections/contact.html' %}
 <section class="row-spacer">
-<div class="row center">
+<div class="container center">
     <div class="copyright">© 2013 Thinking In Box</div>
 </div>
 </section>

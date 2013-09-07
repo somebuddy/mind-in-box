@@ -1,4 +1,5 @@
 <link href='http://fonts.googleapis.com/css?family=Shadows+Into+Light+Two' rel='stylesheet' type='text/css'>
+<link href='{{ STATIC_URL }}css/bitstarter/jquery.mCustomScrollbar.css' rel='stylesheet' type='text/css'>
 <style>
     .font-cursive {
         font-family: 'Shadows Into Light Two', cursive;
@@ -314,14 +315,13 @@
 	overflow-x: auto;
 	overflow-y: hidden;
 	position: relative;
-	text-align: center;
     }
 
     .board .slide {
 	position: relative;
 	height: 100%;
 	text-align: center;
-	display: none;
+	display: inline-block;
 	width: auto;
 	margin-left: auto;
 	margin-right: auto;
@@ -348,6 +348,7 @@
     }
 
     .slide > .link {
+	cursor: pointer;
 	position: absolute;
 	font: 400 16px/18px 'Roboto', sans-serif;
 	color: rgba(69, 177, 221, 1);
@@ -373,7 +374,14 @@
 	width: 52px;
 	height: 52px;
 	border-radius: 25px;
+    }
+
+    .coin.green {
 	background: url({{ STATIC_URL }}img/coin-green.png);
+    }
+
+    .coin.red {
+	background: url({{ STATIC_URL }}img/coin-red.png);
     }
 
     .coin > .head {
@@ -400,33 +408,34 @@
     }
 
 </style>
-<section class="section-even" id="how-it-works">
+<section id="how-it-works" style="background-color: rgba(250, 250, 250, 0.8);">
     <div class="anchor-marker" id="how-it-works-anchor"></div>
     <label>How it Works</label>
     <div class="board">
+	<div id="howitworks-row">
 	<div class="slide" id="howitwork-slide-1">
-		<img src="{{ STATIC_URL }}img/howitworks-slide-1.png">
+		<img src="{{ STATIC_URL }}img/howitworks-slide-1.png" id="img-1">
 		<div class="caption" style="top: 25%; margin-left: auto; margin-right: auto; left:0; right: 0">
 			<p style="font-size: 36px; color: red; font-weight: bold; margin-bottom: 6%;">Beware of falling boxes!</p>
 			<p style="font-size: 24px; color: black; font-weight: 300;">This section is under construction now.</p>
 			<p style="font-size: 24px; color: black; font-weight: 300">But you're welcome to look at the overall ideas and comment on them</p>
 		</div>
-		<div class="link" style="top: 73%; right: 10%;">
+		<a id="link-slide-2" class="link" style="top: 73%; right: 10%;">
 			I will be carefull<br>
 			I promise
-		</div>
+		</a>
 	</div>
 	<div class="slide" id="howitwork-slide-2">
-		<img src="{{ STATIC_URL }}img/howitworks-slide-2.png">
+		<img src="{{ STATIC_URL }}img/howitworks-slide-2.png" id="img-2">
 		<div class="caption" style="top: 10px; left: 50px;">You want something to do?</div>
 		<div class="caption" style="top: 30px; left: 357px;">Add the task</div>
 		<div class="caption" style="top: 280px; left: 15px;">Plan it</div>
 		<div class="caption" style="top: 300px; left: 340px;">and we will remind you when you need</div>
 		<h2 class="caption" style="top: 100px; left: 620px;">Seems to easy?<br>But it works...</h2>
 		<h2 class="caption" style="top: 240px; left: 620px;">Want to look at a more complex case?</h2>
-		<div class="link" style="top: 380px; left: 620px;">Yes, I bravely look in the face of any challenges</div>
+		<a id="link-slide-3" class="link" style="top: 380px; left: 620px;">Yes, I bravely look in the face of any challenges</a>
 	</div>
-	<div class="slide active" id="howitwork-slide-3" style="margin-left: 40%">
+	<div class="slide active" id="howitwork-slide-3" id="img-3">
 			<img src="{{ STATIC_URL }}img/howitworks-slide-3.png">
 		<!-- node caption -->
 		<div class="caption" style="top: 260px; left: 80px;">Have an idea?</div>
@@ -437,17 +446,297 @@
 		<div class="caption" style="top: 108px; left: 1150px;width: 250px;">Share your ideas with others<br>Discuss them</div>
 		<div class="caption" style="top: 410px; left: 1280px;">Set the goal</div>
 		<div class="caption" style="top: 70px; left: 1440px;width: 280px;">Determine milestones and tasks</div>
-		<div class="caption" style="top: 100px; left: 1835px;">Plan your work</div>
+		<div class="caption" style="top: 120px; left: 1935px;">Plan your work</div>
 		<div class="caption" style="top: 400px; left: 1785px;">Share tasks</div>
-		<div class="caption" style="top: 360px; left: 1970px;width: 180px;">Search for coworkers</div>
+		<div class="caption" id="st-1" style="top: 360px; left: 1970px;width: 180px;">Search for coworkers</div>
 		<div class="caption" style="top: 345px; left: 2325px;">Work on tasks</div>
 		<div class="caption" style="top: 105px; left: 2130px;width: 160px;">Track your progress</div>
 		<div class="caption" style="top: 275px; left: 2740px;width: 200px;">Enjoy the result!</div>
+		<h2 class="caption" style="top: 320px; left: 2660px; width: 350px;">Will you invite us to the party?</h2>
 		<!-- coins -->
-		<div class="coin" style="top:20px; left:500px;">
+		<div class="coin green" style="top:20px; left:500px;"
+			data-toogle="popover" data-placement="left" 
+			data-content="Box - the best way to store your ideas. And it's the only thing you need"
+			data-original-title="Box"
+		>
 		    <div class="tail"><img src="{{ STATIC_URL }}img/coins/coin-01-tail.png"></div>
 		    <div class="head"><img src="{{ STATIC_URL }}img/coins/coin-01-head.png"></div>
 		</div>
+		<div class="coin green" style="top:400px; left:500px;"
+			data-toogle="popover" data-placement="top" 
+			data-content="The box may contain ideas and other boxes, so this is the easiest way to simplify your idea"
+			data-original-title="Box"
+		>
+		    <div class="tail"><img src="{{ STATIC_URL }}img/coins/coin-01-tail.png"></div>
+		    <div class="head"><img src="{{ STATIC_URL }}img/coins/coin-01-head.png"></div>
+		</div>
+		<div class="coin green" style="top:410px; left:560px;"
+			data-toogle="popover" data-placement="top" 
+			data-content="Mind map - an excellent tool to determine the details of your idea"
+			data-original-title="Mind Mapping"
+		>
+		    <div class="tail"><img src="{{ STATIC_URL }}img/coins/coin-02-tail.png"></div>
+		    <div class="head"><img src="{{ STATIC_URL }}img/coins/coin-02-head.png"></div>
+		</div>
+		<div class="coin green" style="top:22px; left:790px;"
+			data-toogle="popover" data-placement="bottom" 
+			data-content=""
+			data-original-title="Notes"
+		>
+		    <div class="tail"><img src="{{ STATIC_URL }}img/coins/coin-03-tail.png"></div>
+		    <div class="head"><img src="{{ STATIC_URL }}img/coins/coin-03-head.png"></div>
+		</div>
+		<div class="coin green" style="top:30px; left:850px;"
+			data-toogle="popover" data-placement="bottom" 
+			data-content=""
+			data-original-title="Bookmarks"
+		>
+		    <div class="tail"><img src="{{ STATIC_URL }}img/coins/coin-04-tail.png"></div>
+		    <div class="head"><img src="{{ STATIC_URL }}img/coins/coin-04-head.png"></div>
+		</div>
+		<div class="coin green" style="top:390px; left:900px;"
+			data-toogle="popover" data-placement="top" 
+			data-content=""
+			data-original-title="Mind Mapping"
+		>
+		    <div class="tail"><img src="{{ STATIC_URL }}img/coins/coin-02-tail.png"></div>
+		    <div class="head"><img src="{{ STATIC_URL }}img/coins/coin-02-head.png"></div>
+		</div>
+
+		<div class="coin green" style="top:400px; left:970px;"
+			data-toogle="popover" data-placement="top" 
+			data-content=""
+			data-original-title="Brainstorming"
+		>
+		    <div class="tail"><img src="{{ STATIC_URL }}img/coins/coin-05-tail.png"></div>
+		    <div class="head"><img src="{{ STATIC_URL }}img/coins/coin-05-head.png"></div>
+		</div>
+
+		<div class="coin green" style="top:45px; left:1180px;"
+			data-toogle="popover" data-placement="bottom" 
+			data-content=""
+			data-original-title="Public boxes"
+		>
+		    <div class="tail"><img src="{{ STATIC_URL }}img/coins/coin-01-tail.png"></div>
+		    <div class="head"><img src="{{ STATIC_URL }}img/coins/coin-01-head.png"></div>
+		</div>
+
+		<div class="coin green" style="top:42px; left:1240px;"
+			data-toogle="popover" data-placement="bottom" 
+			data-content=""
+			data-original-title="Team brainstorming"
+		>
+		    <div class="tail"><img src="{{ STATIC_URL }}img/coins/coin-05-tail.png"></div>
+		    <div class="head"><img src="{{ STATIC_URL }}img/coins/coin-05-head.png"></div>
+		</div>
+
+		<div class="coin green" style="top:40px; left:1300px;"
+			data-toogle="popover" data-placement="bottom" 
+			data-content=""
+			data-original-title="User voice"
+		>
+		    <div class="tail"><img src="{{ STATIC_URL }}img/coins/coin-06-tail.png"></div>
+		    <div class="head"><img src="{{ STATIC_URL }}img/coins/coin-06-head.png"></div>
+		</div>
+
+		<div class="coin green" style="top:48px; left:1360px;"
+			data-toogle="popover" data-placement="bottom" 
+			data-content=""
+			data-original-title="Votes"
+		>
+		    <div class="tail"><i class="icon-thumbs-up" style="color: #f00; font-size: 36px;"></i></div>
+		    <div class="head"><i class="icon-thumbs-up" style="color: #89cf58; font-size: 36px;";></i></div>
+		</div>
+		<div class="coin green" style="top:390px; left:1460px;"
+			data-toogle="popover" data-placement="top" 
+			data-content=""
+			data-original-title="Box"
+		>
+		    <div class="tail"><img src="{{ STATIC_URL }}img/coins/coin-01-tail.png"></div>
+		    <div class="head"><img src="{{ STATIC_URL }}img/coins/coin-01-head.png"></div>
+		</div>
+		<div class="coin red" style="top:393px; left:1520px;"
+			data-toogle="popover" data-placement="top" 
+			data-content=""
+			data-original-title="Goal Tracker"
+		>
+		    <div class="tail"><img src="{{ STATIC_URL }}img/coins/coin-09-tail.png"></div>
+		    <div class="head"><img src="{{ STATIC_URL }}img/coins/coin-09-head.png"></div>
+		</div>
+		<div class="coin red" style="top:200px; left:1688px;"
+			data-toogle="popover" data-placement="left" 
+			data-content=""
+			data-original-title="Box"
+		>
+		    <div class="tail"><img src="{{ STATIC_URL }}img/coins/coin-08-tail.png"></div>
+		    <div class="head"><img src="{{ STATIC_URL }}img/coins/coin-08-head.png"></div>
+		</div>
+		<div class="coin red" style="top:140px; left:1700px;"
+			data-toogle="popover" data-placement="left" 
+			data-content=""
+			data-original-title="Goal Tracket"
+		>
+		    <div class="tail"><img src="{{ STATIC_URL }}img/coins/coin-09-tail.png"></div>
+		    <div class="head"><img src="{{ STATIC_URL }}img/coins/coin-09-head.png"></div>
+		</div>
+		<div class="coin red" style="top:80px; left:1715px;"
+			data-toogle="popover" data-placement="left" 
+			data-content=""
+			data-original-title="Tasks workflow"
+		>
+		    <div class="tail"><img src="{{ STATIC_URL }}img/coins/coin-10-tail.png"></div>
+		    <div class="head"><img src="{{ STATIC_URL }}img/coins/coin-10-head.png"></div>
+		</div>
+		<div class="coin red" style="top:45px; left:1760px;"
+			data-toogle="popover" data-placement="bottom" 
+			data-content=""
+			data-original-title="Tasks board"
+		>
+		    <div class="tail"><img src="{{ STATIC_URL }}img/coins/coin-11-tail.png"></div>
+		    <div class="head"><img src="{{ STATIC_URL }}img/coins/coin-11-head.png"></div>
+		</div>
+		<div class="coin red" style="top:30px; left:1820px;"
+			data-toogle="popover" data-placement="bottom" 
+			data-content=""
+			data-original-title="Notes board"
+		>
+		    <div class="tail"><img src="{{ STATIC_URL }}img/coins/coin-12-tail.png"></div>
+		    <div class="head"><img src="{{ STATIC_URL }}img/coins/coin-12-head.png"></div>
+		</div>
+		<div class="coin red" style="top:148px; left:2020px;"
+			data-toogle="popover" data-placement="top" 
+			data-content=""
+			data-original-title="To-do list"
+		>
+		    <div class="tail"><img src="{{ STATIC_URL }}img/coins/coin-13-tail.png"></div>
+		    <div class="head"><img src="{{ STATIC_URL }}img/coins/coin-13-head.png"></div>
+		</div>
+		<div class="coin red" style="top:185px; left:1975px;"
+			data-toogle="popover" data-placement="top" 
+			data-content=""
+			data-original-title="Calendar"
+		>
+		    <div class="tail"><img src="{{ STATIC_URL }}img/coins/coin-14-tail.png"></div>
+		    <div class="head"><img src="{{ STATIC_URL }}img/coins/coin-14-head.png"></div>
+		</div>
+		<div class="coin red" style="top:228px; left:1930px;"
+			data-toogle="popover" data-placement="top" 
+			data-content=""
+			data-original-title="Agile dashboard"
+		>
+		    <div class="tail" style="padding: 8px"><i class="icon-puzzle-piece" style="color: #555; font-size: 28px";></i></div>
+		    <div class="head" style="padding: 8px"><i class="icon-puzzle-piece" style="color: #f00; font-size: 28px"></i></div>
+		</div>
+		<div class="coin red" style="top:340px; left:1883px;"
+			data-toogle="popover" data-placement="top" 
+			data-content=""
+			data-original-title="Public box"
+		>
+		    <div class="tail"><img src="{{ STATIC_URL }}img/coins/coin-08-tail.png"></div>
+		    <div class="head"><img src="{{ STATIC_URL }}img/coins/coin-08-head.png"></div>
+		</div>
+		<div class="coin red" style="top:390px; left:1910px;"
+			data-toogle="popover" data-placement="top" 
+			data-content=""
+			data-original-title="Tasks board"
+		>
+		    <div class="tail"><img src="{{ STATIC_URL }}img/coins/coin-11-tail.png"></div>
+		    <div class="head"><img src="{{ STATIC_URL }}img/coins/coin-11-head.png"></div>
+		</div>
+		<div class="coin red" style="top:390px; left:2050px;"
+			data-toogle="popover" data-placement="top" 
+			data-content=""
+			data-original-title="Teams"
+		>
+		    <div class="tail" style="padding: 8px"><i class="icon-group" style="color: #555; font-size: 28px";></i></div>
+		    <div class="head" style="padding: 8px"><i class="icon-group" style="color: #f00; font-size: 28px"></i></div>
+		</div>
+		<div class="coin red" style="top:392px; left:2110px;"
+			data-toogle="popover" data-placement="top" 
+			data-content=""
+			data-original-title="User profile box"
+		>
+		    <div class="tail"><i class="icon-user" style="color: #555; font-size: 36px;";></i></div>
+		    <div class="head"><i class="icon-user" style="color: #f00; font-size: 36px;"></i></div>
+		</div>
+		<div class="coin red" style="top:350px; left:2255px;"
+			data-toogle="popover" data-placement="top" 
+			data-content=""
+			data-original-title="Box"
+		>
+		    <div class="tail"><img src="{{ STATIC_URL }}img/coins/coin-08-tail.png"></div>
+		    <div class="head"><img src="{{ STATIC_URL }}img/coins/coin-08-head.png"></div>
+		</div>
+		<div class="coin red" style="top:290px; left:2240px;"
+			data-toogle="popover" data-placement="top" 
+			data-content=""
+			data-original-title="Personal workspace"
+		>
+		    <div class="tail" style="padding: 8px"><i class="icon-coffee" style="color: #555; font-size: 28px";></i></div>
+		    <div class="head" style="padding: 8px"><i class="icon-coffee" style="color: #f00; font-size: 28px"></i></div>
+		</div>
+		<div class="coin red" style="top:60px; left:2160px;"
+			data-toogle="popover" data-placement="bottom" 
+			data-content=""
+			data-original-title="Goal tracker"
+		>
+		    <div class="tail"><img src="{{ STATIC_URL }}img/coins/coin-09-tail.png"></div>
+		    <div class="head"><img src="{{ STATIC_URL }}img/coins/coin-09-head.png"></div>
+		</div>
+		<div class="coin red" style="top:57px; left:2220px;"
+			data-toogle="popover" data-placement="bottom" 
+			data-content=""
+			data-original-title="Task workflow"
+		>
+		    <div class="tail"><img src="{{ STATIC_URL }}img/coins/coin-10-tail.png"></div>
+		    <div class="head"><img src="{{ STATIC_URL }}img/coins/coin-10-head.png"></div>
+		</div>
+		<div class="coin red" style="top:56px; left:2280px;"
+			data-toogle="popover" data-placement="bottom" 
+			data-content=""
+			data-original-title="Chronometer"
+		>
+		    <div class="tail" style="padding: 8px"><i class="icon-time" style="color: #555; font-size: 28px";></i></div>
+		    <div class="head" style="padding: 8px"><i class="icon-time" style="color: #f00; font-size: 28px"></i></div>
+		</div>
+		<div class="coin red" style="top:56px; left:2340px;"
+			data-toogle="popover" data-placement="bottom" 
+			data-content=""
+			data-original-title="Pomodoro"
+		>
+		    <div class="tail" style="padding: 8px"><i class="icon-beer" style="color: #555; font-size: 28px";></i></div>
+		    <div class="head" style="padding: 8px"><i class="icon-beer" style="color: #f90; font-size: 28px"></i></div>
+		</div>
+		<div class="coin" style="top:55px; left:2812px;"
+			data-toogle="popover" data-placement="bottom" 
+			data-content="You're winner!!! Great job"
+			data-original-title=""
+		>
+		    <div class="tail" style="padding: 2px"><i class="icon-trophy" style="color: #555; font-size: 40px";></i></div>
+		    <div class="head" style="padding: 2px"><i class="icon-trophy" style="color: #f90; font-size: 40px"></i></div>
+		</div>
+	</div>
 	</div>
     </div>
 </section>
+<script>
+	$(".coin").popover({trigger: 'hover'});
+	(function($) {
+		$(window).load(function() {
+			w = $(window).width()*0.4;
+			$("#howitworks-row").css("width", 4*w + 4000 + "px"); 
+			$("#howitwork-slide-1").css("margin-left", (w-320) + "px"); 
+			$("#howitwork-slide-2").css("margin-left", (w-320) + "px"); 
+			$("#howitwork-slide-3").css("margin-left", w + "px"); 
+			$(".board").mCustomScrollbar({
+				horizontalScroll:true
+			}); 
+			$("#link-slide-2").on('click', function() {				
+				$(".board").mCustomScrollbar("scrollTo", w + 400);
+			});
+			$("#link-slide-3").on('click', function() {				
+				$(".board").mCustomScrollbar("scrollTo", 2*w+800);
+			});
+		});
+	})(jQuery);
+</script>
