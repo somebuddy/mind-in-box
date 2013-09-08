@@ -1,4 +1,4 @@
-
+{% load humanize %}
 <div class="col-lg-10 col-lg-offset-1"> 
     <div class="row statistics">
         <div class="col-6 linediv-l">
@@ -6,14 +6,14 @@
         </div>
         <div class="col-6">
             <div class="linediv-c">
-                <h3>${{ current_balance }}</h3><p>of $300,000</p>
+                <h3>${{ current_balance }}</h3><p>of ${{ total_sum|intcomma }}</p>
             </div>
         </div>
     </div>
     <div class="row">
        <div class="thermometer progress active">
-         <div class="progress-bar progress-bar-success" style="width: 0%;"></div>
-         <div class="progress-bar progress-bar-warning" style="width: 100%;"></div>
+         <div class="progress-bar progress-bar-success" style="width: {{ done_percent }}%;"></div>
+         <div class="progress-bar progress-bar-warning" style="width: {{ rest_percent }}%;"></div>
        </div>
     </div>
     <div class="row statistics">

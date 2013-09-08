@@ -62,8 +62,6 @@ class CoinbaseWallet(object):
     @staticmethod
     def get_total_USD():
         balance = CoinbaseWallet.balance()
-        for k, x in balance.items():
-            print(k)
         total = 0.0
         if balance['currency'] == 'BTC':
             balance = CoinbaseWallet.sell(balance['amount'])['total']

@@ -22,9 +22,15 @@ class CrowdfundingBoxStat(TemplateView):
 
     def get_context_data(self, **kwargs):
         context = super(TemplateView, self).get_context_data(**kwargs)
-        context['start_date'] = datetime(2013, 12, 15)
+        context['start_date'] = datetime(2013, 12, 21)
         context['backers_count'] = CoinbaseWallet.get_orders_count()
-        context['current_balance'] = CoinbaseWallet.get_total_USD()
+        current_donations = CoinbaseWallet.get_total_USD()
+        total_sum = 300000
+        done = current_donations * 100 / total_sum
+        context['current_balance'] = current_donations
+        context['total_sum'] = total_sum
+        context['done_percent'] = done
+        context['rest_percent'] = 100 - done
         return context
 
 class CrowdfundingOrderList(TemplateView):
