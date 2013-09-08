@@ -1,77 +1,22 @@
 <style>
-    #carousel-mission {
-    	margin-top: 20px;
+    /* Indicators */
+
+    .mission-indicators.carousel-indicators {
+	text-align: center;
+	top: 80%;
+	left: 10%;
+        margin-left: 0;
+	width: 200px;
     }
 
-    #carousel-mission .item {
-	    height: 400px;
-    }
-
-    #carousel-mission .carousel-indicators li {
-        width: 12px;
-        height: 12px;
+    .mission-indicators.carousel-indicators > li {
+        width: 16px;
+        height: 16px;
     }	
     
-    #carousel-mission .carousel-indicators .active {
-    	width: 16px;
-	    height: 16px;
-    }
-
-    #carousel-mission .row {
-        height: 100%;
-    }
-
-    #carousel-mission .image-col {
-        height: 60%;
-        top: 20%;
-        text-align: center;
-    }
-
-    #carousel-mission .image-col .caption {
-        width: 100%;
-        text-align: center;
-        color: #333;
-	    font: 20px/30px 'Shadows Into Light Two', cursive;
-    }
-
-    #carousel-mission .image-col .image {
-        max-width: 60%;
-        max-height: 70%;
-    }
-    
-    #carousel-mission .descr-col {
-        height: 90%;
-        top: 5%;
-        text-align: left;
-    }
-
-    #carousel-mission .descr-col .header {
-        width: 100%;
-        font-family: 'Roboto', sans-serif;
-        margin-bottom: 30px;
-    }
-
-    #carousel-mission .descr-col p {
-        font: 300 18px/24px 'Roboto', sans-serif;
-    }
-
-    #carousel-mission .descr-col > .details {
-        font: 300 16px/20px 'Roboto', sans-serif;
-        margin-left: 0px;
-        margin-top: 20px;
-        margin-left: -20px;
-    }
-
-    #carousel-mission .details > li {
-        margin-top: 15px;
-        margin-bottom: 10px;
-    }
-
-    #carousel-mission .carousel-indicators {
-        top: 85%;
-        width: 30%;
-        left: 0;
-        margin-left: 0;
+    .mission-indicators.carousel-indicators > .active {
+    	width: 20px;
+        height: 20px;
     }
 
     .carousel-indicators > li.green {
@@ -122,61 +67,136 @@
         background-color: rgba(77, 77, 77, 0.3);
     }
 
+    /* Carousel */
+    .carousel-fade .item {
+	-webkit-transition: opacity 1s ease;    
+	-moz-transition: opacity 1s ease;    
+	-o-transition: opacity 1s ease;
+	-ms-transition: opacity 1s ease;
+	transition: opacity 1s ease;
+    }
 
-    .header.green {
+    .carousel-fade .active.left {
+	left: 0;
+	opacity: 0;
+	z-index: 2;
+    }
+
+    .carousel-fade .next {
+	left: 0;
+	opacity: 1;
+	z-index: 1;
+    }
+	
+    #carousel-mission {
+    	margin-top: 40px;
+    }
+
+    #carousel-mission .item {
+        height: 400px;
+    }
+
+    #carousel-mission .row {
+        height: 100%;
+    }
+  
+    /* Image Column */
+
+    #carousel-mission .image-col {
+        height: 60%;
+        top: 20%;
+        text-align: center;
+    }
+
+    #carousel-mission .image-col .caption {
+        width: 100%;
+        text-align: center;
+        color: #333;
+        font: 20px/30px 'Shadows Into Light Two', cursive;
+    }
+
+    #carousel-mission .image-col .image {
+        max-width: 60%;
+        max-height: 70%;
+    }
+
+    /* Description Column */
+    
+    #carousel-mission .descr-col {
+        height: 90%;
+        top: 5%;
+        text-align: left;
+	padding: 40px;
+	background-color: rgba(255, 255, 255, 0.9);
+	border-radius: 3px;
+	margin: 10px;
+    }
+
+    #carousel-mission .descr-col > h3 {
+        width: 100%;
+        font-family: 'Roboto', sans-serif;
+	margin: 0 0 30px 0;
+	line-height: 36px;
+    }
+
+    #carousel-mission .descr-col p {
+	color: #999;
+        font: 400 14px/24px 'Roboto', sans-serif;
+    }
+
+    #carousel-mission .descr-col > .details {
+        font: 300 14px/24px 'Roboto', sans-serif;
+        margin-left: 0px;
+        margin-top: 20px;
+        margin-left: -20px;
+    }
+
+    #carousel-mission .details > li {
+        margin-top: 15px;
+        margin-bottom: 10px;
+    }
+
+    h3.green {
         color: rgba(140, 190, 41, 1);
     }
 
-    .header.orange {
+    h3.orange {
         color: rgba(255, 147, 30, 1);
     }
 
-    .header.purple {
+    h3.purple {
         color: rgba(102, 45, 145, 1);
     }
 
-    .header.red {
+    h3.red {
         color: rgba(255, 29, 37, 1);
     }
 
-    .header.blue {
+    h3.blue {
         color: rgba(63, 169, 245, 1);
     }
 
-    .header.dark-gray {
-        border-color: rgba(77, 77, 77, 1);
+    h3.dark-gray {
+        color: rgba(77, 77, 77, 1);
     }
 
 </style>
 
 <section class="section-even" id="mission">
     <label>Mission</label>
+
     <div class="container">
         <h2 class="slogan">Make a way from dream to reality easier</h2>
-	{% comment %}
-	Improve people thinking
-	Help focus
-	Improve concentration
-	Concentrate on details
-	Increase motivation
-	Control of life
-
-	Connect people minds
-    Coworking on common objectives
-
-    Just what you need
-	
-	{% endcomment %}
-        <div id="carousel-mission" class="carousel slide" data-interval="5000">
+        <div id="carousel-mission" class="carousel slide carousel-fade" data-interval="8000">
           <!-- Indicators -->
-          <ol class="carousel-indicators">
-              <li data-target="#carousel-mission" data-slide-to="0" class="green active"></li>
-              <li data-target="#carousel-mission" data-slide-to="1" class="orange"></li>
-              <li data-target="#carousel-mission" data-slide-to="2" class="purple"></li>
-              <li data-target="#carousel-mission" data-slide-to="3" class="red"></li>
-              <li data-target="#carousel-mission" data-slide-to="4" class="blue"></li>
-              <li data-target="#carousel-mission" data-slide-to="5" class="dark-gray"></li>
-          </ol>
+    <ol class="mission-indicators carousel-indicators">
+        <li data-target="#carousel-mission" data-slide-to="0" class="green active"></li>
+        <li data-target="#carousel-mission" data-slide-to="1" class="orange"></li>
+        <li data-target="#carousel-mission" data-slide-to="2" class="purple"></li>
+        <li data-target="#carousel-mission" data-slide-to="3" class="red"></li>
+        <li data-target="#carousel-mission" data-slide-to="4" class="blue"></li>
+        <li data-target="#carousel-mission" data-slide-to="5" class="dark-gray"></li>
+    </ol>
           
           <!-- Wrapper for slides -->
           <div class="carousel-inner">
@@ -186,10 +206,12 @@
                          <h4 class="caption">look at the different sides of our mission</h4>
                          <img class="image" src="{{ STATIC_URL }}img/mission-thinking.png">
                      </div>
-                     <div class="col-lg-8 descr-col">
+                     <div class="col-lg-3 descr-col col-lg-offset-1">
                          <h3 class="header green">Improve human thinking</h3>
                          <p>We believe that everything begins with a thought.</p>
                          <p>The better thought out your ideas, the better the expected result.</p> 
+		     </div>
+                     <div class="col-lg-3 descr-col">
                          <ul class="icons-ul details">
                              <li><i class="icon-li icon-ok-circle"></i>Store the ideas, create new ones</li>
                              <li><i class="icon-li icon-ok-circle"></i>Work on your ideas and improve them</li>
@@ -206,10 +228,12 @@
                          <h4 class="caption">look at the different sides of our mission</h4>
                          <img class="image" src="{{ STATIC_URL }}img/mission-life.png">
                      </div>
-                     <div class="col-lg-8 descr-col">
+                     <div class="col-lg-3 descr-col col-lg-offset-1">
                         <h3 class="header orange">Control of life</h3>
                         <p>We want to help take control of lifetime, determine the values of life, do what really matters, don't waste your time on trifles and finally... enjoy the life.</p>
                         <p>We can not fulfill all your desires, but we can help you:</p>
+		     </div>
+                     <div class="col-lg-3 descr-col col-lg-offset-1">
                         <ul class="icons-ul details">
                             <li><i class="icon-li icon-ok-circle"></i>Follow dreams</li>
                             <li><i class="icon-li icon-ok-circle"></i>Track goals</li>
@@ -226,10 +250,12 @@
                          <h4 class="caption">look at the different sides of our mission</h4>
                          <img class="image" src="{{ STATIC_URL }}img/mission-reduce.png">
                      </div>
-                     <div class="col-lg-8 descr-col">
+                     <div class="col-lg-3 descr-col col-lg-offset-1">
                          <h3 class="header purple">Reduce the time required for supporting actions</h3>
                          <p>We strive for make work more exciting and interesting, and goal achievement quick and easy.</p>
                          <p>To do this, we will create tools that can reduce the effects of secondary tasks and help to focus on goals:</p>
+		     </div>
+                     <div class="col-lg-3 descr-col col-lg-offset-1">
                          <ul class="icons-ul details">
                              <li><i class="icon-li icon-ok-circle"></i>Brainstorming</li>
                              <li><i class="icon-li icon-ok-circle"></i>Goal tracking</li>
@@ -245,10 +271,12 @@
                          <h4 class="caption">look at the different sides of our mission</h4>
                          <img class="image" src="{{ STATIC_URL }}img/mission-cooperation.png">
                      </div>
-                     <div class="col-lg-8 descr-col">
+                     <div class="col-lg-3 descr-col col-lg-offset-1">
                         <h3 class="header red">Working together</h3>
                         <p>We want to bring people together with common goals</p>
                         <p>Working together allows you to move faster, leading to a better result, reduces frustration and increases motivation.</p>
+		     </div>
+                     <div class="col-lg-3 descr-col col-lg-offset-1">
                         <ul class="icons-ul details">
                             <li><i class="icon-li icon-ok-circle"></i>Connect people minds</li>
                             <li><i class="icon-li icon-ok-circle"></i>Search for coworkers</li>
@@ -267,10 +295,12 @@
                          <h4 class="caption">look at the different sides of our mission</h4>
                          <img class="image" src="{{ STATIC_URL }}img/mission-personal.png">
                      </div>
-                     <div class="col-lg-8 descr-col">
+                     <div class="col-lg-3 descr-col col-lg-offset-1">
                         <h3 class="header blue">Create personal workspace</h3>
                         <p>For us it is important that our customers feel comfortable and free.</p>
                         <p>That is why we are working so that our users can: </p>
+		     </div>
+                     <div class="col-lg-3 descr-col col-lg-offset-1">
                         <ul class="icons-ul details">
                             <li><i class="icon-li icon-ok-circle"></i>Create own box</li>
                             <li><i class="icon-li icon-ok-circle"></i>Use own tools</li>
@@ -287,10 +317,12 @@
                          <h4 class="caption">look at the different sides of our mission</h4>
                          <img class="image" src="{{ STATIC_URL }}img/mission-feedback.png">
                      </div>
-                     <div class="col-lg-8 descr-col">
+                     <div class="col-lg-3 descr-col col-lg-offset-1">
                         <h3 class="header dark-gray">Feedback</h3>
                         <p>We open for our users.</p>
                         <p>If you have any ideas, suggestions, comments, or just want to say "Hello", then contact us on our pages on social networks</p>
+		     </div>
+                     <div class="col-lg-3 descr-col col-lg-offset-1">
                         <div style="font-size: 64px">
                             <a href="https://www.facebook.com/pages/Thinking-In-Box/356419494489877">
                                <i class="icon-facebook-sign"></i>
@@ -310,3 +342,17 @@
       </div>
     </div>
 </section>
+	{% comment %}
+	Improve people thinking
+	Help focus
+	Improve concentration
+	Concentrate on details
+	Increase motivation
+	Control of life
+
+	Connect people minds
+    Coworking on common objectives
+
+    Just what you need
+	
+	{% endcomment %}
