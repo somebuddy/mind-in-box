@@ -17,4 +17,17 @@
         </div>
     </div>
 </div>
-
+<script>
+    $(document).ready(function () {
+	$('a[href^="#"]').on('click', function(e) {
+		e.preventDefault();
+		hash = $(this).prop('hash');
+		console.log(hash);
+		$('html, body').animate({
+		    'scrollTop': $(hash).offset().top - $('#navbar').height()
+		}, 2000, 'swing', function () {
+			window.location.hash = hash;
+		});
+	});
+    });
+</script>
