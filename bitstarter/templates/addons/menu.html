@@ -9,10 +9,11 @@
         <div class="nav-collapse collapse navbar-responsive-collapse">
             <ul class="nav navbar-nav">
                 <li class="active"><a href="#dashboard">Home</a></li>
-                <li><a href="#mission-anchor">Our mission</a></li>
-                <li><a href="#features-anchor">Features</a></li>
-                <li><a href="#roadmap-anchor">Roadmap</a></li>
-                <li><a href="#contact-anchor">Contact</a></li>
+                <li><a href="#mission">Our mission</a></li>
+                <li><a href="#how-it-works">How it works</a></li>
+                <li><a href="#features">Features</a></li>
+                <li><a href="#roadmap">Roadmap</a></li>
+                <li><a href="#contact">Contact</a></li>
             </ul>
         </div>
     </div>
@@ -24,10 +25,8 @@
 		hash = $(this).prop('hash');
 		console.log(hash);
 		$('html, body').animate({
-		    'scrollTop': $(hash).offset().top - $('#navbar').height()
-		}, 2000, 'swing', function () {
-			window.location.hash = hash;
-		});
+		    'scrollTop': $(hash).offset().top - $('.navbar-fixed-top').height()
+		}, 2000);
 	});
     });
 </script>
