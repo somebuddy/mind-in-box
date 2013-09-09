@@ -127,7 +127,6 @@
         top: 5%;
         text-align: left;
 	padding: 40px;
-	background-color: rgba(255, 255, 255, 0.9);
 	border-radius: 3px;
 	margin: 10px;
     }
@@ -140,12 +139,12 @@
     }
 
     #carousel-mission .descr-col p {
-	color: #999;
-        font: 400 14px/24px 'Roboto', sans-serif;
+    	color: #555;
+        font: 400 15px/24px 'Roboto', sans-serif;
     }
 
     #carousel-mission .descr-col > .details {
-        font: 300 14px/24px 'Roboto', sans-serif;
+        font: 300 15px/24px 'Roboto', sans-serif;
         margin-left: 0px;
         margin-top: 20px;
         margin-left: -20px;
@@ -196,22 +195,19 @@
         <li data-target="#carousel-mission" data-slide-to="3" class="red"></li>
         <li data-target="#carousel-mission" data-slide-to="4" class="blue"></li>
         <li data-target="#carousel-mission" data-slide-to="5" class="dark-gray"></li>
-    </ol>
-          
+    </ol> 
           <!-- Wrapper for slides -->
           <div class="carousel-inner">
              <div class="item active">
                  <div class="row">
-                     <div class="col-lg-4 image-col">
+                     <div class="col-lg-4 image-col col-lg-offset-1">
                          <h4 class="caption">look at the different sides of our mission</h4>
                          <img class="image" src="{{ STATIC_URL }}img/mission-thinking.png">
                      </div>
-                     <div class="col-lg-3 descr-col col-lg-offset-1">
+                     <div class="col-lg-6 descr-col col-lg-offset-1">
                          <h3 class="header green">Improve human thinking</h3>
                          <p>We believe that everything begins with a thought.</p>
                          <p>The better thought out your ideas, the better the expected result.</p> 
-		     </div>
-                     <div class="col-lg-3 descr-col">
                          <ul class="icons-ul details">
                              <li><i class="icon-li icon-ok-circle"></i>Store the ideas, create new ones</li>
                              <li><i class="icon-li icon-ok-circle"></i>Work on your ideas and improve them</li>
@@ -224,16 +220,14 @@
              </div>
              <div class="item">
                  <div class="row">
-                     <div class="col-lg-4 image-col">
+                     <div class="col-lg-4 image-col col-lg-offset-1">
                          <h4 class="caption">look at the different sides of our mission</h4>
                          <img class="image" src="{{ STATIC_URL }}img/mission-life.png">
                      </div>
-                     <div class="col-lg-3 descr-col col-lg-offset-1">
+                     <div class="col-lg-6 descr-col col-lg-offset-1">
                         <h3 class="header orange">Control of life</h3>
                         <p>We want to help take control of lifetime, determine the values of life, do what really matters, don't waste your time on trifles and finally... enjoy the life.</p>
                         <p>We can not fulfill all your desires, but we can help you:</p>
-		     </div>
-                     <div class="col-lg-3 descr-col col-lg-offset-1">
                         <ul class="icons-ul details">
                             <li><i class="icon-li icon-ok-circle"></i>Follow dreams</li>
                             <li><i class="icon-li icon-ok-circle"></i>Track goals</li>
@@ -246,16 +240,14 @@
             </div>
             <div class="item">
                  <div class="row">
-                     <div class="col-lg-4 image-col">
+                     <div class="col-lg-4 image-col col-lg-offset-1">
                          <h4 class="caption">look at the different sides of our mission</h4>
                          <img class="image" src="{{ STATIC_URL }}img/mission-reduce.png">
                      </div>
-                     <div class="col-lg-3 descr-col col-lg-offset-1">
+                     <div class="col-lg-6 descr-col col-lg-offset-1">
                          <h3 class="header purple">Reduce the time required for supporting actions</h3>
                          <p>We strive for make work more exciting and interesting, and goal achievement quick and easy.</p>
                          <p>To do this, we will create tools that can reduce the effects of secondary tasks and help to focus on goals:</p>
-		     </div>
-                     <div class="col-lg-3 descr-col col-lg-offset-1">
                          <ul class="icons-ul details">
                              <li><i class="icon-li icon-ok-circle"></i>Brainstorming</li>
                              <li><i class="icon-li icon-ok-circle"></i>Goal tracking</li>
@@ -267,16 +259,14 @@
              </div>
              <div class="item">
                  <div class="row">
-                     <div class="col-lg-4 image-col">
+                     <div class="col-lg-4 image-col col-lg-offset-1">
                          <h4 class="caption">look at the different sides of our mission</h4>
                          <img class="image" src="{{ STATIC_URL }}img/mission-cooperation.png">
                      </div>
-                     <div class="col-lg-3 descr-col col-lg-offset-1">
+                     <div class="col-lg-6 descr-col col-lg-offset-1">
                         <h3 class="header red">Working together</h3>
                         <p>We want to bring people together with common goals</p>
                         <p>Working together allows you to move faster, leading to a better result, reduces frustration and increases motivation.</p>
-		     </div>
-                     <div class="col-lg-3 descr-col col-lg-offset-1">
                         <ul class="icons-ul details">
                             <li><i class="icon-li icon-ok-circle"></i>Connect people minds</li>
                             <li><i class="icon-li icon-ok-circle"></i>Search for coworkers</li>
@@ -291,16 +281,14 @@
 	         </div>
              <div class="item">
                  <div class="row">
-                     <div class="col-lg-4 image-col">
+                     <div class="col-lg-4 image-col col-lg-offset-1">
                          <h4 class="caption">look at the different sides of our mission</h4>
                          <img class="image" src="{{ STATIC_URL }}img/mission-personal.png">
                      </div>
-                     <div class="col-lg-3 descr-col col-lg-offset-1">
+                     <div class="col-lg-6 descr-col col-lg-offset-1">
                         <h3 class="header blue">Create personal workspace</h3>
                         <p>For us it is important that our customers feel comfortable and free.</p>
                         <p>That is why we are working so that our users can: </p>
-		     </div>
-                     <div class="col-lg-3 descr-col col-lg-offset-1">
                         <ul class="icons-ul details">
                             <li><i class="icon-li icon-ok-circle"></i>Create own box</li>
                             <li><i class="icon-li icon-ok-circle"></i>Use own tools</li>
@@ -313,16 +301,14 @@
             </div>
              <div class="item">
                  <div class="row">
-                     <div class="col-lg-4 image-col">
+                     <div class="col-lg-4 image-col col-lg-offset-1">
                          <h4 class="caption">look at the different sides of our mission</h4>
                          <img class="image" src="{{ STATIC_URL }}img/mission-feedback.png">
                      </div>
-                     <div class="col-lg-3 descr-col col-lg-offset-1">
+                     <div class="col-lg-6 descr-col col-lg-offset-1">
                         <h3 class="header dark-gray">Feedback</h3>
                         <p>We open for our users.</p>
                         <p>If you have any ideas, suggestions, comments, or just want to say "Hello", then contact us on our pages on social networks</p>
-		     </div>
-                     <div class="col-lg-3 descr-col col-lg-offset-1">
                         <div style="font-size: 64px">
                             <a href="https://www.facebook.com/pages/Thinking-In-Box/356419494489877">
                                <i class="icon-facebook-sign"></i>
