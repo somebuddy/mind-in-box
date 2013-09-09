@@ -6,7 +6,9 @@
 {% block page_styles %}{% endblock %}
 {% include 'addons/default_scripts.html' %}
 {% block page_scripts %}{% endblock %}
-{% include 'addons/google_analytics.html' %}
+{% if not debug %}
+    {% include 'addons/google_analytics.html' %}
+{% endif %}
 
 {% block page_content %}{% endblock %}
 {% block end_scripts %}{% endblock %}
