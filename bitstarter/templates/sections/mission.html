@@ -1,4 +1,9 @@
 <style>
+
+    #mission {
+	background: url({{ STATIC_URL }}img/textures/Texture0207.jpg) repeat;
+    }
+
     /* Indicators */
 
     .mission-indicators.carousel-indicators {
@@ -131,6 +136,10 @@
 	margin: 10px;
     }
 
+    #mission > .container {
+	margin-top: 70px;
+    }
+
     #carousel-mission .descr-col > h3 {
         width: 100%;
         font-family: 'Roboto', sans-serif;
@@ -179,14 +188,99 @@
         color: rgba(77, 77, 77, 1);
     }
 
+    .mission-box-side {
+	position: absolute;
+	width: 95px;
+	height: 95px;
+	background-color: red;
+	-webkit-transform: rotate(-45deg);
+	transform: rotate(-45deg);
+	border-radius: 4px;
+	border: 1px solid #999;
+	z-index: 2;
+
+/*	-webkit-transform-origin: 0 100%;
+	transform-origin: 0 100%;*/
+    }
+
+    .mb-cont {
+	-webkit-transform: rotate(45deg);
+	transform: rotate(45deg);
+	position: absolute;
+	top: 17px;
+	left: 17px;
+	width: 68px;
+	height: 68px;
+	font: 400 18px 'Roboto';
+	color: white;
+	text-align: center;
+    }
+
+
+    .mission-box-side.green {
+        background-color: rgba(140, 190, 41, 0.5);
+    }
+
+    .mission-box-side.orange {
+        background-color: rgba(255, 147, 30, 0.5);
+    }
+
+    .mission-box-side.purple {
+        background-color: rgba(102, 45, 145, 0.5);
+    }
+
+    .mission-box-side.red {
+        background-color: rgba(255, 29, 37, 0.5);
+    }
+
+    .mission-box-side.blue {
+        background-color: rgba(63, 169, 245, 0.5);
+    }
+
+    .mission-box-side.dark-gray {
+	border: 2px solid #999;
+        background-color: rgba(77, 77, 77, 0.1);
+    }
+
+    .mission-box-side.green:hover {
+        background-color: rgba(140, 190, 41, 0.9);
+    }
+
+    .mission-box-side.orange:hover {
+        background-color: rgba(255, 147, 30, 0.9);
+    }
+
+    .mission-box-side.purple:hover {
+        background-color: rgba(102, 45, 145, 0.9);
+    }
+
+    .mission-box-side.red:hover {
+        background-color: rgba(255, 29, 37, 0.9);
+    }
+
+    .mission-box-side.blue:hover {
+        background-color: rgba(63, 169, 245, 0.9);
+    }
+
+    .mission-box-side.dark-gray:hover {
+        background-color: rgba(77, 77, 77, 0.9);
+    }
 </style>
 
-<section class="section-even" id="mission">
+<section id="mission">
     <label>Mission</label>
 
-    <div class="container">
+    <div class="container" style="position: relative">
+	<div class"indicators" style="position: absolute; top: -90px; right: 0px;">
+	    <div class="mission-box-side green" style="top: 21px; right: 21px;"><div class="mb-cont">Improve thinking</div></div>
+	    <div class="mission-box-side orange" style="top: 162px; right: 21px;"><div class="mb-cont">Control of life</div></div>
+	    <div class="mission-box-side purple" style="top: 21px; right: 162px;"><div class="mb-cont">Save time</div></div>
+	    <div class="mission-box-side red" style="top: 162px; right: 162px;"><div class="mb-cont">Working together</div></div>
+	    <div class="mission-box-side blue" style="top: 91px; right: 91px;"><div class="mb-cont">Personalize</div></div>
+	    <div class="mission-box-side dark-gray" style="top: 232px; right: 232px;"><div class="mb-cont">Be open</div></div>
+	</div>
         <h2 class="slogan">Make a way from dream to reality easier</h2>
-        <div id="carousel-mission" class="carousel slide carousel-fade" data-interval="8000">
+        <div id="carousel-mission" class="carousel slide carousel-fade" data-interval="8000" style="margin-top: 50px">
           <!-- Indicators -->
     <ol class="mission-indicators carousel-indicators">
         <li data-target="#carousel-mission" data-slide-to="0" class="green active"></li>
@@ -204,7 +298,7 @@
                          <h4 class="caption">look at the different sides of our mission</h4>
                          <img class="image" src="{{ STATIC_URL }}img/mission-thinking.png">
                      </div>
-                     <div class="col-lg-6 descr-col col-lg-offset-1">
+                     <div class="col-lg-3 descr-col col-lg-offset-1">
                          <h3 class="header green">Improve human thinking</h3>
                          <p>We believe that everything begins with a thought.</p>
                          <p>The better thought out your ideas, the better the expected result.</p> 
@@ -224,7 +318,7 @@
                          <h4 class="caption">look at the different sides of our mission</h4>
                          <img class="image" src="{{ STATIC_URL }}img/mission-life.png">
                      </div>
-                     <div class="col-lg-6 descr-col col-lg-offset-1">
+                     <div class="col-lg-3 descr-col col-lg-offset-1">
                         <h3 class="header orange">Control of life</h3>
                         <p>We want to help take control of lifetime, determine the values of life, do what really matters, don't waste your time on trifles and finally... enjoy the life.</p>
                         <p>We can not fulfill all your desires, but we can help you:</p>
@@ -244,7 +338,7 @@
                          <h4 class="caption">look at the different sides of our mission</h4>
                          <img class="image" src="{{ STATIC_URL }}img/mission-reduce.png">
                      </div>
-                     <div class="col-lg-6 descr-col col-lg-offset-1">
+                     <div class="col-lg-3 descr-col col-lg-offset-1">
                          <h3 class="header purple">Reduce the time required for supporting actions</h3>
                          <p>We strive for make work more exciting and interesting, and goal achievement quick and easy.</p>
                          <p>To do this, we will create tools that can reduce the effects of secondary tasks and help to focus on goals:</p>
@@ -263,7 +357,7 @@
                          <h4 class="caption">look at the different sides of our mission</h4>
                          <img class="image" src="{{ STATIC_URL }}img/mission-cooperation.png">
                      </div>
-                     <div class="col-lg-6 descr-col col-lg-offset-1">
+                     <div class="col-lg-3 descr-col col-lg-offset-1">
                         <h3 class="header red">Working together</h3>
                         <p>We want to bring people together with common goals</p>
                         <p>Working together allows you to move faster, leading to a better result, reduces frustration and increases motivation.</p>
@@ -285,7 +379,7 @@
                          <h4 class="caption">look at the different sides of our mission</h4>
                          <img class="image" src="{{ STATIC_URL }}img/mission-personal.png">
                      </div>
-                     <div class="col-lg-6 descr-col col-lg-offset-1">
+                     <div class="col-lg-3 descr-col col-lg-offset-1">
                         <h3 class="header blue">Create personal workspace</h3>
                         <p>For us it is important that our customers feel comfortable and free.</p>
                         <p>That is why we are working so that our users can: </p>
@@ -305,7 +399,7 @@
                          <h4 class="caption">look at the different sides of our mission</h4>
                          <img class="image" src="{{ STATIC_URL }}img/mission-feedback.png">
                      </div>
-                     <div class="col-lg-6 descr-col col-lg-offset-1">
+                     <div class="col-lg-3 descr-col col-lg-offset-1">
                         <h3 class="header dark-gray">Feedback</h3>
                         <p>We open for our users.</p>
                         <p>If you have any ideas, suggestions, comments, or just want to say "Hello", then contact us on our pages on social networks</p>
