@@ -89,6 +89,8 @@ section {
     min-height: 100%;
     width: 100%;
     padding: 60px;
+    margin-top: 60px;
+    box-shadow: 0 0 9px rgba(100, 100, 100, 0.8);
 }
 
 section > label {
