@@ -10,6 +10,7 @@
 
 {% block page_scripts %}
     <script src="{{ STATIC_URL }}js/jquery.tinyscrollbar.min.js"></script>
+    <script src="{{ STATIC_URL }}js/waypoints.min.js"></script>
 {% endblock %}
 
 {% block page_content %}
@@ -33,4 +34,12 @@
 {% endblock %}
 
 {% block end_scripts %}
+<script>
+	$(document).ready(function () {
+		$('section').waypoint(function () {
+			console.log(this);
+			$(this).animate({opacity: 1}, 1500);	
+		}, {offset: '95%'});
+	});
+</script>
 {% endblock %}

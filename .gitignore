@@ -2,5 +2,6 @@
 *.pot
 *.pyc
 *.swp
+*~
 venv/
 mindinbox/settings/local.py
