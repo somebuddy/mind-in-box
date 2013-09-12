@@ -1,4 +1,38 @@
 <style>
+    #mission {
+    	background: url({{ STATIC_URL }}img/textures/Texture0207.jpg) repeat;
+    }
+    
+    #mission .slogan,
+    #mission .header,
+    #mission p,
+    #mission ul,
+    #mission > * {    	
+    	opacity: 0;
+    };
+
+</style>
+
+<section id="mission">
+	<label>mission</label>
+	<h2 class="slogan">Make a way from dream to reality easier</h2>
+</section>
+<script>
+	function AnimateNext(el) {
+		next = $(el).next();
+		return function () {
+			$(next).animate({opacity: 1}, 500, AnimateNext(next));
+		}
+	}
+
+
+	$('#mission > label').waypoint( function () {
+		$(this).animate({opacity: 1}, 500, AnimateNext(this));
+	}, {offset: '50%'});	
+</script>
+
+
+<style>
 
     /* Indicators */
 
