@@ -9,26 +9,121 @@
     #mission ul,
     #mission > * {    	
     	opacity: 0;
-    };
+    }
 
+    .mission-board {
+        position: relative;
+        margin: 60px auto;
+        height: 600px;
+        width: 800px;
+    }
+
+    .mission-board > * {
+        opacity: 0;
+    }
+
+    [class^='mission-box'] {
+        position: absolute;
+        height: 150px;
+        width: 150px;
+        font: 400 18px/20px 'Roboto', sans-serif;
+        transform: rotate(-45deg);
+        -webkit-transform: rotate(-45deg);
+    }
+
+    [class^='mission-box'] > div {
+        transform: rotate(45deg);
+        -webkit-transform: rotate(45deg);
+    }
+
+
+    .mission-box.green {
+        top: 150px;
+        left: 510px;
+        background: url({{ STATIC_URL }}img/mission-box-green.png);
+    }
+
+    .mission-box.red {
+        top: 150px;
+        left: 670px;
+        background: url({{ STATIC_URL }}img/mission-box-red.png);
+    }
+
+    .mission-box.purple {
+        top: 226px;
+        left: 590px;
+        background: url({{ STATIC_URL }}img/mission-box-purple.png);
+    }
+
+    .mission-box.orange {
+        top: 302px;
+        left: 510px;
+        background: url({{ STATIC_URL }}img/mission-box-orange.png);
+    }
+
+    .mission-box.blue {
+        top: 302px;
+        left: 670px;
+        background: url({{ STATIC_URL }}img/mission-box-blue.png);
+    }
+
+    .mission-box.gray {
+        height: 600px;
+        width: 600px;
+        left: 0;
+        top: 0;
+        background: url({{ STATIC_URL }}img/mission-box-dark-gray.png);
+    }
 </style>
 
 <section id="mission">
 	<label>mission</label>
-	<h2 class="slogan">Make a way from dream to reality easier</h2>
+    <h2 class="slogan">Make a way from dream to reality easier</h2>
+
+    <div class="mission-board">
+        <div class="mission-box green">
+            <div>Improve thinking</div>
+        </div>
+        <div class="mission-box red">
+            <div>Working together</div>
+        </div>
+        <div class="mission-box purple">
+            <div>Saving your time</div>
+        </div>
+        <div class="mission-box orange">
+            <div>Control of life</div>
+        </div>
+        <div class="mission-box blue">
+            <div>Personalize</div>
+        </div>
+        <div class="mission-box gray"></div>
+    </div>
 </section>
 <script>
-	function AnimateNext(el) {
-		next = $(el).next();
-		return function () {
-			$(next).animate({opacity: 1}, 500, AnimateNext(next));
-		}
-	}
+    var MissionAnimateQueue = [
+        '#mission > label',
+        '#mission > .slogan',
+        '.mission-board',
+        '.mission-box.green',
+        '.mission-box.red',
+        '.mission-box.purple',
+        '.mission-box.orange',
+        '.mission-box.blue',
+        '.mission-box.gray',
 
+        ];
+
+	function AnimateNext(arr) {
+        console.log($(arr[0]));
+		return function () {
+			$(arr[0]).animate({opacity: 1}, 200, AnimateNext(arr.slice(1)));
+		}
+	};
 
 	$('#mission > label').waypoint( function () {
-		$(this).animate({opacity: 1}, 500, AnimateNext(this));
-	}, {offset: '50%'});	
+        AnimateNext(MissionAnimateQueue)();
+    }, {offset: '50%'});
+
 </script>
 
 
