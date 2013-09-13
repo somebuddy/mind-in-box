@@ -24,18 +24,42 @@
 
     [class^='mission-box'] {
         position: absolute;
-        height: 150px;
-        width: 150px;
-        font: 400 18px/20px 'Roboto', sans-serif;
-        transform: rotate(-45deg);
+        height: 110px;
+        width: 110px;
+        font: 400 16px/20px 'Roboto', sans-serif;
         -webkit-transform: rotate(-45deg);
+        transform: rotate(-45deg);
     }
 
-    [class^='mission-box'] > div {
+    [class^='mission-box'] > .caption {
+        -webkit-transform-origin: 50% 50% 0;
+        transform-origin: 50% 50% 0;
         transform: rotate(45deg);
         -webkit-transform: rotate(45deg);
+        height: 90px;
+        width: 90px;
+        padding-top: 25px;
+        margin: 10px auto;
+        text-align: center;
     }
 
+    [class^='mission-box'] > .cover {
+        position: absolute;
+        top: 6px;
+        bottom: 6px;
+        left: 6px;
+        right: 6px;
+        opacity: 0;
+    }
+
+
+    [class^='mission-box'].active > .caption {
+        color: white;
+    }
+
+    [class^='mission-box'].active > .cover {
+        opacity: 1;
+    }
 
     .mission-box.green {
         top: 150px;
@@ -43,36 +67,62 @@
         background: url({{ STATIC_URL }}img/mission-box-green.png);
     }
 
+    .mission-box.green.active > .cover {
+        background-color: rgba(140, 190, 41, 1);
+    }
+
     .mission-box.red {
         top: 150px;
         left: 670px;
         background: url({{ STATIC_URL }}img/mission-box-red.png);
+        color: rgba(255, 29, 37, 1);
+    }
+
+    .mission-box.red.active > .cover {
+        background-color: rgba(255, 29, 37, 1);
     }
 
     .mission-box.purple {
         top: 226px;
         left: 590px;
         background: url({{ STATIC_URL }}img/mission-box-purple.png);
+        color: rgba(102, 45, 145, 1);
     }
+
+    .mission-box.purple.active > .cover {
+        background-color: rgba(102, 45,145, 1);
+    }
+
 
     .mission-box.orange {
         top: 302px;
         left: 510px;
         background: url({{ STATIC_URL }}img/mission-box-orange.png);
+        color: rgba(255, 147, 30, 1);
+    }
+
+    .mission-box.orange.active > .cover {
+        background-color: rgba(255, 147, 30, 1);
     }
 
     .mission-box.blue {
         top: 302px;
         left: 670px;
         background: url({{ STATIC_URL }}img/mission-box-blue.png);
+        color: rgba(63, 169, 245, 1);
+    }
+
+    .mission-box.blue.active > .cover {
+        background-color: rgba(63, 169, 245, 1);
     }
 
     .mission-box.gray {
-        height: 600px;
-        width: 600px;
-        left: 0;
-        top: 0;
+        height: 400px;
+        width: 400px;
+        left: 82px;
+        top: 82px;
         background: url({{ STATIC_URL }}img/mission-box-dark-gray.png);
+        color: rgba(77, 77, 77, 1);
     }
 </style>
 
@@ -81,20 +131,25 @@
     <h2 class="slogan">Make a way from dream to reality easier</h2>
 
     <div class="mission-board">
-        <div class="mission-box green">
-            <div>Improve thinking</div>
+        <div class="mission-box green active">
+            <div class="cover"></div>
+            <div class="caption">Improve thinking</div>
         </div>
-        <div class="mission-box red">
-            <div>Working together</div>
+        <div class="mission-box red active">
+            <div class="cover"></div>
+            <div class="caption">Working together</div>
         </div>
-        <div class="mission-box purple">
-            <div>Saving your time</div>
+        <div class="mission-box purple active">
+            <div class="cover"></div>
+            <div class="caption">Save your time</div>
         </div>
-        <div class="mission-box orange">
-            <div>Control of life</div>
+        <div class="mission-box orange active">
+            <div class="cover"></div>
+            <div class="caption">Control of life</div>
         </div>
-        <div class="mission-box blue">
-            <div>Personalize</div>
+        <div class="mission-box blue active">
+            <div class="cover"></div>
+            <div class="caption">Personalize</div>
         </div>
         <div class="mission-box gray"></div>
     </div>
