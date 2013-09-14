@@ -90,63 +90,75 @@
     	top: 90px;
     	left: 180px;
     	width: 200px;
-    	font: 22px/24px 'Shadows Into Light Two', cursive;
+    	/* font: 22px/24px 'Shadows Into Light Two', cursive; */
+    	font: 300 40px/50px 'Roboto', sans-serif;
     	text-align: center;
     }
 
-    .item p {
-    	width: 200px;
-    	font: 300 12px/20px 'Roboto', sans-serif;
-    	color: rgb(77, 77, 77);
-    	text-align: center;
+    .item  p {
+    	font: 300 14px/22px 'Roboto', sans-serif;
+    	color: rgb(77, 77, 77);    	
     }
 
     .item [class^="comment-"] {
+    	text-align: center;
     	position: absolute;
     	overflow: hidden;
     }
 
+    .item [class^="comment-"].small {
+    	font: 300 14px/22px 'Roboto', sans-serif;
+    }
+
+    .item [class^="comment-"].middle {
+    	font: 300 16px/24px 'Roboto', sans-serif;	
+    }
+
+    .item [class^="comment-"].big {
+    	font: 400 18px/26px 'Roboto', sans-serif;	
+    }
+
     .item .comment-1 {
-    	top: 135px;
+    	top: 150px;
     	left: 145px;
     	width: 280px;
-    	height: 55px;
+    	height: 70px;    	
     }
 
     .item .comment-2 {
-    	top: 220px;
-    	left: 50px;
-    	width: 130px;
-    	height: 130px;
+    	top: 240px;
+    	left: 30px;
+    	width: 150px;
+    	height: 90px;
     	text-align: right;
     }
 
     .item .comment-3 {
-    	top: 220px;
+    	top: 240px;
     	left: 220px;
     	width: 130px;
-    	height: 130px;
+    	height: 90px;
     }
 
     .item .comment-2-3 {
-    	top: 220px;
-    	left: 50px;
-    	width: 290px;
-    	height: 130px;
+    	top: 240px;
+    	left: 30px;
+    	width: 320px;
+    	height: 90px;
     }
 
     .item .comment-4 {
-    	top: 220px;
+    	top: 240px;
     	left: 390px;
     	width: 130px;
-    	height: 130px;
+    	height: 90px;
     	text-align: left;
     }
 
     .item .comment-5 {
-    	top: 380px;
-    	left: 145px;
-    	width: 280px;
+    	top: 365px;
+    	left: 125px;
+    	width: 320px;
     	height: 150px;
     }
 
@@ -261,23 +273,23 @@
 <section id="mission">
 	<label>mission</label>
     <h2 class="slogan">Make a way from dream to reality easier</h2>
-    <div id="carousel-mission" class="carousel slide mission-board carousel-fade">
+    <div id="carousel-mission" class="carousel slide mission-board carousel-fade" data-interval=100000>
 	    <div class="carousel-indicators">
-	        <div class="mission-box green active" data-target="#carousel-mission" data-slide-to="0">
+	        <div class="mission-box green" data-target="#carousel-mission" data-slide-to="0">
 	            <div class="cover"></div>
-	            <div class="caption">Improve thinking</div>
+	            <div class="caption">Think</div>
 	        </div>
-	        <div class="mission-box red" data-target="#carousel-mission" data-slide-to="1">
+	        <div class="mission-box orange active" data-target="#carousel-mission" data-slide-to="1">
+	            <div class="cover"></div>
+	            <div class="caption">Manage the life</div>
+	        </div>
+	        <div class="mission-box red" data-target="#carousel-mission" data-slide-to="2">
 	            <div class="cover"></div>
 	            <div class="caption">Working together</div>
 	        </div>
-	        <div class="mission-box purple" data-target="#carousel-mission" data-slide-to="2">
+	        <div class="mission-box purple" data-target="#carousel-mission" data-slide-to="3">
 	            <div class="cover"></div>
 	            <div class="caption">Save your time</div>
-	        </div>
-	        <div class="mission-box orange" data-target="#carousel-mission" data-slide-to="3">
-	            <div class="cover"></div>
-	            <div class="caption">Control of life</div>
 	        </div>
 	        <div class="mission-box blue" data-target="#carousel-mission" data-slide-to="4">
 	            <div class="cover"></div>
@@ -286,75 +298,34 @@
 		</div>
 	    <!-- Wrapper for slides -->
 		<div class="carousel-inner">
+		    <div class="item">
+		    	<div class="mission-box gray"></div>
+		    	<div class="caption green">Think</div>
+		    	<p class="comment-1 middle">
+		    		We believe that it all starts with a thought and better thoughts lead to better results		    		
+		    	</p>
+		    	<p class="comment-2-3 big" style="width: 350px; color: rgba(140, 190, 41, 1); padding-top: 20px">
+		    		We create and connect together tools <br> for storing your ideas and work on them.
+		    	</p>
+		    	<p class="comment-4" style="padding-top: 10px; color: #BBB; text-align: center; font-size: 64px"><i class="icon-lightbulb"></i></p>
+		    	<p class="comment-5">
+		    		Using boxes and special tools, such as mind maps and brainstorming, you can improve your ideas, focus on details, share them with others<br>to work together towards<br> a common goal.
+		    	</p>		    	
+		    </div>
 		    <div class="item active">
 		    	<div class="mission-box gray"></div>
-		    	<div class="caption green">Improve thinking</div>
-		    	<p class="comment-2">
-		    		We believe that:
-		    		All begins from thoughts
-		    		Better thoughts follows to better results		    		
-		    	</p>
-		    	<p class="comment-3">
-		    		We work on creating and connecting together tools for storing your ideas, improve your thinking, make it more efficient, help concentrate on details.
-		    	</p>
-		    	<p class="comment-5">
-		    		We creating our service that you can keep your ideas in one place, have access to them at anytime, share your ideas for other people and work on them together. We provide features like brainstorming, mind mapping and others to make thinking easier, more full and detailed.
-		    	</p>
-		    	                         <h3 class="header green">Improve human thinking</h3>
-                         <p>We believe that everything begins with a thought.</p>
-                         <p>The better thought out your ideas, the better the expected result.</p> 
-                         <ul class="icons-ul details">
-                             <li><i class="icon-li icon-ok-circle"></i>Store the ideas, create new ones</li>
-                             <li><i class="icon-li icon-ok-circle"></i>Work on your ideas and improve them</li>
-                             <li><i class="icon-li icon-ok-circle"></i>Share your ideas with others</li>
-                             <li><i class="icon-li icon-ok-circle"></i>Help others and get help to achieve better results</li>
-                         </ul>
-                         <p>and way to the dream will be easier and more pleasant</p>
-		    </div>
-		    <div class="item">
-		    	<div class="mission-box gray"></div>
-	    		<div class="caption red">Working together</div>
-	    		<p class="comment-1"></p>
-	    		<p class="comment-2"></p>
-	    		<p class="comment-3"></p>
-	    		<p class="comment-4"></p>
-	    		<p class="comment-5"></p>
-	    		<h3 class="header red">Working together</h3>
-                        <p>We want to bring people together with common goals</p>
-                        <p>Working together allows you to move faster, leading to a better result, reduces frustration and increases motivation.</p>
-                        <ul class="icons-ul details">
-                            <li><i class="icon-li icon-ok-circle"></i>Connect people minds</li>
-                            <li><i class="icon-li icon-ok-circle"></i>Search for coworkers</li>
-                            <li><i class="icon-li icon-ok-circle"></i>Communicate</li>
-                        </ul>
-		    </div>
-		    <div class="item">
-		    	<div class="mission-box gray"></div>
-	    		<div class="caption purple">Save your time</div>
-	    		<p class="comment-1"></p>
-	    		<p class="comment-2"></p>
-	    		<p class="comment-3"></p>
-	    		<p class="comment-4"></p>
-	    		<p class="comment-5"></p>
-	    		<h3 class="header purple">Reduce the time required for supporting actions</h3>
-                         <p>We strive for make work more exciting and interesting, and goal achievement quick and easy.</p>
-                         <p>To do this, we will create tools that can reduce the effects of secondary tasks and help to focus on goals:</p>
-                         <ul class="icons-ul details">
-                             <li><i class="icon-li icon-ok-circle"></i>Brainstorming</li>
-                             <li><i class="icon-li icon-ok-circle"></i>Goal tracking</li>
-                             <li><i class="icon-li icon-ok-circle"></i>Planning</li>
-                         </ul>
-                         <p>and many others our <a href="#features">features</a> and even your personal</p>
-		    </div>
-		    <div class="item">
-		    	<div class="mission-box gray"></div>
-	    		<div class="caption orange">Control of life</div>
-	    		<p class="comment-1"></p>
-	    		<p class="comment-2"></p>
-	    		<p class="comment-3"></p>
-	    		<p class="comment-4"></p>
-	    		<p class="comment-5"></p>
-	    		<h3 class="header orange">Control of life</h3>
+	    		<div class="caption orange">Manage<br>the life</div>
+	    		<p class="comment-1 middle" style="margin-top: 50px;">Taking the activities under control</p>
+	    		<p class="comment-2-3 big" style="width: 350px; color: rgba(255, 147, 30, 1); padding-top: 20px">We want to make easier goal setting,<br>work planning and tracking progress.</p>    		
+	    		<p class="comment-4" style="padding-top: 10px; color: #BBB; text-align: center; font-size: 64px"><i class="icon-trophy"></i></p>
+	    		<div class="comment-5" style="text-align: left;">
+	    			<p style="margin: 0;">We will provide solutions that helps you:</p>
+	    			<p style="margin: 0 20px"><i class="icon-angle-right"></i> plan you work</p>
+	    			<p style="margin: 0 40px"><i class="icon-angle-right"></i> follow right direction</p>
+	    			<p style="margin: 0 60px"><i class="icon-angle-right"></i> efficiently choose the next step</p>
+	    			<p style="margin: 0 80px"><i class="icon-angle-right"></i> monitor your actions</p>	    			
+	    		</div>
+	    		{% comment %}
                         <p>We want to help take control of lifetime, determine the values of life, do what really matters, don't waste your time on trifles and finally... enjoy the life.</p>
                         <p>We can not fulfill all your desires, but we can help you:</p>
                         <ul class="icons-ul details">
@@ -364,7 +335,47 @@
                             <li><i class="icon-li icon-ok-circle"></i>Control your actions</li>
                             <li><i class="icon-li icon-ok-circle"></i>Find and communicate with people on the way to common goals</li>
                         </ul>
+                {% endcomment %}
 		    </div>
+		    <div class="item">
+		    	<div class="mission-box gray"></div>
+	    		<div class="caption red">Working together</div>
+	    		<p class="comment-1"></p>
+	    		<p class="comment-2"></p>
+	    		<p class="comment-3"></p>
+	    		<p class="comment-4"></p>
+	    		<p class="comment-5"></p>
+	    		{% comment %}
+	    		<h3 class="header red">Working together</h3>
+                        <p>We want to bring people together with common goals</p>
+                        <p>Working together allows you to move faster, leading to a better result, reduces frustration and increases motivation.</p>
+                        <ul class="icons-ul details">
+                            <li><i class="icon-li icon-ok-circle"></i>Connect people minds</li>
+                            <li><i class="icon-li icon-ok-circle"></i>Search for coworkers</li>
+                            <li><i class="icon-li icon-ok-circle"></i>Communicate</li>
+                        </ul>
+                {% endcomment %}
+		    </div>
+		    <div class="item">
+		    	<div class="mission-box gray"></div>
+	    		<div class="caption purple">Save your time</div>
+	    		<p class="comment-1"></p>
+	    		<p class="comment-2"></p>
+	    		<p class="comment-3"></p>
+	    		<p class="comment-4"></p>
+	    		<p class="comment-5"></p>
+	    		{% comment %}
+	    		<h3 class="header purple">Reduce the time required for supporting actions</h3>
+                         <p>We strive for make work more exciting and interesting, and goal achievement quick and easy.</p>
+                         <p>To do this, we will create tools that can reduce the effects of secondary tasks and help to focus on goals:</p>
+                         <ul class="icons-ul details">
+                             <li><i class="icon-li icon-ok-circle"></i>Brainstorming</li>
+                             <li><i class="icon-li icon-ok-circle"></i>Goal tracking</li>
+                             <li><i class="icon-li icon-ok-circle"></i>Planning</li>
+                         </ul>
+                         <p>and many others our <a href="#features">features</a> and even your personal</p>
+                {% endcomment %}
+		    </div>		    
 		    <div class="item">
 		    	<div class="mission-box gray"></div>
 	    		<div class="caption blue">Personalize</div>
@@ -373,6 +384,7 @@
 	    		<p class="comment-3"></p>
 	    		<p class="comment-4"></p>
 	    		<p class="comment-5"></p>
+	    		{% comment %}
 	    		                        <h3 class="header blue">Create personal workspace</h3>
                         <p>For us it is important that our customers feel comfortable and free.</p>
                         <p>That is why we are working so that our users can: </p>
@@ -397,6 +409,7 @@
                                 <i class="icon-twitter-sign"></i>
                             </a>
                         </div>
+                {% endcomment %}
 
 		    </div>
 		</div>  
