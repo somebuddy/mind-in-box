@@ -85,11 +85,80 @@
         opacity: 1;
     }
 
+    .item .caption {
+    	position: absolute;
+    	top: 90px;
+    	left: 180px;
+    	width: 200px;
+    	font: 22px/24px 'Shadows Into Light Two', cursive;
+    	text-align: center;
+    }
+
+    .item p {
+    	width: 200px;
+    	font: 300 12px/20px 'Roboto', sans-serif;
+    	color: rgb(77, 77, 77);
+    	text-align: center;
+    }
+
+    .item [class^="comment-"] {
+    	position: absolute;
+    	overflow: hidden;
+    }
+
+    .item .comment-1 {
+    	top: 135px;
+    	left: 145px;
+    	width: 280px;
+    	height: 55px;
+    }
+
+    .item .comment-2 {
+    	top: 220px;
+    	left: 50px;
+    	width: 130px;
+    	height: 130px;
+    	text-align: right;
+    }
+
+    .item .comment-3 {
+    	top: 220px;
+    	left: 220px;
+    	width: 130px;
+    	height: 130px;
+    }
+
+    .item .comment-2-3 {
+    	top: 220px;
+    	left: 50px;
+    	width: 290px;
+    	height: 130px;
+    }
+
+    .item .comment-4 {
+    	top: 220px;
+    	left: 390px;
+    	width: 130px;
+    	height: 130px;
+    	text-align: left;
+    }
+
+    .item .comment-5 {
+    	top: 380px;
+    	left: 145px;
+    	width: 280px;
+    	height: 150px;
+    }
+
     .mission-box.green {
         top: 150px;
         left: 0px;
         background: url({{ STATIC_URL }}img/mission-box-green.png);
         color: rgba(140, 190, 41, 1);
+    }
+
+    .caption.green {
+    	color: rgba(140, 190, 41, 1);
     }
 
     .mission-box.green.active > .cover {
@@ -103,6 +172,10 @@
         color: rgba(255, 29, 37, 1);
     }
 
+    .caption.red {
+    	color: rgba(255, 29, 37, 1);
+    }
+
     .mission-box.red.active > .cover {
         background-color: rgba(255, 29, 37, 0.9);
     }
@@ -112,6 +185,10 @@
         left: 80px;
         background: url({{ STATIC_URL }}img/mission-box-purple.png);
         color: rgba(102, 45, 145, 1);
+    }
+
+    .caption.purple {
+    	color: rgba(102, 45, 145, 1);
     }
 
     .mission-box.purple.active > .cover {
@@ -125,8 +202,12 @@
         color: rgba(255, 147, 30, 1);
     }
 
+    .caption.orange {
+    	color: rgba(255, 147, 30, 1);
+    }
+
     .mission-box.orange.active > .cover {
-        background-color: rgba(255, 147, 30, 1);
+        background-color: rgba(255, 147, 30, 0.9);
     }
 
     .mission-box.blue {
@@ -136,8 +217,12 @@
         color: rgba(63, 169, 245, 1);
     }
 
+    .caption.blue {
+    	color: rgba(63, 169, 245, 1);
+    }
+
     .mission-box.blue.active > .cover {
-        background-color: rgba(63, 169, 245, 1);
+        background-color: rgba(63, 169, 245, 0.9);
     }
 
     .mission-box.gray {
@@ -182,19 +267,19 @@
 	            <div class="cover"></div>
 	            <div class="caption">Improve thinking</div>
 	        </div>
-	        <div class="mission-box red" data-target="#carousel-mission" data-slide-to="0">
+	        <div class="mission-box red" data-target="#carousel-mission" data-slide-to="1">
 	            <div class="cover"></div>
 	            <div class="caption">Working together</div>
 	        </div>
-	        <div class="mission-box purple" data-target="#carousel-mission" data-slide-to="0">
+	        <div class="mission-box purple" data-target="#carousel-mission" data-slide-to="2">
 	            <div class="cover"></div>
 	            <div class="caption">Save your time</div>
 	        </div>
-	        <div class="mission-box orange" data-target="#carousel-mission" data-slide-to="0">
+	        <div class="mission-box orange" data-target="#carousel-mission" data-slide-to="3">
 	            <div class="cover"></div>
 	            <div class="caption">Control of life</div>
 	        </div>
-	        <div class="mission-box blue" data-target="#carousel-mission" data-slide-to="0">
+	        <div class="mission-box blue" data-target="#carousel-mission" data-slide-to="4">
 	            <div class="cover"></div>
 	            <div class="caption">Personalize</div>
 	        </div>
@@ -202,21 +287,57 @@
 	    <!-- Wrapper for slides -->
 		<div class="carousel-inner">
 		    <div class="item active">
-		    	<div class="mission-box gray">Improve thinking</div>		    	
+		    	<div class="mission-box gray"></div>
+		    	<div class="caption green">Improve thinking</div>
+		    	<p class="comment-2">
+		    		We believe that:
+		    		All begins from thoughts
+		    		Better thoughts follows to better results		    		
+		    	</p>
+		    	<p class="comment-3">
+		    		We work on creating and connecting together tools for storing your ideas, improve your thinking, make it more efficient, help concentrate on details.
+		    	</p>
+		    	<p class="comment-5">
+		    		We creating our service that you can keep your ideas in one place, have access to them at anytime, share your ideas for other people and work on them together. We provide features like brainstorming, mind mapping and others to make thinking easier, more full and detailed.
+		    	</p>
 		    </div>
 		    <div class="item">
-		    	<div class="mission-box gray">Working together</div> 	
+		    	<div class="mission-box gray"></div>
+	    		<div class="caption red">Working together</div>
+	    		<p class="comment-1"></p>
+	    		<p class="comment-2"></p>
+	    		<p class="comment-3"></p>
+	    		<p class="comment-4"></p>
+	    		<p class="comment-5"></p>
 		    </div>
 		    <div class="item">
-		    	<div class="mission-box gray">Save you time</div>  	
+		    	<div class="mission-box gray"></div>
+	    		<div class="caption purple">Save your time</div>
+	    		<p class="comment-1"></p>
+	    		<p class="comment-2"></p>
+	    		<p class="comment-3"></p>
+	    		<p class="comment-4"></p>
+	    		<p class="comment-5"></p>
 		    </div>
 		    <div class="item">
-		    	<div class="mission-box gray">Control of life</div>		    	
+		    	<div class="mission-box gray"></div>
+	    		<div class="caption orange">Control of life</div>
+	    		<p class="comment-1"></p>
+	    		<p class="comment-2"></p>
+	    		<p class="comment-3"></p>
+	    		<p class="comment-4"></p>
+	    		<p class="comment-5"></p>
 		    </div>
 		    <div class="item">
-		    	<div class="mission-box gray">Personalize</div>   	
-		    </div>		    
-		</div>	    
+		    	<div class="mission-box gray"></div>
+	    		<div class="caption blue">Personalize</div>
+	    		<p class="comment-1"></p>
+	    		<p class="comment-2"></p>
+	    		<p class="comment-3"></p>
+	    		<p class="comment-4"></p>
+	    		<p class="comment-5"></p>
+		    </div>
+		</div>  
     </div>
 </section>
 <script>
