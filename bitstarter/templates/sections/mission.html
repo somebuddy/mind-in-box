@@ -1,13 +1,32 @@
 <style>
+    /* Carousel */
+    .carousel-fade .item {
+        -webkit-transition: opacity 1s ease;    
+        -moz-transition: opacity 1s ease;    
+        -o-transition: opacity 1s ease;
+        -ms-transition: opacity 1s ease;
+        transition: opacity 1s ease;
+    }
+
+    .carousel-fade .active.left {
+        left: 0;
+        opacity: 0;
+        z-index: 2;
+    }
+
+    .carousel-fade .next {
+	left: 0;
+	opacity: 1;
+	z-index: 1;
+    }
+
     #mission {
     	background: url({{ STATIC_URL }}img/textures/Texture0207.jpg) repeat;
     }
     
     #mission .slogan,
     #mission .header,
-    #mission p,
-    #mission ul,
-    #mission > * {    	
+    #mission [class^='mission-box'] {    	
     	opacity: 0;
     }
 
@@ -18,17 +37,18 @@
         width: 800px;
     }
 
-    .mission-board > * {
-        opacity: 0;
-    }
-
     [class^='mission-box'] {
         position: absolute;
         height: 110px;
         width: 110px;
-        font: 400 16px/20px 'Roboto', sans-serif;
+        font: 500 17px/20px 'Roboto', sans-serif;
         -webkit-transform: rotate(-45deg);
         transform: rotate(-45deg);
+    }
+
+    [class^="mission-box"] .active {
+    	width: 110px;
+    	height: 110px;  
     }
 
     [class^='mission-box'] > .caption {
@@ -50,8 +70,12 @@
         left: 6px;
         right: 6px;
         opacity: 0;
+        -webkit-transition: opacity 1s ease;    
+        -moz-transition: opacity 1s ease;    
+        -o-transition: opacity 1s ease;
+        -ms-transition: opacity 1s ease;
+        transition: opacity 1s ease;
     }
-
 
     [class^='mission-box'].active > .caption {
         color: white;
@@ -63,40 +87,40 @@
 
     .mission-box.green {
         top: 150px;
-        left: 510px;
+        left: 0px;
         background: url({{ STATIC_URL }}img/mission-box-green.png);
+        color: rgba(140, 190, 41, 1);
     }
 
     .mission-box.green.active > .cover {
-        background-color: rgba(140, 190, 41, 1);
+        background-color: rgba(140, 190, 41, 0.9);
     }
 
     .mission-box.red {
         top: 150px;
-        left: 670px;
+        left: 160px;
         background: url({{ STATIC_URL }}img/mission-box-red.png);
         color: rgba(255, 29, 37, 1);
     }
 
     .mission-box.red.active > .cover {
-        background-color: rgba(255, 29, 37, 1);
+        background-color: rgba(255, 29, 37, 0.9);
     }
 
     .mission-box.purple {
         top: 226px;
-        left: 590px;
+        left: 80px;
         background: url({{ STATIC_URL }}img/mission-box-purple.png);
         color: rgba(102, 45, 145, 1);
     }
 
     .mission-box.purple.active > .cover {
-        background-color: rgba(102, 45,145, 1);
+        background-color: rgba(102, 45,145, 0.9);
     }
-
 
     .mission-box.orange {
         top: 302px;
-        left: 510px;
+        left: 0px;
         background: url({{ STATIC_URL }}img/mission-box-orange.png);
         color: rgba(255, 147, 30, 1);
     }
@@ -107,7 +131,7 @@
 
     .mission-box.blue {
         top: 302px;
-        left: 670px;
+        left: 160px;
         background: url({{ STATIC_URL }}img/mission-box-blue.png);
         color: rgba(63, 169, 245, 1);
     }
@@ -124,34 +148,75 @@
         background: url({{ STATIC_URL }}img/mission-box-dark-gray.png);
         color: rgba(77, 77, 77, 1);
     }
+
+    .carousel {
+    	opacity: 1;
+    }
+
+    .mission-board .carousel-indicators {
+    	left: auto;
+    	right: 0px;
+    	top: 0;
+    	bottom: 0;
+    	width: 290px;    	
+    }
+
+    .mission-board .carousel-indicators .active {
+    	width: 110px;
+    	height: 110px;
+    	background-color: rgba(0, 0, 0, 0);
+    }
+
+    #carousel-mission .item {
+    	height: 600px;
+    }
+
 </style>
 
 <section id="mission">
 	<label>mission</label>
     <h2 class="slogan">Make a way from dream to reality easier</h2>
-
-    <div class="mission-board">
-        <div class="mission-box green active">
-            <div class="cover"></div>
-            <div class="caption">Improve thinking</div>
-        </div>
-        <div class="mission-box red active">
-            <div class="cover"></div>
-            <div class="caption">Working together</div>
-        </div>
-        <div class="mission-box purple active">
-            <div class="cover"></div>
-            <div class="caption">Save your time</div>
-        </div>
-        <div class="mission-box orange active">
-            <div class="cover"></div>
-            <div class="caption">Control of life</div>
-        </div>
-        <div class="mission-box blue active">
-            <div class="cover"></div>
-            <div class="caption">Personalize</div>
-        </div>
-        <div class="mission-box gray"></div>
+    <div id="carousel-mission" class="carousel slide mission-board carousel-fade">
+	    <div class="carousel-indicators">
+	        <div class="mission-box green active" data-target="#carousel-mission" data-slide-to="0">
+	            <div class="cover"></div>
+	            <div class="caption">Improve thinking</div>
+	        </div>
+	        <div class="mission-box red" data-target="#carousel-mission" data-slide-to="0">
+	            <div class="cover"></div>
+	            <div class="caption">Working together</div>
+	        </div>
+	        <div class="mission-box purple" data-target="#carousel-mission" data-slide-to="0">
+	            <div class="cover"></div>
+	            <div class="caption">Save your time</div>
+	        </div>
+	        <div class="mission-box orange" data-target="#carousel-mission" data-slide-to="0">
+	            <div class="cover"></div>
+	            <div class="caption">Control of life</div>
+	        </div>
+	        <div class="mission-box blue" data-target="#carousel-mission" data-slide-to="0">
+	            <div class="cover"></div>
+	            <div class="caption">Personalize</div>
+	        </div>
+		</div>
+	    <!-- Wrapper for slides -->
+		<div class="carousel-inner">
+		    <div class="item active">
+		    	<div class="mission-box gray">Improve thinking</div>		    	
+		    </div>
+		    <div class="item">
+		    	<div class="mission-box gray">Working together</div> 	
+		    </div>
+		    <div class="item">
+		    	<div class="mission-box gray">Save you time</div>  	
+		    </div>
+		    <div class="item">
+		    	<div class="mission-box gray">Control of life</div>		    	
+		    </div>
+		    <div class="item">
+		    	<div class="mission-box gray">Personalize</div>   	
+		    </div>		    
+		</div>	    
     </div>
 </section>
 <script>
@@ -165,7 +230,6 @@
         '.mission-box.orange',
         '.mission-box.blue',
         '.mission-box.gray',
-
         ];
 
 	function AnimateNext(arr) {
@@ -181,7 +245,7 @@
 
 </script>
 
-
+<!--
 <style>
 
     /* Indicators */
@@ -252,27 +316,6 @@
         background-color: rgba(77, 77, 77, 0.3);
     }
 
-    /* Carousel */
-    .carousel-fade .item {
-        -webkit-transition: opacity 1s ease;    
-        -moz-transition: opacity 1s ease;    
-        -o-transition: opacity 1s ease;
-        -ms-transition: opacity 1s ease;
-        transition: opacity 1s ease;
-    }
-
-    .carousel-fade .active.left {
-        left: 0;
-        opacity: 0;
-        z-index: 2;
-    }
-
-    .carousel-fade .next {
-	left: 0;
-	opacity: 1;
-	z-index: 1;
-    }
-	
     #carousel-mission {
     	margin-top: 40px;
     }
@@ -454,7 +497,7 @@
     .mission-box-side.dark-gray:hover {
         background-color: rgba(77, 77, 77, 0.9);
     }
-</style>
+</style> -->
 
 <section id="mission">
     <label>Mission</label>
