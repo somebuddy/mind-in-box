@@ -291,13 +291,13 @@
 <section id="mission">
 	<label>mission</label>
     <h2 class="slogan">Make a way from dream to reality easier</h2>
-    <div id="carousel-mission" class="carousel slide mission-board carousel-fade" data-interval=100000>
+    <div id="carousel-mission" class="carousel slide mission-board carousel-fade" data-interval=50000>
 	    <div class="carousel-indicators">
-	        <div class="mission-box green" data-target="#carousel-mission" data-slide-to="0">
+	        <div class="mission-box green active" data-target="#carousel-mission" data-slide-to="0">
 	            <div class="cover"></div>
 	            <div class="caption">Think</div>
 	        </div>
-	        <div class="mission-box orange active" data-target="#carousel-mission" data-slide-to="1">
+	        <div class="mission-box orange" data-target="#carousel-mission" data-slide-to="1">
 	            <div class="cover"></div>
 	            <div class="caption">Manage the life</div>
 	        </div>
@@ -311,12 +311,12 @@
 	        </div>	        
 	        <div class="mission-box blue" data-target="#carousel-mission" data-slide-to="4">
 	            <div class="cover"></div>
-	            <div class="caption">Personalize</div>
+	            <div class="caption">Personal</div>
 	        </div>
 		</div>
 	    <!-- Wrapper for slides -->
 		<div class="carousel-inner">
-		    <div class="item">
+		    <div class="item active">
 		    	<div class="mission-box gray"></div>
 		    	<div class="caption green">Think</div>
 		    	<p class="comment-1 middle">
@@ -330,7 +330,7 @@
 		    		Using boxes and special tools, such as mind maps and brainstorming, you can improve your ideas, focus on details, share them with others<br>to work together towards<br> a common goal.
 		    	</p>		    	
 		    </div>
-		    <div class="item active">
+		    <div class="item">
 		    	<div class="mission-box gray"></div>
 	    		<div class="caption orange">Manage<br>the life</div>
 	    		<p class="comment-1 middle" style="margin-top: 50px;">Taking the activities under control</p>
@@ -393,11 +393,14 @@
 		    <div class="item">
 		    	<div class="mission-box gray"></div>
 	    		<div class="caption red">Working together</div>
-	    		<p class="comment-1" style="margin-top: 50px;">Connect people thoughts and skills</p>
-	    		<p class="comment-2"></p>
-	    		<p class="comment-3"></p>
-	    		<p class="comment-4"></p>
-	    		<p class="comment-5"></p>
+	    		<p class="comment-1 middle" style="margin-top: 40px;">Connect people thoughts and skills</p>
+	    		<p class="comment-2-3 big" style="color: rgb(255, 29, 37); width: 510px">We create network for ideas, goals, projects and tasks<br> to help you move faster, lead to a better results</p>
+	    		<p class="comment-5" style="margin-top: -40px; left: 100px; width: 360px;">
+	    			We want to make it easier to share ideas, to work together toward common goals, to use the best opportunities of each person for better results.
+	    		</p>
+	    		<p class="comment-5" style="margin-top: 50px;">
+	    			We are creating a place where<br>it is only important<br> what you think<br> and do.
+	    		</p>
 	    		{% comment %}
 	    		<h3 class="header red">Working together</h3>
                     <p>We want to bring people together with common goals</p>
@@ -411,12 +414,13 @@
 		    </div>		    		    
 		    <div class="item">
 		    	<div class="mission-box gray"></div>
-	    		<div class="caption blue" style="margin-top: 20px">Personalize</div>
-	    		<p class="comment-1" style="margin-top: 30px;">Little piece of your own world</p>
-	    		<p class="comment-2"></p>
-	    		<p class="comment-3"></p>
-	    		<p class="comment-4"></p>
-	    		<p class="comment-5"></p>
+	    		<div class="caption blue">Personal</div>
+	    		<p class="comment-1 middle" style="margin-top: 10px;">Little piece of your own world</p>
+	    		<p class="comment-2-3 big" style="margin-top: -20px; height: 110px; width: 350px; color: rgb(63, 169, 245);">
+	    			For us it is important that<br>our users feel comfortable and free.<br>
+	    			We make workspace for you<br> that helps focus on current task
+	    		</p>
+	    		<p class="comment-5">Collect all information and tools that you need, throw away all the unnecessary<br>Clean your mind, there is only you<br> and your work - nothing more</p>	
 	    		{% comment %}
     		        <h3 class="header blue">Create personal workspace</h3>
                     <p>For us it is important that our customers feel comfortable and free.</p>
@@ -460,7 +464,7 @@
         '.mission-box.blue',
         '.mission-box.gray',
         '.caption',
-        '.comment-1', '.comment-2', '.comment-2-3', '.comment-3', '.comment-4', '.comment-5', '.comment-6', '.comment-7',
+        '[class^="comment-"]',        
         ];
 
 	function AnimateNext(arr) {
