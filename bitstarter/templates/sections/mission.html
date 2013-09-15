@@ -26,6 +26,8 @@
     
     #mission .slogan,
     #mission .header,
+    #mission .caption,
+    #mission [class^='comment-'],
     #mission [class^='mission-box'] {    	
     	opacity: 0;
     }
@@ -162,6 +164,22 @@
     	height: 150px;
     }
 
+    .item .comment-6 {
+    	left: 30px;
+    	top: 240px;
+    	width: 235px;
+    	height: 200px;
+    	text-align: right;
+    }
+
+    .item .comment-7 {
+    	left: 305px;
+    	top: 240px;
+    	width: 235px;
+    	height: 200px;
+    	text-align: left;
+    }
+
     .mission-box.green {
         top: 150px;
         left: 0px;
@@ -283,14 +301,14 @@
 	            <div class="cover"></div>
 	            <div class="caption">Manage the life</div>
 	        </div>
-	        <div class="mission-box red" data-target="#carousel-mission" data-slide-to="2">
-	            <div class="cover"></div>
-	            <div class="caption">Working together</div>
-	        </div>
-	        <div class="mission-box purple" data-target="#carousel-mission" data-slide-to="3">
+	        <div class="mission-box purple" data-target="#carousel-mission" data-slide-to="2">
 	            <div class="cover"></div>
 	            <div class="caption">Save your time</div>
 	        </div>
+	        <div class="mission-box red" data-target="#carousel-mission" data-slide-to="3">
+	            <div class="cover"></div>
+	            <div class="caption">Working together</div>
+	        </div>	        
 	        <div class="mission-box blue" data-target="#carousel-mission" data-slide-to="4">
 	            <div class="cover"></div>
 	            <div class="caption">Personalize</div>
@@ -339,83 +357,98 @@
 		    </div>
 		    <div class="item">
 		    	<div class="mission-box gray"></div>
+		    	<div style="position: absolute;background: url(/static/img/mission-save-time.png) no-repeat; top: 397px; left: 137px;width: 293px;height: 270px;"></div>
+	    		<div class="caption purple" style="margin-top: -30px;">Save<br>the time</div>
+	    		<p class="comment-1 big" style="margin-top:30px; color: rgb(102, 45, 145);">We can not give you more time, but we can help to keep available</p>	    		
+	    		<p class="comment-2-3" style="width: 510px; margin-top: 20px">
+	    			We develop the tools for time management, that help you do<br> what is really matters, reduce the cost of supporting tasks,<br> work less and do more, save time for more important things for you.
+	    		</p>	    		
+	    		<p class="comment-5" style="margin-top: -25px">
+	    			At the same time our goal is to make the work with the service as quickly as possible.<br> So that all the necessary commands<br> you could do in one click.
+	    		</p>
+	    		{% comment %}
+					<p>Know your time</p>	    			
+	    			<p>Do what really matters</p>
+	    			<p>Less secondary tasks</p>
+	    			<p>Do what really matters</p>
+	    			<p>Don't repeat yourself</p>	    			
+	    			<ol>
+	    				<li>Monitor your time</li>
+	    				<li>Set priorities</li>
+	    				<li>Analyze your time</li>
+	    				<li>No frustrating synchronization</li>
+	    				<li>Do that you can the best</li>
+	    			</ol>	    			
+	    			<ul class="sand">	    				
+	    				<li>frustrations</li>
+	    				<li>secondary tasks</li>
+	    				<li>distractions</li>
+	    				<li>repeatings</li>
+	    				<li>wrong actions</li>
+	    			</ul>
+	    		    <p>We strive for make work more exciting and interesting, and goal achievement quick and easy.</p>
+                    <p>To do this, we will create tools that can reduce the effects of secondary tasks and help to focus on goals:</p>                  
+                {% endcomment %}
+		    </div>
+		    <div class="item">
+		    	<div class="mission-box gray"></div>
 	    		<div class="caption red">Working together</div>
-	    		<p class="comment-1"></p>
+	    		<p class="comment-1" style="margin-top: 50px;">Connect people thoughts and skills</p>
 	    		<p class="comment-2"></p>
 	    		<p class="comment-3"></p>
 	    		<p class="comment-4"></p>
 	    		<p class="comment-5"></p>
 	    		{% comment %}
 	    		<h3 class="header red">Working together</h3>
-                        <p>We want to bring people together with common goals</p>
-                        <p>Working together allows you to move faster, leading to a better result, reduces frustration and increases motivation.</p>
-                        <ul class="icons-ul details">
-                            <li><i class="icon-li icon-ok-circle"></i>Connect people minds</li>
-                            <li><i class="icon-li icon-ok-circle"></i>Search for coworkers</li>
-                            <li><i class="icon-li icon-ok-circle"></i>Communicate</li>
-                        </ul>
+                    <p>We want to bring people together with common goals</p>
+                    <p>Working together allows you to move faster, leading to a better result, reduces frustration and increases motivation.</p>
+                    <ul class="icons-ul details">
+                        <li><i class="icon-li icon-ok-circle"></i>Connect people minds</li>
+                        <li><i class="icon-li icon-ok-circle"></i>Search for coworkers</li>
+                        <li><i class="icon-li icon-ok-circle"></i>Communicate</li>
+                    </ul>
                 {% endcomment %}
-		    </div>
+		    </div>		    		    
 		    <div class="item">
 		    	<div class="mission-box gray"></div>
-	    		<div class="caption purple">Save your time</div>
-	    		<p class="comment-1"></p>
+	    		<div class="caption blue" style="margin-top: 20px">Personalize</div>
+	    		<p class="comment-1" style="margin-top: 30px;">Little piece of your own world</p>
 	    		<p class="comment-2"></p>
 	    		<p class="comment-3"></p>
 	    		<p class="comment-4"></p>
 	    		<p class="comment-5"></p>
 	    		{% comment %}
-	    		<h3 class="header purple">Reduce the time required for supporting actions</h3>
-                         <p>We strive for make work more exciting and interesting, and goal achievement quick and easy.</p>
-                         <p>To do this, we will create tools that can reduce the effects of secondary tasks and help to focus on goals:</p>
-                         <ul class="icons-ul details">
-                             <li><i class="icon-li icon-ok-circle"></i>Brainstorming</li>
-                             <li><i class="icon-li icon-ok-circle"></i>Goal tracking</li>
-                             <li><i class="icon-li icon-ok-circle"></i>Planning</li>
-                         </ul>
-                         <p>and many others our <a href="#features">features</a> and even your personal</p>
-                {% endcomment %}
-		    </div>		    
-		    <div class="item">
-		    	<div class="mission-box gray"></div>
-	    		<div class="caption blue">Personalize</div>
-	    		<p class="comment-1"></p>
-	    		<p class="comment-2"></p>
-	    		<p class="comment-3"></p>
-	    		<p class="comment-4"></p>
-	    		<p class="comment-5"></p>
-	    		{% comment %}
-	    		                        <h3 class="header blue">Create personal workspace</h3>
-                        <p>For us it is important that our customers feel comfortable and free.</p>
-                        <p>That is why we are working so that our users can: </p>
-                        <ul class="icons-ul details">
-                            <li><i class="icon-li icon-ok-circle"></i>Create own box</li>
-                            <li><i class="icon-li icon-ok-circle"></i>Use own tools</li>
-                            <li><i class="icon-li icon-ok-circle"></i>Customize workspace</li>
-                        </ul>
-                        <p>and even use the <a href="#source-code">open source framework</a> to create their own server.</p>
-                        <p>And to make it easier, we develop the most popular as voted by users features at first</p>
-                         <h3 class="header dark-gray">Feedback</h3>
-                        <p>We open for our users.</p>
-                        <p>If you have any ideas, suggestions, comments, or just want to say "Hello", then contact us on our pages on social networks</p>
-                        <div style="font-size: 64px">
-                            <a href="https://www.facebook.com/pages/Thinking-In-Box/356419494489877">
-                               <i class="icon-facebook-sign"></i>
-                            </a>
-                            <a href="https://plus.google.com/101018259054761270486" rel="publisher">
-                               <i class="icon-google-plus-sign"></i>
-                            </a> 
-                            <a href="https://twitter.com/ThinkingInBox">
-                                <i class="icon-twitter-sign"></i>
-                            </a>
-                        </div>
+    		        <h3 class="header blue">Create personal workspace</h3>
+                    <p>For us it is important that our customers feel comfortable and free.</p>
+                    <p>That is why we are working so that our users can: </p>
+                    <ul class="icons-ul details">
+                        <li><i class="icon-li icon-ok-circle"></i>Create own box</li>
+                        <li><i class="icon-li icon-ok-circle"></i>Use own tools</li>
+                        <li><i class="icon-li icon-ok-circle"></i>Customize workspace</li>
+                    </ul>
+                    <p>and even use the <a href="#source-code">open source framework</a> to create their own server.</p>
+                    <p>And to make it easier, we develop the most popular as voted by users features at first</p>
+                     <h3 class="header dark-gray">Feedback</h3>
+                    <p>We open for our users.</p>
+                    <p>If you have any ideas, suggestions, comments, or just want to say "Hello", then contact us on our pages on social networks</p>
+                    <div style="font-size: 64px">
+                        <a href="https://www.facebook.com/pages/Thinking-In-Box/356419494489877">
+                           <i class="icon-facebook-sign"></i>
+                        </a>
+                        <a href="https://plus.google.com/101018259054761270486" rel="publisher">
+                           <i class="icon-google-plus-sign"></i>
+                        </a> 
+                        <a href="https://twitter.com/ThinkingInBox">
+                            <i class="icon-twitter-sign"></i>
+                        </a>
+                    </div>
                 {% endcomment %}
 
 		    </div>
 		</div>  
     </div>
 </section>
-<script>
+<script>	
     var MissionAnimateQueue = [
         '#mission > label',
         '#mission > .slogan',
@@ -426,6 +459,8 @@
         '.mission-box.orange',
         '.mission-box.blue',
         '.mission-box.gray',
+        '.caption',
+        '.comment-1', '.comment-2', '.comment-2-3', '.comment-3', '.comment-4', '.comment-5', '.comment-6', '.comment-7',
         ];
 
 	function AnimateNext(arr) {

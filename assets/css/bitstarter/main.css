@@ -2,6 +2,7 @@
 html,
 body {
     height: 100%;
+    background-color: rgba(0, 0, 0, 0.1);
 }
 
 /* Page background */
@@ -15,7 +16,6 @@ html {
 }
 
 body {
-    background-color: rgba(0, 0, 0, 0.2);
     font-family: 'Roboto', 'Open Sans';
 }
 
@@ -87,17 +87,18 @@ h6 {
 section {
 	 opacity: 0;
     position: relative;
-    min-height: 100%;
-    width: 100%;
+    /* min-height: 100%; */
+    margin: 0px auto 60px auto;
+    width: 90%;
     padding: 60px;
-    margin-top: 60px;
-    box-shadow: 0 0 9px rgba(100, 100, 100, 0.8);
+    border: 2px solid white;
+    /* box-shadow: 0 0 9px rgba(100, 100, 100, 0.8); */
 }
 
 section > label {
     position: absolute; 
     top: 20px;
-    left: -1px;
+    left: -4px;
     width: 25%;
     height: 50px;
     padding-right: 30px;
@@ -109,7 +110,10 @@ section > label {
 
 
 #dashboard {
-    background-color: rgba(0, 0, 0, 0);
+    border: none;
+    border-bottom: 5px solid rgba(0, 0, 0, 0.1);
+    width: 100%;    
+    background-color: rgba(0, 0, 0, 0.2);
 }
 
 .section-odd {
