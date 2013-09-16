@@ -28,7 +28,8 @@
     #mission .header,
     #mission .caption,
     #mission [class^='comment-'],
-    #mission [class^='mission-box'] {    	
+    #mission [class^='mission-box'],
+    #mission .background {    	
     	opacity: 0;
     }
 
@@ -291,7 +292,7 @@
 <section id="mission">
 	<label>mission</label>
     <h2 class="slogan">Make a way from dream to reality easier</h2>
-    <div id="carousel-mission" class="carousel slide mission-board carousel-fade" data-interval=50000>
+    <div id="carousel-mission" class="carousel slide mission-board carousel-fade" data-interval=5000>
 	    <div class="carousel-indicators">
 	        <div class="mission-box green active" data-target="#carousel-mission" data-slide-to="0">
 	            <div class="cover"></div>
@@ -318,7 +319,7 @@
 		<div class="carousel-inner">
 		    <div class="item active">
 		    	<div class="mission-box gray"></div>
-		    	<div style="position: absolute;background: url(/static/img/mission-think.png) no-repeat; top: -30px; left: 0px;width: 800px;height: 600px;"></div>
+		    	<div class="background" style="position: absolute;background: url(/static/img/mission-think.png) no-repeat; top: -30px; left: 0px;width: 800px;height: 600px;"></div>
 		    	<div class="caption green">Think</div>
 		    	<p class="comment-1 middle">
 		    		We believe that it all starts with a thought and better thoughts lead to better results		    		
@@ -332,7 +333,7 @@
 		    </div>
 		    <div class="item">
 		    	<div class="mission-box gray"></div>
-		    	<div style="position: absolute;background: url(/static/img/mission-life.png) no-repeat; top: 230px; left: 400px;width: 100px;height: 99px;"></div>
+		    	<div class="background" style="position: absolute;background: url(/static/img/mission-life.png) no-repeat; top: 230px; left: 400px;width: 100px;height: 99px;"></div>
 	    		<div class="caption orange">Manage<br>the life</div>
 	    		<p class="comment-1 middle" style="margin-top: 50px;">Taking the activities under control</p>
 	    		<p class="comment-2-3 big" style="width: 350px; color: rgba(255, 147, 30, 1); padding-top: 20px">We want to make easier goal setting,<br>work planning and tracking progress.</p>    		
@@ -357,7 +358,7 @@
 		    </div>
 		    <div class="item">
 		    	<div class="mission-box gray"></div>
-		    	<div style="position: absolute;background: url(/static/img/mission-save-time.png) no-repeat; top: 397px; left: 137px;width: 293px;height: 270px;"></div>
+		    	<div class="background" style="position: absolute;background: url(/static/img/mission-save-time.png) no-repeat; top: 397px; left: 137px;width: 293px;height: 270px;"></div>
 	    		<div class="caption purple" style="margin-top: -30px;">Save<br>the time</div>
 	    		<p class="comment-1 big" style="margin-top:30px; color: rgb(102, 45, 145);">We can not give you more time, but we can help to keep available</p>	    		
 	    		<p class="comment-2-3" style="width: 510px; margin-top: 20px">
@@ -392,7 +393,7 @@
 		    </div>
 		    <div class="item">
 		    	<div class="mission-box gray"></div>
-		    	<div style="position: absolute;background: url(/static/img/mission-together.png) no-repeat; top: 0px; left: 0px;width: 358px;height: 414px;"></div>
+		    	<div class="background" style="position: absolute;background: url(/static/img/mission-together.png) no-repeat; top: 0px; left: 0px;width: 358px;height: 414px;"></div>
 	    		<div class="caption red">Working together</div>
 	    		<p class="comment-1 middle" style="margin-top: 40px;">Connect people thoughts and skills</p>
 	    		<p class="comment-2-3 big" style="color: rgb(255, 29, 37); width: 510px">We create network for ideas, goals, projects and tasks<br> to help you move faster, lead to a better results</p>
@@ -415,7 +416,7 @@
 		    </div>		    		    
 		    <div class="item">
 		    	<div class="mission-box gray"></div>
-		    	<div style="position: absolute;background: url(/static/img/mission-personal.png) no-repeat; top: 230px; left: 400px;width: 100px;height: 99px;"></div>
+		    	<div class="background" style="position: absolute;background: url(/static/img/mission-personal.png) no-repeat; top: 230px; left: 400px;width: 100px;height: 99px;"></div>
 	    		<div class="caption blue">Personal</div>
 	    		<p class="comment-1 middle" style="margin-top: 10px;">Little piece of your own world</p>
 	    		<p class="comment-2-3 big" style="margin-top: -20px; height: 110px; width: 350px; color: rgb(63, 169, 245);">
@@ -466,7 +467,8 @@
         '.mission-box.blue',
         '.mission-box.gray',
         '.caption',
-        '[class^="comment-"]',        
+        '[class^="comment-"]',
+        '.background',
         ];
 
 	function AnimateNext(arr) {
