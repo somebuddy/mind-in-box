@@ -165,6 +165,12 @@ section h2 {
     text-align: center;
 }
 
+#mission,
+#at-glance,
+#how-it-works {
+    background: url(/static/img/textures/paper.jpg) repeat;
+}
+
 /* Copyright */
 .copyright {
     font-size: 14px;
@@ -553,3 +559,23 @@ a:hover > i {
     text-decoration: none;
 }
 
+/* Carousel with fade animation */
+.carousel-fade .item {
+    -webkit-transition: opacity 1s ease;    
+    -moz-transition: opacity 1s ease;    
+    -o-transition: opacity 1s ease;
+    -ms-transition: opacity 1s ease;
+    transition: opacity 1s ease;
+}
+
+.carousel-fade .active.left {
+    left: 0;
+    opacity: 0;
+    z-index: 2;
+}
+
+.carousel-fade .next {
+    left: 0;
+    opacity: 1;
+    z-index: 1;
+}
