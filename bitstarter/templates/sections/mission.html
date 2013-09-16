@@ -161,6 +161,7 @@
     /* Mission carousel items */
 	#carousel-mission .item {
     	height: 800px;
+    	font: 300 14px/22px 'Roboto', sans-serif;
     	color: rgba(77, 77, 77, 1);
     }
 
@@ -226,58 +227,36 @@
 
     /* Item Text Styles */
     
-    #carousel-mission .item .caption {
-    	position: absolute;
-    	top: 90px;
-    	left: 180px;
+    #carousel-mission .item .caption {    	
+    	margin-top: 80px;
+    	margin-left: 183px;
+    	margin-bottom: 20px;
     	width: 200px;    	
     	font: 300 40px/50px 'Roboto', sans-serif;
     	text-align: center;
     }
 
-    .item [class^="comment-"] {
+    #carousel-mission .item .comment {
+    	margin: 20px 30px 30px 30px;
+    	width: 506px;
     	text-align: center;
-    	position: absolute;
-    	overflow: hidden;
-    	font: 300 14px/22px 'Roboto', sans-serif;
+    	font: 300 14px/22px 'Roboto', sans-serif;	
     }
 
-    .item [class^="comment-"].middle {
-    	font-size: 16px/24px;
+    #carousel-mission .item .comment.middle {
     	font: 300 16px/24px 'Roboto', sans-serif;	
     }
 
-    .item [class^="comment-"].big {
+    #carousel-mission .item .comment.big {
     	font: 400 18px/26px 'Roboto', sans-serif;	
     }
 
-    .item .comment-1 {
-    	top: 150px;
-    	left: 145px;
-    	width: 280px;
-    	height: 70px;    	
-    }
-
-    .item .comment-2-3 {
-    	top: 240px;
-    	left: 30px;
-    	width: 320px;
-    	height: 90px;
-    }
-
-    .item .comment-5 {
-    	top: 365px;
-    	left: 125px;
-    	width: 320px;
-    	height: 150px;
-    }
-    
 </style>
 
 <section id="mission">
 	<label>mission</label>
     <h2 class="slogan">Make a way from dream to reality easier</h2>
-    <div id="carousel-mission" class="carousel slide mission-board carousel-fade" data-interval=5000>
+    <div id="carousel-mission" class="carousel slide mission-board carousel-fade" data-interval=500000>
 	    <div class="carousel-indicators">
 	        <div class="indicator green position-1 active" data-target="#carousel-mission" data-slide-to="0">
 	            <div class="cover"></div>
@@ -293,7 +272,7 @@
 	        </div>
 	        <div class="indicator red position-4" data-target="#carousel-mission" data-slide-to="3">
 	            <div class="cover"></div>
-	            <div class="caption">Working together</div>
+	            <div class="caption">Work together</div>
 	        </div>	        
 	        <div class="indicator blue position-5" data-target="#carousel-mission" data-slide-to="4">
 	            <div class="cover"></div>
@@ -306,52 +285,46 @@
 		    	<div class="item-box"></div>
 		    	<div class="background"></div>
 		    	<p class="caption green">Think</p>
-		    	<p class="comment-1 middle">
-		    		We believe that it all starts with a thought and better thoughts lead to better results		    		
-		    	</p>
-		    	<p class="comment-2-3 big green" style="width: 350px; padding-top: 20px">
-		    		We create and connect together tools <br> for storing your ideas and work on them.
-		    	</p>		    	
-		    	<p class="comment-5">
-		    		Using boxes and special tools, such as mind maps and brainstorming, you can improve your ideas, focus on details, share them with others<br>to work together towards<br> a common goal.
-		    	</p>		    	
+		    	<p class="comment middle">We believe that it all starts<br> with a thought and better thoughts<br> lead to better results.</p>
+		    	<p class="comment big green" style="width: 350px">We create and connect together tools <br> for storing your ideas and work on them.</p>		    	
+		    	<p class="comment" style="padding-top: 20px;">Using boxes and special tools, such as mind maps<br> and brainstorming, you can improve your ideas,<br> focus on details, share them with others<br>to work together towards<br> a common goal.</p>		    	
 		    </div>
 		    <div class="item" id="mission-life-slide">
 		    	<div class="item-box"></div>
 		    	<div class="background"></div>
 	    		<p class="caption orange">Manage<br>the life</p>
-	    		<p class="comment-1 middle" style="margin-top: 50px;">Taking the activities under control</p>
-	    		<p class="comment-2-3 big orange" style="width: 350px; padding-top: 20px">We want to make easier goal setting,<br>work planning and tracking progress.</p>    		
-	    		<div class="comment-5" style="text-align: left;">
-	    			<p style="margin: 0;">We will provide solutions that helps you:</p>
-	    			<p style="margin: 0 20px"><i class="icon-angle-right"></i> plan you work</p>
-	    			<p style="margin: 0 40px"><i class="icon-angle-right"></i> follow right direction</p>
-	    			<p style="margin: 0 60px"><i class="icon-angle-right"></i> efficiently choose the next step</p>
-	    			<p style="margin: 0 80px"><i class="icon-angle-right"></i> monitor your actions</p>	    			
+	    		<p class="comment middle">Taking the activities under control</p>
+	    		<p class="comment big orange" style="width: 350px">We want to make easier goal setting,<br>work planning and tracking progress.</p>    		
+	    		<div class="comment" style="padding-top: 20px">
+	    			We will provide solutions that helps you:<br>
+	    			<i class="icon-angle-right"></i> plan you work<br>
+	    			<i class="icon-angle-right"></i> follow right direction<br>
+	    			<i class="icon-angle-right"></i> efficiently choose the next step<br>
+	    			<i class="icon-angle-right"></i> monitor your actions.<br>
 	    		</div>	    		
 		    </div>
 		    <div class="item" id="mission-time-slide">
 		    	<div class="item-box"></div>
 		    	<div class="background"></div>
-	    		<p class="caption purple" style="margin-top: -30px;">Save<br>the time</p>
-	    		<p class="comment-1 big purple" style="margin-top:30px">We can not give you more time, but we can help to keep available</p>	    		
-	    		<p class="comment-2-3" style="width: 510px; margin-top: 20px">
-	    			We develop the tools for time management, that help you do<br> what is really matters, reduce the cost of supporting tasks,<br> work less and do more, save time for more important things for you.
+	    		<p class="caption purple" style="margin-top: 60px">Save<br>the time</p>
+	    		<p class="comment big purple">We can not give you more time,<br> but we can help to keep available.</p>	    		
+	    		<p class="comment">
+	    			We develop the tools for time management, that help you do what is really matters, reduce the cost of supporting tasks, work less and do more,<br> save time for more important things for you.
 	    		</p>	    		
-	    		<p class="comment-5" style="margin-top: -25px">
-	    			At the same time our goal is to make the work with the service as quickly as possible.<br> So that all the necessary commands<br> you could do in one click.
+	    		<p class="comment" style="margin-top: -20px">
+	    			At the same time our goal is to make the work<br> with the service as quickly as possible.<br> So that all the necessary commands<br> you could do in one click.
 	    		</p>	    		
 		    </div>
 		    <div class="item" id="mission-together-slide">
 		    	<div class="item-box"></div>
 		    	<div class="background"></div>
-	    		<p class="caption red">Working together</p>
-	    		<p class="comment-1 middle" style="margin-top: 40px;">Connect people thoughts and skills</p>
-	    		<p class="comment-2-3 big red" style="width: 510px">We create network for ideas, goals, projects and tasks<br> to help you move faster, lead to a better results</p>
-	    		<p class="comment-5" style="margin-top: -40px; left: 100px; width: 360px;">
-	    			We want to make it easier to share ideas, to work together toward common goals, to use the best opportunities of each person for better results.
+	    		<p class="caption red">Work together</p>
+	    		<p class="comment middle">Connect people thoughts and skills</p>
+	    		<p class="comment big red">We create network for ideas, goals, projects and tasks<br> to help you move faster, lead to a better results.</p>
+	    		<p class="comment">
+	    			We want to make it easier to share ideas, to work together<br> toward common goals, to use the best opportunities<br> of each person for better results.
 	    		</p>
-	    		<p class="comment-5" style="margin-top: 50px;">
+	    		<p class="comment">
 	    			We are creating a place where<br>it is only important<br> what you think<br> and do.
 	    		</p>	    		
 		    </div>		    		    
@@ -359,12 +332,12 @@
 		    	<div class="item-box"></div>
 		    	<div class="background"></div>
 	    		<p class="caption blue">Personal</p>
-	    		<p class="comment-1 middle" style="margin-top: 10px;">Little piece of your own world</p>
-	    		<p class="comment-2-3 big blue" style="margin-top: -20px; height: 110px; width: 350px;">
+	    		<p class="comment middle">Little piece of your own world</p>
+	    		<p class="comment big blue" style="width: 350px; padding-top: 30px">
 	    			For us it is important that<br>our users feel comfortable and free.<br>
-	    			We make workspace for you<br> that helps focus on current task
+	    			We make workspace for you<br> that helps focus on current task.
 	    		</p>
-	    		<p class="comment-5">Collect all information and tools that you need, throw away all the unnecessary<br>Clean your mind, there is only you<br> and your work - nothing more</p>	    		
+	    		<p class="comment">Collect all information and tools that you need,<br> throw away all the unnecessary.<br>Clean your mind, there is only you<br> and your work - nothing more.</p>
 		    </div>
 		</div>  
     </div>
