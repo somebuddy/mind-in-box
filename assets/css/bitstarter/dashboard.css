@@ -651,64 +651,64 @@
     box-shadow: 0 0 9px red;
 }
 
-   #crowdfunding-box .header .caption {
-    display: block;
-    float: left;
-    }
+#crowdfunding-box .header .caption {
+display: block;
+float: left;
+}
 
-    .dashboard #crowdfunding-box .header .button {
+.dashboard #crowdfunding-box .header .button {
+opacity: 0;
+-webkit-transition: opacity 0.9s step-start;
+-o-transition: opacity 0.9s step-start;
+-moz-transition: opacity 0.9s step-start;
+-transition: opacity 0.9s step-start;
+}
+
+.dashboard:hover #crowdfunding-box .header .button {
+color: black;
+position: absolute;
+top: 0px;
+right: 0px;
+height: 60px;
+width: 80px;
+background-color: #F55;
+text-align: center;
+padding: 10px;
+font: small-caps 26px/20px 'Pathway Gothic One', sans-serif;
+opacity: 1;
+-webkit-transition: all 0.9s step-end;
+-o-transition: all 0.9s step-end;
+-moz-transition: all 0.9s step-end;
+transition: opacity 0.9s step-end;
+}
+
+.button:hover {
+cursor: pointer;
+text-decoration: underline;
+}
+
+.social-row {
     opacity: 0;
-    -webkit-transition: opacity 0.9s step-start;
-    -o-transition: opacity 0.9s step-start;
-    -moz-transition: opacity 0.9s step-start;
-    -transition: opacity 0.9s step-start;
-    }
-
-    .dashboard:hover #crowdfunding-box .header .button {
-    color: black;
     position: absolute;
-    top: 0px;
-    right: 0px;
-    height: 60px;
-    width: 80px;
-    background-color: #F55;
-    text-align: center;
-    padding: 10px;
-    font: small-caps 26px/20px 'Pathway Gothic One', sans-serif;
+    width: 100%;
+    bottom: 0;
+    height: 30px;
+    -webkit-transition: opacity 0.9s easy;
+    -o-transition: opacity 0.9s easy;
+    -moz-transition: opacity 0.9s easy;
+    transition: opacity 0.9s easy;
+}
+
+.dashboard:hover .social-row {
+    -webkit-transition: opacity 0.9s easy;
+    -o-transition: opacity 0.9s easy;
+    -moz-transition: opacity 0.9s easy;
+    transition: opacity 0.9s easy;
     opacity: 1;
-    -webkit-transition: all 0.9s step-end;
-    -o-transition: all 0.9s step-end;
-    -moz-transition: all 0.9s step-end;
-    transition: opacity 0.9s step-end;
-    }
+}
 
-    .button:hover {
-    cursor: pointer;
-    text-decoration: underline;
-    }
-
-    .social-row {
-        opacity: 0;
-        position: absolute;
-        width: 100%;
-        bottom: 0;
-        height: 30px;
-        -webkit-transition: opacity 0.9s easy;
-        -o-transition: opacity 0.9s easy;
-        -moz-transition: opacity 0.9s easy;
-        transition: opacity 0.9s easy;
-    }
-
-    .dashboard:hover .social-row {
-        -webkit-transition: opacity 0.9s easy;
-        -o-transition: opacity 0.9s easy;
-        -moz-transition: opacity 0.9s easy;
-        transition: opacity 0.9s easy;
-        opacity: 1;
-    }
-
-    .social-button {
-        display: inline-block;
-        width: 200px;
-        text-align: center;
-    }
+.social-button {
+    display: inline-block;
+    width: 200px;
+    text-align: center;
+}

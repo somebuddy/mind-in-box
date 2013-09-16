@@ -2,7 +2,7 @@
 html,
 body {
     height: 100%;
-    background-color: rgba(0, 0, 0, 0.1);
+    background-color: rgba(0, 0, 0, 0);
 }
 
 /* Page background */
@@ -13,10 +13,6 @@ html {
     -o-background-size: cover;
     -webkit-background-size: cover;
     background-size: cover;
-}
-
-body {
-    font-family: 'Roboto', 'Open Sans';
 }
 
 /* Default font */
@@ -41,11 +37,6 @@ h6 {
 
 .right {
     text-align: right;
-}
-
-.anchor-marker {
-    position: absolute;
-    top: -50px;
 }
 
 /* Menu */

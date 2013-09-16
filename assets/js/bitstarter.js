@@ -5,7 +5,6 @@
 
 /* Animate elements from queue */
 function AnimateNext(arr) {
-    console.log($(arr[0]));
 	return function () {
 		$(arr[0]).animate({opacity: 1}, 300, AnimateNext(arr.slice(1)));
 	}
@@ -46,7 +45,6 @@ if(!d.getElementById(id)){
 $(document).ready(function () {
 
 	$('section').waypoint(function () {
-		console.log(this);
 		$(this).animate({opacity: 1}, 1500);	
 	}, {offset: '95%'});
 

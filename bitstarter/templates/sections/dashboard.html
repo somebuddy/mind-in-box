@@ -1,9 +1,7 @@
 <section id="dashboard">
     <div>
         <div class="dashboard">
-            <div class="box box-s logo dash-col-1 dash-row-2">
-                THINKING IN BOX
-            </div> 
+            <div class="box box-s logo dash-col-1 dash-row-2">THINKING IN BOX</div> 
             <div class="box box-s dash-col-1 dash-row-1 box-purple">
                 <div class="header">
                     Our Mission
@@ -166,5 +164,14 @@
     $('#orderModal').on('show.bs.modal', function () {
 	$(this).find('.modal-body').load('{% url 'coinbase:orders' %}');
     });
+
+    /* Set dashboard height depends of window size */
+    function FixDashboardSectionSize () {
+        h = Math.max($(window).height(), $('.dashboard').height() + 180);
+        $('#dashboard').css({height: h});
+    }
+
+    $(window).resize(FixDashboardSectionSize);
+    $(document).ready(FixDashboardSectionSize);
 </script>
 
