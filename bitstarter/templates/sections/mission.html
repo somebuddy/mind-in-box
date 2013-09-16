@@ -1,19 +1,15 @@
 <style>
-/*
-    #mission .slogan,
-    #mission .header,
-    #mission .caption,
-    #mission [class^='comment-'],
-    #mission [class^='mission-box'],
-    #mission .background {    	
+	#mission label,
+	#mission .slogan,
+	#carousel-mission .indicator,
+	#carousel-mission .item-box,
+	#carousel-mission .background,
+	#carousel-mission .item .caption,
+	#carousel-mission .item .comment {
     	opacity: 0;
     }
 
-    .carousel {
-    	opacity: 1;
-    }    
-*/
-    .mission-board {
+    #carousel-mission {
         position: relative;
         margin: 60px auto;
         height: 600px;
@@ -256,7 +252,7 @@
 <section id="mission">
 	<label>mission</label>
     <h2 class="slogan">Make a way from dream to reality easier</h2>
-    <div id="carousel-mission" class="carousel slide mission-board carousel-fade" data-interval=500000>
+    <div id="carousel-mission" class="carousel slide carousel-fade" data-interval=5000>
 	    <div class="carousel-indicators">
 	        <div class="indicator green position-1 active" data-target="#carousel-mission" data-slide-to="0">
 	            <div class="cover"></div>
@@ -346,17 +342,21 @@
     var MissionAnimateQueue = [
         '#mission > label',
         '#mission > .slogan',
-        '.mission-board',
-        'indicator',
-        '.caption',
-        '[class^="comment-"]',
-        '.background',
+        '#carousel-mission .indicator.position-1',
+        '#carousel-mission .indicator.position-2',
+        '#carousel-mission .indicator.position-3',
+        '#carousel-mission .indicator.position-4',
+        '#carousel-mission .indicator.position-5',
+        '#carousel-mission .item-box',
+        '#carousel-mission .background',
+        '#carousel-mission .item .caption',
+        '#carousel-mission .item .comment',
         ];
 
 	function AnimateNext(arr) {
         console.log($(arr[0]));
 		return function () {
-			$(arr[0]).animate({opacity: 1}, 200, AnimateNext(arr.slice(1)));
+			$(arr[0]).animate({opacity: 1}, 300, AnimateNext(arr.slice(1)));
 		}
 	};
 
