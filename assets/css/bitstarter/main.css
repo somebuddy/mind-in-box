@@ -108,14 +108,6 @@ section > label {
     text-transform: uppercase;
 }
 
-
-#dashboard {
-    border: none;
-    border-bottom: 5px solid rgba(0, 0, 0, 0.1);
-    width: 100%;    
-    background-color: rgba(0, 0, 0, 0.2);
-}
-
 .section-odd {
     background-color: rgba(250, 250, 250, 0.8);
 }
