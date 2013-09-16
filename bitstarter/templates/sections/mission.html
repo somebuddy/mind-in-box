@@ -8,6 +8,10 @@
     #mission .background {    	
     	opacity: 0;
     }
+
+    .carousel {
+    	opacity: 1;
+    }    
 */
     .mission-board {
         position: relative;
@@ -17,6 +21,14 @@
     }
 
     /* Mission Carousel Indicators */
+    #mission .carousel-indicators {
+    	left: auto;
+    	right: 0px;
+    	top: 0;
+    	bottom: 0;
+    	width: 290px;    	
+    }
+
     #mission .indicator {
     	position: absolute;
     	height: 110px;
@@ -146,17 +158,75 @@
         transition: opacity 0.5s ease;
     }
 
+
+
     /* Mission carousel items */
-    
-    [class^='mission-box'] {
-        position: absolute;
-        height: 110px;
-        width: 110px;
-        font: 500 18px/26px 'Roboto', sans-serif;
+	#carousel-mission .item {
+    	height: 800px;
+    }
+
+
+    /* Item backgrounds */
+
+    #carousel-mission .item-box {
+    	position: absolute;
+        background: url({{ STATIC_URL }}img/mission-box-dark-gray.png) no-repeat;
+        left: 82px;
+        top: 82px;
+        height: 400px;
+        width: 400px;
+        color: rgba(77, 77, 77, 1);
         -webkit-transform: rotate(-45deg);
+        -moz-transform: rotate(-45deg);
+        -o-transform: rotate(-45deg);
+        -ms-transform: rotate(-45deg);
         transform: rotate(-45deg);
     }
 
+    #carousel-mission .item .background {
+    	position: absolute;
+    }
+
+    #mission-think-slide > .background {    	
+    	background: url(/static/img/mission-think.png) no-repeat; 
+    	top: -30px;
+    	left: 0px;
+    	width: 800px;
+    	height: 600px;
+    }
+
+    #mission-life-slide > .background {
+    	background: url(/static/img/mission-life.png) no-repeat; 
+    	top: 230px; 
+    	left: 400px;
+    	width: 100px;
+    	height: 99px;
+    }
+
+    #mission-time-slide > .background {
+    	background: url(/static/img/mission-save-time.png) no-repeat; 
+    	top: 397px; 
+    	left: 137px;
+    	width: 293px;
+    	height: 270px;
+    }
+
+    #mission-together-slide > .background {
+    	background: url(/static/img/mission-together.png) no-repeat; 
+    	top: 0px; 
+    	left: 0px;
+    	width: 358px;
+    	height: 414px;
+    }
+
+    #mission-personal-slide > .background {
+    	background: url(/static/img/mission-personal.png) no-repeat; 
+    	top: 230px; 
+    	left: 400px;
+    	width: 100px;
+    	height: 99px;
+    }
+    
     .item .caption {
     	position: absolute;
     	top: 90px;
@@ -226,37 +296,6 @@
     	color: rgba(63, 169, 245, 1);
     }
 
-    .mission-box.gray {
-        height: 400px;
-        width: 400px;
-        left: 82px;
-        top: 82px;
-        background: url({{ STATIC_URL }}img/mission-box-dark-gray.png);
-        color: rgba(77, 77, 77, 1);
-    }
-
-    .carousel {
-    	opacity: 1;
-    }
-
-    .mission-board .carousel-indicators {
-    	left: auto;
-    	right: 0px;
-    	top: 0;
-    	bottom: 0;
-    	width: 290px;    	
-    }
-
-    .mission-board .carousel-indicators .active {
-    	width: 110px;
-    	height: 110px;
-    	background-color: rgba(0, 0, 0, 0);
-    }
-
-    #carousel-mission .item {
-    	height: 600px;
-    }
-
 </style>
 
 <section id="mission">
@@ -287,9 +326,9 @@
 		</div>
 	    <!-- Wrapper for slides -->
 		<div class="carousel-inner">
-		    <div class="item active">
-		    	<div class="mission-box gray"></div>
-		    	<div class="background" style="position: absolute;background: url(/static/img/mission-think.png) no-repeat; top: -30px; left: 0px;width: 800px;height: 600px;"></div>
+		    <div class="item active" id="mission-think-slide">
+		    	<div class="item-box"></div>
+		    	<div class="background"></div>
 		    	<div class="caption green">Think</div>
 		    	<p class="comment-1 middle">
 		    		We believe that it all starts with a thought and better thoughts lead to better results		    		
@@ -301,9 +340,9 @@
 		    		Using boxes and special tools, such as mind maps and brainstorming, you can improve your ideas, focus on details, share them with others<br>to work together towards<br> a common goal.
 		    	</p>		    	
 		    </div>
-		    <div class="item">
-		    	<div class="mission-box gray"></div>
-		    	<div class="background" style="position: absolute;background: url(/static/img/mission-life.png) no-repeat; top: 230px; left: 400px;width: 100px;height: 99px;"></div>
+		    <div class="item" id="mission-life-slide">
+		    	<div class="item-box"></div>
+		    	<div class="background"></div>
 	    		<div class="caption orange">Manage<br>the life</div>
 	    		<p class="comment-1 middle" style="margin-top: 50px;">Taking the activities under control</p>
 	    		<p class="comment-2-3 big" style="width: 350px; color: rgba(255, 147, 30, 1); padding-top: 20px">We want to make easier goal setting,<br>work planning and tracking progress.</p>    		
@@ -326,9 +365,9 @@
                         </ul>
                 {% endcomment %}
 		    </div>
-		    <div class="item">
-		    	<div class="mission-box gray"></div>
-		    	<div class="background" style="position: absolute;background: url(/static/img/mission-save-time.png) no-repeat; top: 397px; left: 137px;width: 293px;height: 270px;"></div>
+		    <div class="item" id="mission-time-slide">
+		    	<div class="item-box"></div>
+		    	<div class="background"></div>
 	    		<div class="caption purple" style="margin-top: -30px;">Save<br>the time</div>
 	    		<p class="comment-1 big" style="margin-top:30px; color: rgb(102, 45, 145);">We can not give you more time, but we can help to keep available</p>	    		
 	    		<p class="comment-2-3" style="width: 510px; margin-top: 20px">
@@ -361,9 +400,9 @@
                     <p>To do this, we will create tools that can reduce the effects of secondary tasks and help to focus on goals:</p>                  
                 {% endcomment %}
 		    </div>
-		    <div class="item">
-		    	<div class="mission-box gray"></div>
-		    	<div class="background" style="position: absolute;background: url(/static/img/mission-together.png) no-repeat; top: 0px; left: 0px;width: 358px;height: 414px;"></div>
+		    <div class="item" id="mission-together-slide">
+		    	<div class="item-box"></div>
+		    	<div class="background"></div>
 	    		<div class="caption red">Working together</div>
 	    		<p class="comment-1 middle" style="margin-top: 40px;">Connect people thoughts and skills</p>
 	    		<p class="comment-2-3 big" style="color: rgb(255, 29, 37); width: 510px">We create network for ideas, goals, projects and tasks<br> to help you move faster, lead to a better results</p>
@@ -384,9 +423,9 @@
                     </ul>
                 {% endcomment %}
 		    </div>		    		    
-		    <div class="item">
-		    	<div class="mission-box gray"></div>
-		    	<div class="background" style="position: absolute;background: url(/static/img/mission-personal.png) no-repeat; top: 230px; left: 400px;width: 100px;height: 99px;"></div>
+		    <div class="item" id="mission-personal-slide">
+		    	<div class="item-box"></div>
+		    	<div class="background"></div>
 	    		<div class="caption blue">Personal</div>
 	    		<p class="comment-1 middle" style="margin-top: 10px;">Little piece of your own world</p>
 	    		<p class="comment-2-3 big" style="margin-top: -20px; height: 110px; width: 350px; color: rgb(63, 169, 245);">
