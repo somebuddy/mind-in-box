@@ -579,3 +579,24 @@ a:hover > i {
     opacity: 1;
     z-index: 1;
 }
+
+    p.green {
+        color: rgba(140, 190, 41, 1);
+    }
+
+    p.red {
+        color: rgba(255, 29, 37, 1);
+    }
+
+    p.purple {
+        color: rgba(102, 45, 145, 1);
+    }
+
+    p.orange {
+        color: rgba(255, 147, 30, 1);
+    }
+
+    p.blue {
+        color: rgba(63, 169, 245, 1);
+    }
+

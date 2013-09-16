@@ -161,6 +161,7 @@
     /* Mission carousel items */
 	#carousel-mission .item {
     	height: 800px;
+    	color: rgba(77, 77, 77, 1);
     }
 
     /* Item backgrounds */
@@ -171,8 +172,7 @@
         left: 82px;
         top: 82px;
         height: 400px;
-        width: 400px;
-        color: rgba(77, 77, 77, 1);
+        width: 400px;        
         -webkit-transform: rotate(-45deg);
         -moz-transform: rotate(-45deg);
         -o-transform: rotate(-45deg);
@@ -226,17 +226,13 @@
 
     /* Item Text Styles */
     
-    .item .caption {
+    #carousel-mission .item .caption {
     	position: absolute;
     	top: 90px;
     	left: 180px;
     	width: 200px;    	
     	font: 300 40px/50px 'Roboto', sans-serif;
     	text-align: center;
-    }
-
-    .item  p {    	
-    	color: rgb(77, 77, 77);    	
     }
 
     .item [class^="comment-"] {
@@ -276,26 +272,6 @@
     	height: 150px;
     }
     
-    .caption.green {
-    	color: rgba(140, 190, 41, 1);
-    }
-
-    .caption.red {
-    	color: rgba(255, 29, 37, 1);
-    }
-
-    .caption.purple {
-    	color: rgba(102, 45, 145, 1);
-    }
-
-    .caption.orange {
-    	color: rgba(255, 147, 30, 1);
-    }
-
-    .caption.blue {
-    	color: rgba(63, 169, 245, 1);
-    }
-
 </style>
 
 <section id="mission">
@@ -329,11 +305,11 @@
 		    <div class="item active" id="mission-think-slide">
 		    	<div class="item-box"></div>
 		    	<div class="background"></div>
-		    	<div class="caption green">Think</div>
+		    	<p class="caption green">Think</p>
 		    	<p class="comment-1 middle">
 		    		We believe that it all starts with a thought and better thoughts lead to better results		    		
 		    	</p>
-		    	<p class="comment-2-3 big" style="width: 350px; color: rgba(140, 190, 41, 1); padding-top: 20px">
+		    	<p class="comment-2-3 big green" style="width: 350px; padding-top: 20px">
 		    		We create and connect together tools <br> for storing your ideas and work on them.
 		    	</p>		    	
 		    	<p class="comment-5">
@@ -343,9 +319,9 @@
 		    <div class="item" id="mission-life-slide">
 		    	<div class="item-box"></div>
 		    	<div class="background"></div>
-	    		<div class="caption orange">Manage<br>the life</div>
+	    		<p class="caption orange">Manage<br>the life</p>
 	    		<p class="comment-1 middle" style="margin-top: 50px;">Taking the activities under control</p>
-	    		<p class="comment-2-3 big" style="width: 350px; color: rgba(255, 147, 30, 1); padding-top: 20px">We want to make easier goal setting,<br>work planning and tracking progress.</p>    		
+	    		<p class="comment-2-3 big orange" style="width: 350px; padding-top: 20px">We want to make easier goal setting,<br>work planning and tracking progress.</p>    		
 	    		<div class="comment-5" style="text-align: left;">
 	    			<p style="margin: 0;">We will provide solutions that helps you:</p>
 	    			<p style="margin: 0 20px"><i class="icon-angle-right"></i> plan you work</p>
@@ -357,8 +333,8 @@
 		    <div class="item" id="mission-time-slide">
 		    	<div class="item-box"></div>
 		    	<div class="background"></div>
-	    		<div class="caption purple" style="margin-top: -30px;">Save<br>the time</div>
-	    		<p class="comment-1 big" style="margin-top:30px; color: rgb(102, 45, 145);">We can not give you more time, but we can help to keep available</p>	    		
+	    		<p class="caption purple" style="margin-top: -30px;">Save<br>the time</p>
+	    		<p class="comment-1 big purple" style="margin-top:30px">We can not give you more time, but we can help to keep available</p>	    		
 	    		<p class="comment-2-3" style="width: 510px; margin-top: 20px">
 	    			We develop the tools for time management, that help you do<br> what is really matters, reduce the cost of supporting tasks,<br> work less and do more, save time for more important things for you.
 	    		</p>	    		
@@ -369,9 +345,9 @@
 		    <div class="item" id="mission-together-slide">
 		    	<div class="item-box"></div>
 		    	<div class="background"></div>
-	    		<div class="caption red">Working together</div>
+	    		<p class="caption red">Working together</p>
 	    		<p class="comment-1 middle" style="margin-top: 40px;">Connect people thoughts and skills</p>
-	    		<p class="comment-2-3 big" style="color: rgb(255, 29, 37); width: 510px">We create network for ideas, goals, projects and tasks<br> to help you move faster, lead to a better results</p>
+	    		<p class="comment-2-3 big red" style="width: 510px">We create network for ideas, goals, projects and tasks<br> to help you move faster, lead to a better results</p>
 	    		<p class="comment-5" style="margin-top: -40px; left: 100px; width: 360px;">
 	    			We want to make it easier to share ideas, to work together toward common goals, to use the best opportunities of each person for better results.
 	    		</p>
@@ -382,9 +358,9 @@
 		    <div class="item" id="mission-personal-slide">
 		    	<div class="item-box"></div>
 		    	<div class="background"></div>
-	    		<div class="caption blue">Personal</div>
+	    		<p class="caption blue">Personal</p>
 	    		<p class="comment-1 middle" style="margin-top: 10px;">Little piece of your own world</p>
-	    		<p class="comment-2-3 big" style="margin-top: -20px; height: 110px; width: 350px; color: rgb(63, 169, 245);">
+	    		<p class="comment-2-3 big blue" style="margin-top: -20px; height: 110px; width: 350px;">
 	    			For us it is important that<br>our users feel comfortable and free.<br>
 	    			We make workspace for you<br> that helps focus on current task
 	    		</p>
