@@ -198,31 +198,7 @@
                 </div>
             </div>
 	    </div>
-
-            {% comment %}                        
-            <div class="box box-s dash-col-5 dash-row-1">Test Box 1, 5</div>
-            <div class="box box-s dash-col-6 dash-row-1">Test Box 1, 6</div>
-            <div class="box box-s dash-col-4 dash-row-2">Test Box 2, 4</div>
-            <div class="box box-s dash-col-5 dash-row-2">Test Box 2, 5</div>
-            <div class="box box-s dash-col-6 dash-row-2">Test Box 2, 6</div>
-            <div class="box box-s dash-col-7 dash-row-2">Test Box 2, 7</div>
-            <div class="box box-s dash-col-4 dash-row-3">Test Box 3, 4</div>
-            <div class="box box-s dash-col-5 dash-row-3">Test Box 3, 5</div>
-            <div class="box box-s dash-col-6 dash-row-3">Test Box 3, 6</div>
-            <div class="box box-s dash-col-7 dash-row-3">Test Box 3, 7</div> 
-            <div class="box box-s dash-col-1 dash-row-2">Test Box 2, 1</div>
-            <div class="box box-s dash-col-2 dash-row-2">Test Box 2, 2</div>
-            {% endcomment %}
-        </div>
     </div>
-
-    {% comment %}
-    <div class="social-row">
-    
-    <!-- Поместите этот тег туда, где должна отображаться кнопка +1. -->
-    
-    </div>
-    {% endcomment %}
 </section>
 <div class="modal fade" id="orderModal">
   <div class="modal-dialog">
@@ -254,13 +230,5 @@
     $('#orderModal').on('show.bs.modal', function () {
 	$(this).find('.modal-body').load('{% url 'coinbase:orders' %}');
     });
-
-   !function(d,s,id) {
-	var js,fjs=d.getElementsByTagName(s)[0];
-	if(!d.getElementById(id)){
-		js=d.createElement(s);js.id=id;
-		js.src="https://platform.twitter.com/widgets.js";
-		fjs.parentNode.insertBefore(js,fjs);
-	}}(document,"script","twitter-wjs");
 </script>
 
