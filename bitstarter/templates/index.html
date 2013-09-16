@@ -36,12 +36,5 @@
 {% endblock %}
 
 {% block end_scripts %}
-<script>
-	$(document).ready(function () {
-		$('section').waypoint(function () {
-			console.log(this);
-			$(this).animate({opacity: 1}, 1500);	
-		}, {offset: '95%'});
-	});
-</script>
+<script src="{{ STATIC_URL }}js/bitstarter.js"></script>
 {% endblock %}
