@@ -35,6 +35,32 @@
 	text-decoration: underline;
     }
 
+    .social-row {
+        opacity: 0;
+        position: absolute;
+        width: 100%;
+        bottom: 0;
+        height: 30px;
+        -webkit-transition: opacity 0.9s easy;
+        -o-transition: opacity 0.9s easy;
+        -moz-transition: opacity 0.9s easy;
+        transition: opacity 0.9s easy;
+    }
+
+    .dashboard:hover .social-row {
+        -webkit-transition: opacity 0.9s easy;
+        -o-transition: opacity 0.9s easy;
+        -moz-transition: opacity 0.9s easy;
+        transition: opacity 0.9s easy;
+        opacity: 1;
+    }
+
+    .social-button {
+        display: inline-block;
+        width: 200px;
+        text-align: center;
+    }
+
 </style>
 <section id="dashboard">
     <div>
@@ -80,7 +106,7 @@
                 <div class="header">
                     <p>Crowdfunding</p>
                     <p class="header-comment">Everyone can help</p>
-		    <div data-toggle="modal" href="#orderModal" class="button">donation list</div>
+		            <div data-toggle="modal" href="#orderModal" class="button">donation list</div>
                 </div>
                 <div class="cover">
                     <div class="row center" id='funding-stat'>
@@ -150,8 +176,29 @@
                         <i class="icon-double-angle-down icon-large"></i>
                     </a>
                 </div>
-            </div>            
+            </div>
+            <div class="social-row">
+                <div class="social-button">
+                    <div class="fb-like" data-href="http://thinking-in-box.herokuapp.com/" data-width="450" data-layout="button_count" data-show-faces="false" data-send="false"></div>
+                </div>
+                <div class="social-button">
+                    <div class="g-plusone" data-size="standard" data-annotation="bubble" data-width="450" data-href="http://thinking-in-box.herokuapp.com/" data-align="right"></div>
+                    <script type="text/javascript">
+                      window.___gcfg = {lang: 'ru'};
+
+                      (function() {
+                        var po = document.createElement('script'); po.type = 'text/javascript'; po.async = true;
+                        po.src = 'https://apis.google.com/js/plusone.js';
+                        var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(po, s);
+                      })();
+                    </script>
+                </div>
+                <div class="social-button">
+                    <a href="https://twitter.com/share" class="twitter-share-button" data-url="http://thinking-in-box.herokuapp.com/" data-via="ThinkingInBox">Tweet</a>                
+                </div>
+            </div>
 	    </div>
+
             {% comment %}                        
             <div class="box box-s dash-col-5 dash-row-1">Test Box 1, 5</div>
             <div class="box box-s dash-col-6 dash-row-1">Test Box 1, 6</div>
@@ -168,6 +215,14 @@
             {% endcomment %}
         </div>
     </div>
+
+    {% comment %}
+    <div class="social-row">
+    
+    <!-- Поместите этот тег туда, где должна отображаться кнопка +1. -->
+    
+    </div>
+    {% endcomment %}
 </section>
 <div class="modal fade" id="orderModal">
   <div class="modal-dialog">
