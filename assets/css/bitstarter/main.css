@@ -184,43 +184,17 @@ section h2 {
     color: rgba(183, 26, 26, 1);
 }
 
-/* Mission */
-
-#mission > label {
-    background-color: rgba(147, 42, 182, 0.8);
-    border: 1px solid rgba(147, 42, 182, 1);
+section > label {
     color: white;
-    box-shadow: 2px 2px 9px rgba(50, 50, 50, 0.7);
-}
-
-#mission h2 {
-    color: rgba(147, 42, 182, 0.8);
-}
-
-#mission .subheader {
-    font-size: 24px;
-    font-weight: 300;
-    color: #333;
-    text-align: center;
-    margin-bottom: 40px;
-    margin-top: 30px;
-}
-
-#mission .footer-icons {
-    position: absolute;
-    top: 40px;
-    left: 30px;
-    font-size: 30em;
-    color: rgba(147, 42, 182, 0.1);
+    box-shadow: 2px 2px 9px rgba(50, 50, 50, 0.7); 
+    border: 1px solid;
 }
 
 /* At a glance */
 
 #at-glance > label {
     background-color: rgba(140, 190, 41, 0.8);
-    border: 1px solid rgba(140, 190, 41, 1);
-    color: white;
-    box-shadow: 2px 2px 9px rgba(50, 50, 50, 0.7);
+    border-color: rgba(140, 190, 41, 1);
 }
 
 #at-glance h2 {
@@ -231,9 +205,7 @@ section h2 {
 
 #how-it-works > label {
     background-color: rgba(140, 190, 41, 0.8);
-    border: 1px solid rgba(140, 190, 41, 1);
-    color: white;
-    box-shadow: 2px 2px 9px rgba(50, 50, 50, 0.7);
+    border-color: rgba(140, 190, 41, 1);
 }
 
 #how-it-works h2 {
@@ -244,9 +216,7 @@ section h2 {
 
 #features > label {
     background-color: rgba(224, 0, 0, 0.8);
-    border: 1px solid rgba(224, 0, 0, 1);
-    color: white;
-    box-shadow: 2px 2px 9px rgba(50, 50, 50, 0.7);
+    border-color: rgba(224, 0, 0, 1);
 }
 
 #features h2 {
@@ -257,9 +227,7 @@ section h2 {
 
 #source-code > label {
     background-color: rgba(25, 162, 222, 0.8);
-    border: 1px solid rgba(25, 162, 222, 1);
-    color: white;
-    box-shadow: 2px 2px 9px rgba(50, 50, 50, 0.7);
+    border-color: rgba(25, 162, 222, 1);
 }
 
 #source-code h2 {
@@ -270,9 +238,7 @@ section h2 {
 
 #mobile > label {
     background-color: rgba(44, 103, 0, 0.8);
-    border: 1px solid rgba(44, 103, 0, 1);
-    color: white;
-    box-shadow: 2px 2px 9px rgba(50, 50, 50, 0.7);
+    border-color: rgba(44, 103, 0, 1);
 }
 
 #mobile h2 {
@@ -301,9 +267,7 @@ section h2 {
 
 #sandbox > label {
     background-color: rgba(254, 124, 34, 0.8);
-    border: 1px solid rgba(254, 124, 34, 1);
-    color: white;
-    box-shadow: 2px 2px 9px rgba(50, 50, 50, 0.7);
+    border-color: rgba(254, 124, 34, 1);
 }
 
 #sandbox h2 {
@@ -314,9 +278,7 @@ section h2 {
 
 #roadmap > label {
     background-color: rgba(51, 51, 51, 0.8);
-    border: 1px solid rgba(51, 51, 51, 1);
-    color: white;
-    box-shadow: 2px 2px 9px rgba(50, 50, 50, 0.7);
+    border-color: rgba(51, 51, 51, 1);
 }
 
 #roadmap h2 {
@@ -465,9 +427,7 @@ section h2 {
 
 #contact > label {
     background-color: rgba(0, 0, 0, 0.7);
-    border: 1px solid rgba(30, 30, 30, 1);
-    color: white;
-    box-shadow: 2px 2px 9px rgba(50, 50, 50, 0.7);
+    border-color: rgba(30, 30, 30, 1);
 }
 
 #contact .subheader {
@@ -580,23 +540,23 @@ a:hover > i {
     z-index: 1;
 }
 
-    p.green {
-        color: rgba(140, 190, 41, 1);
-    }
+p.green {
+    color: rgba(140, 190, 41, 1);
+}
 
-    p.red {
-        color: rgba(255, 29, 37, 1);
-    }
+p.red {
+    color: rgba(255, 29, 37, 1);
+}
 
-    p.purple {
-        color: rgba(102, 45, 145, 1);
-    }
+p.purple {
+    color: rgba(102, 45, 145, 1);
+}
 
-    p.orange {
-        color: rgba(255, 147, 30, 1);
-    }
+p.orange {
+    color: rgba(255, 147, 30, 1);
+}
 
-    p.blue {
-        color: rgba(63, 169, 245, 1);
-    }
+p.blue {
+    color: rgba(63, 169, 245, 1);
+}
 

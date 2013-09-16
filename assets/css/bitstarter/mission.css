@@ -1,3 +1,16 @@
+    /* Mission */
+
+    #mission > label {
+        background-color: rgba(147, 42, 182, 0.8);
+        border-color: rgba(147, 42, 182, 1);
+    }
+
+    #mission h2 {
+        color: rgba(147, 42, 182, 0.8);
+    }
+
+    /* Mission Carousel */
+
     #carousel-mission {
         position: relative;
         margin: 60px auto;
