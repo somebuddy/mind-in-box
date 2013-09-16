@@ -1,4 +1,5 @@
 <style>
+/*
     #mission .slogan,
     #mission .header,
     #mission .caption,
@@ -7,7 +8,7 @@
     #mission .background {    	
     	opacity: 0;
     }
-
+*/
     .mission-board {
         position: relative;
         margin: 60px auto;
@@ -16,6 +17,136 @@
     }
 
     /* Mission Carousel Indicators */
+    #mission .indicator {
+    	position: absolute;
+    	height: 110px;
+    	width: 110px;
+    	-webkit-transform: rotate(-45deg);
+    	-moz-transform: rotate(-45deg);
+    	-ms-transform: rotate(-45deg);
+    	-o-transform: rotate(-45deg);
+    	transform: rotate(-45deg);
+    	font: 500 18px/26px 'Roboto', sans-serif;
+    }
+
+    #mission .indicator > .caption {
+    	-webkit-transform-origin: 50% 50% 0;
+    	-moz-transform-origin: 50% 50% 0;
+    	-ms-transform-origin: 50% 50% 0;
+    	-o-transform-origin: 50% 50% 0;
+        transform-origin: 50% 50% 0;
+        -webkit-transform: rotate(45deg);
+        -moz-transform: rotate(45deg);
+        -ms-transform: rotate(45deg);
+        -o-transform: rotate(45deg);
+        transform: rotate(45deg);
+        height: 90px;
+        width: 90px;
+        padding-top: 20px;
+        margin: 10px auto;
+        text-align: center;
+    }
+
+    #mission .indicator > .cover {
+    	position: absolute;
+        top: 6px;
+        bottom: 6px;
+        left: 6px;
+        right: 6px;
+        opacity: 0;
+        -webkit-transition: opacity 0.5s ease;    
+        -moz-transition: opacity 0.5s ease;    
+        -o-transition: opacity 0.5s ease;
+        -ms-transition: opacity 0.5s ease;
+        transition: opacity 0.5s ease;
+    }
+
+    #mission .indicator.green {
+        background: url({{ STATIC_URL }}img/mission-box-green.png);
+        color: rgba(140, 190, 41, 1);
+    }
+
+    #mission .indicator.green > .cover {
+    	background-color: rgba(140, 190, 41, 0.8);
+    }
+
+    #mission .indicator.orange {
+        background: url({{ STATIC_URL }}img/mission-box-orange.png);
+        color: rgba(255, 147, 30, 1);
+    }
+
+	#mission .indicator.orange > .cover {
+    	background-color: rgba(255, 147, 30, 0.8);
+    }
+
+    #mission .indicator.red {
+        background: url({{ STATIC_URL }}img/mission-box-red.png);
+        color: rgba(255, 29, 37, 1);   	
+    }
+
+    #mission .indicator.red > .cover {
+        background-color: rgba(255, 29, 37, 0.8);   	
+    }
+
+    #mission .indicator.purple {
+        background: url({{ STATIC_URL }}img/mission-box-purple.png);
+        color: rgba(102, 45, 145, 1);
+    }
+
+    #mission .indicator.purple > .cover {
+        background-color: rgba(102, 45,145, 0.9);
+    }
+
+    #mission .indicator.blue {
+        background: url({{ STATIC_URL }}img/mission-box-blue.png);
+        color: rgba(63, 169, 245, 1);
+    }
+
+    #mission .indicator.blue > .cover {
+        background-color: rgba(63, 169, 245, 0.9);
+    }
+
+    #mission .indicator.position-1 {
+    	top: 150px;
+        left: 0px;      
+    }
+
+    #mission .indicator.position-2 {
+        top: 302px;
+        left: 0px;
+    }
+
+    #mission .indicator.position-3 {
+        top: 226px;
+        left: 80px;
+    }
+
+    #mission .indicator.position-4 {
+        top: 150px;
+        left: 160px;
+    }
+
+    #mission .indicator.position-5 {
+        top: 302px;
+        left: 160px;
+    }
+
+    #mission .indicator.active {
+    	height: 110px;
+    	width: 110px;
+    	color: white;
+    }
+
+    #mission .indicator.active > .cover {
+    	opacity: 1;
+    	-webkit-transition: opacity 0.5s ease;    
+        -moz-transition: opacity 0.5s ease;    
+        -o-transition: opacity 0.5s ease;
+        -ms-transition: opacity 0.5s ease;
+        transition: opacity 0.5s ease;
+    }
+
+    /* Mission carousel items */
     
     [class^='mission-box'] {
         position: absolute;
@@ -24,40 +155,6 @@
         font: 500 18px/26px 'Roboto', sans-serif;
         -webkit-transform: rotate(-45deg);
         transform: rotate(-45deg);
-    }
-
-    [class^='mission-box'] > .caption {
-        -webkit-transform-origin: 50% 50% 0;
-        transform-origin: 50% 50% 0;
-        transform: rotate(45deg);
-        -webkit-transform: rotate(45deg);
-        height: 90px;
-        width: 90px;
-        padding-top: 20px;
-        margin: 10px auto;
-        text-align: center;
-    }
-
-    [class^='mission-box'] > .cover {
-        position: absolute;
-        top: 6px;
-        bottom: 6px;
-        left: 6px;
-        right: 6px;
-        opacity: 0;
-        -webkit-transition: opacity 1s ease;    
-        -moz-transition: opacity 1s ease;    
-        -o-transition: opacity 1s ease;
-        -ms-transition: opacity 1s ease;
-        transition: opacity 1s ease;
-    }
-
-    [class^='mission-box'].active > .caption {
-        color: white;
-    }
-
-    [class^='mission-box'].active > .cover {
-        opacity: 1;
     }
 
     .item .caption {
@@ -109,79 +206,24 @@
     	height: 150px;
     }
     
-    .mission-box.green {
-        top: 150px;
-        left: 0px;
-        background: url({{ STATIC_URL }}img/mission-box-green.png);
-        color: rgba(140, 190, 41, 1);
-    }
-
     .caption.green {
     	color: rgba(140, 190, 41, 1);
-    }
-
-    .mission-box.green.active > .cover {
-        background-color: rgba(140, 190, 41, 0.9);
-    }
-
-    .mission-box.red {
-        top: 150px;
-        left: 160px;
-        background: url({{ STATIC_URL }}img/mission-box-red.png);
-        color: rgba(255, 29, 37, 1);
     }
 
     .caption.red {
     	color: rgba(255, 29, 37, 1);
     }
 
-    .mission-box.red.active > .cover {
-        background-color: rgba(255, 29, 37, 0.9);
-    }
-
-    .mission-box.purple {
-        top: 226px;
-        left: 80px;
-        background: url({{ STATIC_URL }}img/mission-box-purple.png);
-        color: rgba(102, 45, 145, 1);
-    }
-
     .caption.purple {
     	color: rgba(102, 45, 145, 1);
-    }
-
-    .mission-box.purple.active > .cover {
-        background-color: rgba(102, 45,145, 0.9);
-    }
-
-    .mission-box.orange {
-        top: 302px;
-        left: 0px;
-        background: url({{ STATIC_URL }}img/mission-box-orange.png);
-        color: rgba(255, 147, 30, 1);
     }
 
     .caption.orange {
     	color: rgba(255, 147, 30, 1);
     }
 
-    .mission-box.orange.active > .cover {
-        background-color: rgba(255, 147, 30, 0.9);
-    }
-
-    .mission-box.blue {
-        top: 302px;
-        left: 160px;
-        background: url({{ STATIC_URL }}img/mission-box-blue.png);
-        color: rgba(63, 169, 245, 1);
-    }
-
     .caption.blue {
     	color: rgba(63, 169, 245, 1);
-    }
-
-    .mission-box.blue.active > .cover {
-        background-color: rgba(63, 169, 245, 0.9);
     }
 
     .mission-box.gray {
@@ -222,23 +264,23 @@
     <h2 class="slogan">Make a way from dream to reality easier</h2>
     <div id="carousel-mission" class="carousel slide mission-board carousel-fade" data-interval=5000>
 	    <div class="carousel-indicators">
-	        <div class="mission-box green active" data-target="#carousel-mission" data-slide-to="0">
+	        <div class="indicator green position-1 active" data-target="#carousel-mission" data-slide-to="0">
 	            <div class="cover"></div>
 	            <div class="caption" style="padding-top: 33px">Think</div>
 	        </div>
-	        <div class="mission-box orange" data-target="#carousel-mission" data-slide-to="1">
+	        <div class="indicator orange position-2" data-target="#carousel-mission" data-slide-to="1">
 	            <div class="cover"></div>
 	            <div class="caption">Manage the life</div>
 	        </div>
-	        <div class="mission-box purple" data-target="#carousel-mission" data-slide-to="2">
+	        <div class="indicator purple position-3" data-target="#carousel-mission" data-slide-to="2">
 	            <div class="cover"></div>
 	            <div class="caption">Save the time</div>
 	        </div>
-	        <div class="mission-box red" data-target="#carousel-mission" data-slide-to="3">
+	        <div class="indicator red position-4" data-target="#carousel-mission" data-slide-to="3">
 	            <div class="cover"></div>
 	            <div class="caption">Working together</div>
 	        </div>	        
-	        <div class="mission-box blue" data-target="#carousel-mission" data-slide-to="4">
+	        <div class="indicator blue position-5" data-target="#carousel-mission" data-slide-to="4">
 	            <div class="cover"></div>
 	            <div class="caption" style="padding-top: 33px">Personal</div>
 	        </div>
@@ -388,11 +430,12 @@
         '#mission > label',
         '#mission > .slogan',
         '.mission-board',
-        '.mission-box.green',
+        'indicator',
+        /*'.mission-box.green',
         '.mission-box.red',
         '.mission-box.purple',
         '.mission-box.orange',
-        '.mission-box.blue',
+        '.mission-box.blue', */
         '.mission-box.gray',
         '.caption',
         '[class^="comment-"]',
