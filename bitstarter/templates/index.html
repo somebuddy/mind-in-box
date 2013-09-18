@@ -4,9 +4,9 @@
 
 {% block page_styles %}
 	<meta property="fb:admins" content="100006490210703" />
-
-
     <link href='{{ STATIC_URL }}css/bitstarter/main.css' rel='stylesheet' type='text/css'>
+    <link href='{{ STATIC_URL }}css/bitstarter/dashboard.css' rel='stylesheet' type='text/css'>
+    <link href='{{ STATIC_URL }}css/bitstarter/mission.css' rel='stylesheet' type='text/css'>
     <link href='http://fonts.googleapis.com/css?family=Pathway+Gothic+One&subset=latin,latin-ext' rel='stylesheet' type='text/css'>
     <link href='http://fonts.googleapis.com/css?family=Roboto:400,100,300,100italic,300italic,400italic,500,500italic,700,700italic,900,900italic' rel='stylesheet' type='text/css'>
 {% endblock %}
@@ -19,6 +19,7 @@
 {% block page_content %}
 <body data-spy="scroll" data-target="#navbar" data-offset=70>
 {% include 'addons/menu.html' %}
+{% include 'addons/external.html' %}
 {% include 'sections/dashboard.html' %}
 {% include 'sections/mission.html' %}
 {% include 'sections/at-a-glance.html' %}
@@ -37,12 +38,5 @@
 {% endblock %}
 
 {% block end_scripts %}
-<script>
-	$(document).ready(function () {
-		$('section').waypoint(function () {
-			console.log(this);
-			$(this).animate({opacity: 1}, 1500);	
-		}, {offset: '95%'});
-	});
-</script>
+<script src="{{ STATIC_URL }}js/bitstarter.js"></script>
 {% endblock %}

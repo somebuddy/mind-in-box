@@ -1,48 +1,7 @@
-<link href='{{ STATIC_URL }}css/bitstarter/dashboard.css' rel='stylesheet' type='text/css'>
-<style>
-    #crowdfunding-box .header .caption {
-	display: block;
-	float: left;
-    }
-
-    .dashboard #crowdfunding-box .header .button {
-	opacity: 0;
-	-webkit-transition: opacity 0.9s step-start;
-	-o-transition: opacity 0.9s step-start;
-	-moz-transition: opacity 0.9s step-start;
-	-transition: opacity 0.9s step-start;
-    }
-
-    .dashboard:hover #crowdfunding-box .header .button {
-	color: black;
-	position: absolute;
-	top: 0px;
-	right: 0px;
-	height: 60px;
-	width: 80px;
-	background-color: #F55;
-	text-align: center;
-	padding: 10px;
-	font: small-caps 26px/20px 'Pathway Gothic One', sans-serif;
-	opacity: 1;
-	-webkit-transition: all 0.9s step-end;
-	-o-transition: all 0.9s step-end;
-	-moz-transition: all 0.9s step-end;
-	transition: opacity 0.9s step-end;
-    }
-
-    .button:hover {
-	cursor: pointer;
-	text-decoration: underline;
-    }
-
-</style>
 <section id="dashboard">
     <div>
         <div class="dashboard">
-            <div class="box box-s logo dash-col-1 dash-row-2">
-                THINKING IN BOX
-            </div> 
+            <div class="box box-s logo dash-col-1 dash-row-2">THINKING IN BOX</div> 
             <div class="box box-s dash-col-1 dash-row-1 box-purple">
                 <div class="header">
                     Our Mission
@@ -77,11 +36,11 @@
                     <p> We work hard to finish it as soon as possible</p>
                 </div>
             </div>
-            <div class="box box-x3 dash-col-4 dash-row-1 box-whit" id="crowdfunding-box">
+            <div class="box box-x3 dash-col-4 dash-row-1 box-white" id="crowdfunding-box">
                 <div class="header">
                     <p>Crowdfunding</p>
                     <p class="header-comment">Everyone can help</p>
-		    <div data-toggle="modal" href="#orderModal" class="button">donation list</div>
+		            <div data-toggle="modal" href="#orderModal" class="button">donation list</div>
                 </div>
                 <div class="cover">
                     <div class="row center" id='funding-stat'>
@@ -143,6 +102,8 @@
             <div class="crowdfunding-footer-arrow dash-col-4 dash-row-3">
                 <img src="{{ STATIC_URL }}img/cf-footer.png">
             </div>
+            {% comment %}
+            {% endcomment %}
             <div class="box box-s dash-col-3 dash-row-3 box-dark-gray">
                 <div class="header">Roadmap</div>
                 <div class="cover">
@@ -151,23 +112,28 @@
                         <i class="icon-double-angle-down icon-large"></i>
                     </a>
                 </div>
-            </div>            
+            </div>
+            <div class="social-row">
+                <div class="social-button">
+                    <div class="fb-like" data-href="http://thinking-in-box.herokuapp.com/" data-width="450" data-layout="button_count" data-show-faces="false" data-send="false"></div>
+                </div>
+                <div class="social-button">
+                    <div class="g-plusone" data-size="standard" data-annotation="bubble" data-width="450" data-href="http://thinking-in-box.herokuapp.com/" data-align="right"></div>
+                    <script type="text/javascript">
+                      window.___gcfg = {lang: 'ru'};
+
+                      (function() {
+                        var po = document.createElement('script'); po.type = 'text/javascript'; po.async = true;
+                        po.src = 'https://apis.google.com/js/plusone.js';
+                        var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(po, s);
+                      })();
+                    </script>
+                </div>
+                <div class="social-button">
+                    <a href="https://twitter.com/share" class="twitter-share-button" data-url="http://thinking-in-box.herokuapp.com/" data-via="ThinkingInBox">Tweet</a>                
+                </div>
+            </div>
 	    </div>
-            {% comment %}                        
-            <div class="box box-s dash-col-5 dash-row-1">Test Box 1, 5</div>
-            <div class="box box-s dash-col-6 dash-row-1">Test Box 1, 6</div>
-            <div class="box box-s dash-col-4 dash-row-2">Test Box 2, 4</div>
-            <div class="box box-s dash-col-5 dash-row-2">Test Box 2, 5</div>
-            <div class="box box-s dash-col-6 dash-row-2">Test Box 2, 6</div>
-            <div class="box box-s dash-col-7 dash-row-2">Test Box 2, 7</div>
-            <div class="box box-s dash-col-4 dash-row-3">Test Box 3, 4</div>
-            <div class="box box-s dash-col-5 dash-row-3">Test Box 3, 5</div>
-            <div class="box box-s dash-col-6 dash-row-3">Test Box 3, 6</div>
-            <div class="box box-s dash-col-7 dash-row-3">Test Box 3, 7</div> 
-            <div class="box box-s dash-col-1 dash-row-2">Test Box 2, 1</div>
-            <div class="box box-s dash-col-2 dash-row-2">Test Box 2, 2</div>
-            {% endcomment %}
-        </div>
     </div>
 </section>
 <div class="modal fade" id="orderModal">
@@ -201,12 +167,13 @@
 	$(this).find('.modal-body').load('{% url 'coinbase:orders' %}');
     });
 
-   !function(d,s,id) {
-	var js,fjs=d.getElementsByTagName(s)[0];
-	if(!d.getElementById(id)){
-		js=d.createElement(s);js.id=id;
-		js.src="https://platform.twitter.com/widgets.js";
-		fjs.parentNode.insertBefore(js,fjs);
-	}}(document,"script","twitter-wjs");
+    /* Set dashboard height depends of window size */
+    function FixDashboardSectionSize () {
+        h = Math.max($(window).height(), $('.dashboard').height() + 180);
+        $('#dashboard').css({height: h});
+    }
+
+    $(window).resize(FixDashboardSectionSize);
+    $(document).ready(FixDashboardSectionSize);
 </script>
 
